@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "arkadash-31998"
+  },
+  "targets": {
+    "arkadash-31998": {
+      "hosting": {
+        "newsite": [
+          "newsite-app"
+        ]
+      }
+    }
+  }
+}

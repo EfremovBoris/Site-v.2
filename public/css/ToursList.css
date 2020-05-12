@@ -1,0 +1,234 @@
+body {
+	background-color: #F9E0E0;
+}
+
+
+a {
+	text-decoration: none !important;
+}
+
+.menu {
+	height: 50px;
+	background-color: rgba(68,93,227,.5);
+	color: #fff;
+	position: sticky;
+	z-index: 1000;
+}
+
+
+/* HiScreen */
+
+.hiscreen {
+	height: 100vh;
+
+	background-image: url(../images/bigwall.jpg);
+	background-position: 50% 60%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	/* new lines demo */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.welcometext {
+	/* position: absolute; */
+	font-size: 30px;
+	color: #fff;
+	/* top: 50%; */
+	/* left: 30%; */
+}
+
+.hiscreen2 {
+	height: 100vh;
+
+	background-image: url(../images/bigwall2.jpg);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+
+
+/* End of HiScreen*/
+
+
+.tourWrapper {
+	border-style: solid 1px #643C3C;
+	border-radius: 0 0 15px 15px;
+	background-color: #ABCAC7;
+	text-align: center;
+}
+
+
+.tourWrapper:hover {
+	box-shadow: 0 0 0 3px #7481FF, 0 0 0;
+}
+
+
+.tourCover h3 {
+	color: #F72A2A;
+}
+
+
+.bboxsize {
+	box-sizing: border-box !important;
+}
+
+
+/* ПРОГРАММА ТУРА ПО ДНЯМ*/
+
+.day-item {
+	margin-bottom: 10px;
+}
+.day-item-content {
+	/* margin: auto; */
+}
+.day-item-content img {
+	
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+    /*width: calc(100% - 80px);*/
+    /*width: 300px;*/
+    /*height: 200px;*/
+}
+
+
+p.day-item-title {
+    cursor: pointer;
+	font-size: 1em;
+	text-align: center;
+	color: blueviolet;
+/*
+    padding-left: 50px;
+    padding-right: 20px;
+    background-image: url(../images/day-open.png);
+    background-position: 10px center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+*/
+
+}
+
+.t778__scroll-icon-wrapper {
+	text-align: right;
+	margin-right: 50px;
+}
+@media screen and (max-width: 960px){
+
+	.days-list {
+		min-width: 100%;
+		/* box-sizing: border-box; */
+		overflow-x: scroll;
+
+		/* margin: 0; */
+		display: flex;
+		/* justify-content: center;
+		align-items: center; */
+
+
+	}
+
+	.day-item {
+		/* flex: 1; */
+		/* flex-grow: 1; */
+		min-width: 80%;
+		margin: 5px 10px;
+		/* max-width: 38%; */
+		/* margin-bottom: 0px; */
+		background-color: burlywood;
+	}
+
+
+	.t778__scroll-icon {
+		-webkit-animation: t778__icon-anim 1.5s infinite;
+		animation: t778__icon-anim 1.5s infinite;
+	}
+}
+
+.hidden-item {
+	/* display: none; */
+}
+
+.selected-day {
+	/* border: solid 2px #903C3C;
+	border-radius: 15px;
+	background-color: #DED5D5;
+	padding: 0 20px;
+	transition: border 0.5s ease; */
+}
+
+
+/* ПРобы с Блоком краткой информации*/
+
+.advWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	/*text-align: center;*/
+	/*padding: 10px;*/
+}
+
+.advantage {
+	width: 400px;
+	height: 200px;
+	border: solid 2px #F88310;
+	margin: 10px;
+	padding: 5px;
+	text-align: center;
+	/*box-sizing: content-box !important;*/
+}
+
+
+
+/* МЕДИА-ЗАПРОСЫ */
+
+
+.owl-carousel div {
+	height: 50px;
+	background-color: #F88310;
+}
+
+
+
+@keyframes t778__icon-anim {
+	0% {
+		transform: translate3d(-20px, 0, 0);
+		opacity: 0
+	}
+	10% {
+		transform: translate3d(-20px, 0, 0);
+		opacity: 0
+	}
+	20% {
+		transform: translate3d(-20px, 0, 0);
+		opacity: 1
+	}
+	70% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+	80% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+	81% {
+		transform: translate3d(0, 0, 0);
+		opacity: 0
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+		opacity: 0
+	}
+}
+.t778__scroll-icon {
+	-webkit-animation: t778__icon-anim 1.5s infinite;
+	animation: t778__icon-anim 1.5s infinite
+}

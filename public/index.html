@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Сетка расположения туров!!!</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/ToursList.css">
+
+	<!-- Bootstrap 4 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>	
+
+	<!-- InstagramFeed -->
+	<script src="js/jquery.instagramFeed.js"></script>
+	<!-- Owl caruosel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Slick -->
+	<link rel="stylesheet" href="css/my-slick.css">
+	<script src="js/slick.min.js"></script>
+
+	<script>
+		(function($){
+				$(window).on('load', function(){
+					$.instagramFeed({
+						'username': 'boris.efremov',
+						'container': "#instagram-feed-demo",
+						'display_profile': true,
+						'display_biography': true,
+						'display_gallery': true,
+						 'get_raw_json': false,
+						'callback': null,
+						'styling': true,
+						'items': 8,
+						'items_per_row': 4,
+						'margin': 1 
+					});
+				});
+			})(jQuery);
+
+
+		$(document).ready(function(){
+		$("p.day-item-title").click(function(){
+
+			$(this).parent().toggleClass("selected-day");
+			var bgpath = $(this).css("background-image");
+			if (bgpath.indexOf("day-open.png") > 0) {
+				$(this).css("background-image", "url('images/day-close.png')");
+			} else {
+				$(this).css("background-image", "url('images/day-open.png')");
+			}
+
+			$(this).next().toggleClass("hidden-item");
+		});
+
+		// init carousel
+		$('.owl-carousel').owlCarousel();
+	
+		});
+</script>
+</head>
+<body>
+
+
+	<div class="root">
+		<!-- ФОТО-заглушка -->
+		<section id="welcome">
+			<div class="hiscreen">
+				<div class="welcometext">
+					Приветствую, тебя мой друг на нашем сайте!!!
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- СЕКЦИЯ МЕНЮ -->
+		<div class="menu">
+			<a href="gallery.html">Gallery</a>
+		</div>
+
+		<!-- СЕКЦИЯ ТУРЫ -->
+		<section id="ToursList">
+
+
+			<!-- Как проверить работу BEETWEEN?
+			d-flex justify-content-between
+			 -->
+			<div class="container">	
+				<div class="row bboxsize">
+					<div class="col-md-6 col-lg-4 mb-3 px-3 tourItem">
+						<div class="tourWrapper">
+							<a href="#" class="tourCover">
+								<img src="images/TourCover/tour1.jpg" alt="tour1" class="img-fluid">
+								<h3>Тур активный</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic vel id laborum quam voluptatum sunt.</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4 mb-3 px-3 tourItem">
+						<div class="tourWrapper">
+							<a href="#" class="tourCover">
+								<img src="images/TourCover/tour2.jpg" alt="tour1" class="img-fluid">
+								<h3>Тур активный</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic vel id laborum quam voluptatum sunt.</p>
+							</a>							
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4 mb-3 px-3 tourItem">	
+						<div class="tourWrapper">
+							<a href="#" class="tourCover">
+								<img src="images/TourCover/tour3.jpg" alt="tour1" class="img-fluid">
+								<h3>Тур активный</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic vel id laborum quam voluptatum sunt.</p>
+							</a>							
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4 mb-3 px-3 tourItem">
+						<div class="tourWrapper">
+							<a href="#" class="tourCover">
+								<img src="images/TourCover/tour1.jpg" alt="tour1" class="img-fluid">
+								<h3>Тур активный</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic vel id laborum quam voluptatum sunt.</p>
+							</a>							
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4 mb-3 px-3 tourItem">		
+						<div class="tourWrapper">
+							<a href="#" class="tourCover">
+								<img src="images/TourCover/tour2.jpg" alt="tour1" class="img-fluid">
+								<h3>Тур активный</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic vel id laborum quam voluptatum sunt.</p>
+							</a>							
+						</div>
+					</div>					
+				</div>
+			</div>
+
+
+		</section> 
+
+
+
+
+		<!-- СЕКЦИЯ ПРОГРАММА ПО ДНЯМ -->
+		<section id="TourProgram">
+			<!-- 			<div class="container">
+			<div class="row">
+			<div class="col">	 -->
+				<div class="t778__scroll-icon-wrapper"> <svg class="t778__scroll-icon" style="width:22px;fill:#bebebe;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"> <path d="M97.2 298.2S56.1 225 38.8 193.3c-23-42.2-26.8-60-10.9-68.8 9.9-5.5 23.6-3.2 32 11.4l19.6 31.2V44.8s-1.2-32.3 21.8-32.3c24.5 0 22.4 32.3 22.4 32.3v59.4s12.9-9.3 28-5.1c7.7 2.1 16.7 5.8 21.5 18 0 0 30.7-14.9 46 16.8 0 0 35.4-7 35.4 29.7s-44.2 134.6-44.2 134.6H97.2zM249.9.5l-10.6 10.6 24.1 23.8H158.5v15h105l-24.2 23.9 10.6 10.6 42.5-42z" class="st0"></path> </svg></div>			
+				<div class="days-list">
+					<div class="day-item">
+						<p class="day-item-title">День 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis id asperiores nemo mollitia eos totam.</p>
+						<div class="day-item-content hidden-item">
+								<img src="images/TourCover/tour1.jpg" alt="photo day 1">
+			
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam optio, adipisci perferendis rem eius quia accusamus cumque quo dolorum quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ullam aliquid accusantium maiores voluptas deserunt in nulla dolorem dicta explicabo?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet totam rerum laboriosam, fuga itaque at veniam provident qui obcaecati corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ad doloremque quisquam neque. Pariatur unde culpa distinctio laborum amet fugit.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur accusamus, itaque beatae suscipit. Aperiam, vero facere ab accusamus sunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam consectetur est aliquid tenetur facilis aut adipisci amet. Quibusdam, quam, sint?</p>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut illum asperiores reprehenderit ipsa consequatur, labore dolorum alias blanditiis velit mollitia ullam consequuntur et doloribus ex fugiat, earum quaerat officiis optio tempore esse beatae cumque sequi. Eveniet consectetur placeat quaerat numquam ipsum exercitationem doloremque deserunt. Fuga dolor nostrum excepturi provident iste?</p>
+						</div>
+					</div>
+			
+			
+			
+					<div class="day-item">
+						<p class="day-item-title">День 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis id asperiores nemo mollitia eos totam.</p>
+						<div class="day-item-content hidden-item">
+								<img src="images/TourCover/tour2.jpg" alt="photo day 1">
+			
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam optio, adipisci perferendis rem eius quia accusamus cumque quo dolorum quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ullam aliquid accusantium maiores voluptas deserunt in nulla dolorem dicta explicabo?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet totam rerum laboriosam, fuga itaque at veniam provident qui obcaecati corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ad doloremque quisquam neque. Pariatur unde culpa distinctio laborum amet fugit.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur accusamus, itaque beatae suscipit. Aperiam, vero facere ab accusamus sunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam consectetur est aliquid tenetur facilis aut adipisci amet. Quibusdam, quam, sint?</p>
+			
+						</div>
+					</div>
+			
+			
+					<div class="day-item">
+						<p class="day-item-title">День 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis id asperiores nemo mollitia eos totam.</p>
+						<div class="day-item-content hidden-item">
+								<img src="images/TourCover/tour3.jpg" alt="photo day 1">
+			
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam optio, adipisci perferendis rem eius quia accusamus cumque quo dolorum quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ullam aliquid accusantium maiores voluptas deserunt in nulla dolorem dicta explicabo?</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet totam rerum laboriosam, fuga itaque at veniam provident qui obcaecati corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ad doloremque quisquam neque. Pariatur unde culpa distinctio laborum amet fugit.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur accusamus, itaque beatae suscipit. Aperiam, vero facere ab accusamus sunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam consectetur est aliquid tenetur facilis aut adipisci amet. Quibusdam, quam, sint?</p>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eos voluptatem rerum cupiditate quis maiores recusandae nisi magnam placeat reiciendis ad consequuntur assumenda laudantium veniam magni aperiam minus exercitationem blanditiis est nemo error aspernatur, voluptas quos. Nulla modi quibusdam doloribus dolorem quidem cupiditate eveniet nemo esse, natus, ea, rem delectus tempora nisi. Eum commodi aspernatur nemo ullam corporis. Tenetur dolor sed sapiente ex iure quae vel enim quas maiores soluta aut, exercitationem quaerat. Excepturi, sunt. Delectus, numquam atque ut vel, animi repellendus amet expedita architecto vero incidunt corporis in dolorum rem distinctio magni. Officiis facilis quos quia! Ipsa, impedit quo?</p>
+						</div>
+					</div>							
+			
+				</div>
+			
+			
+			<!-- 					</div>
+			</div>
+			</div> -->
+			
+</section>
+
+
+		<!-- ФОТО-заглушка -->
+		<section id="welcome2">
+			<div class="hiscreen2">
+			</div>
+		</section>
+
+
+		<!-- БЛОК КРАТКАЯ ИНФОРМАЦИЯ -->
+		<section id="advantages">
+			<div class="container">
+				<div class="advWrapper">
+					<div class="advantage">
+						<h6>
+							Проживание в домиках на кордоне Центральном
+						</h6>
+						<p>
+							Это важно, так как палатки ставить там запрещено, а от палаточных стоянок до источников идти несколько километров. От домиков до купальни идти "два шага".
+						</p>
+					</div>
+					<div class="advantage">
+						<h6>
+							Заброска продуктов
+						</h6>
+						<p>
+							Мы каждый год делаем заброску продуктов на кордон Центральный. Таким образом вам меньше придется нести в рюкзаке.
+						</p>
+					</div>
+					<div class="advantage">
+						<h6>
+							Облегченный провиант
+						</h6>
+						<p>
+							Для пешеходных групп мы формируем облегченную продуктовую раскладку: в ней присутствуют сушеные овощи и сушеное мясо, а также качественная тушенка в фольгированной упаковке.
+						</p>
+					</div>
+					<div class="advantage">
+						<h6>
+							Облегченное снаряжение
+						</h6>
+						<p>
+							Мы используем палатки облегченной конструкции, при этом сохраняющие свою функциональность для северных регионов.s
+						</p>
+					</div>
+					<div class="advantage">
+						<h6>
+							Наши гиды местные
+						</h6>
+						<p>
+							Инструктор знает Камчатку и знает маршрут, по которому ведет группу.
+						</p>
+					</div>
+					<div class="advantage">
+						<h6>
+							Гостиница до и после похода
+						</h6>
+						<p>
+							У вас будет возможность отдохнуть и привести себя в порядок после перелета на Камчатку, а также после похода перед обратным вылетом.
+						</p>
+					</div>
+					<!-- <div class="advantage">7</div> -->
+					<!-- <div class="advantage">8</div> -->
+				</div>
+
+			</div>
+		</section>	
+
+
+<!-- ЗАБИВКА ДЛЯ ПРОБЫ -->
+<section>
+	<div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur provident, maiores eos debitis eum, sint non corporis totam cumque dolor explicabo quo autem! Odit amet voluptatum excepturi officia commodi voluptates quo esse. Rerum nemo cumque officiis reiciendis facere asperiores vel consequuntur nihil sed quibusdam aspernatur iusto est neque laudantium magnam voluptas cupiditate sit inventore rem, enim repellendus expedita magni aperiam nisi! Tempore numquam veritatis quam deserunt. Est aliquid illum quo tempore neque sint corporis omnis ipsa, quis aspernatur perferendis, et fuga atque consequuntur rem quaerat alias nobis voluptas ullam odit! Vel maxime voluptate eius harum iste similique, pariatur officiis possimus aspernatur nulla doloribus est temporibus architecto. Soluta officia, veritatis similique expedita sit ab vero harum quae dolores explicabo veniam perspiciatis modi, rerum eveniet sint distinctio quas, enim dolorum molestias excepturi natus odit dolorem a! Tempora quos harum ipsam dolores repudiandae, laborum voluptate quo adipisci accusamus porro dolore aperiam error, fuga deleniti dicta earum minus officia ea, doloremque id consectetur odit! Eaque eius asperiores accusamus error placeat, praesentium culpa enim eligendi delectus, perspiciatis, architecto harum provident voluptas veritatis cupiditate recusandae dolorum earum quidem officia omnis quas ex tempore, mollitia tempora! Eligendi officia harum impedit numquam temporibus dolor praesentium ipsum, aliquid voluptatum.lorem1000     Lorem ipsum dolor sit amet, consectetur adipisicing elit. A obcaecati maxime, quas ullam iure culpa molestiae perspiciatis molestias, quos sint consequuntur architecto iusto, ratione repellendus. Temporibus eligendi saepe obcaecati fugit dolore accusantium reiciendis ipsum recusandae atque, tempora inventore, est sint natus architecto, quos expedita nemo placeat quidem? Sapiente itaque quisquam, voluptatum quia perferendis voluptates doloribus molestias, sint quos libero modi fuga laudantium illo mollitia perspiciatis cumque alias quo, suscipit veniam. Dolorum similique sapiente fuga reprehenderit, praesentium recusandae veritatis labore suscipit blanditiis eius ab illo eaque non magnam natus. Sint cumque qui voluptate nemo, voluptatibus in assumenda nihil, dignissimos cum officia eveniet iure sequi. Inventore officia quia tempore nihil, voluptas reprehenderit quam nemo blanditiis, nesciunt a. Hic, facilis. Consequatur, dolores, minus assumenda illum nesciunt maxime! Error maiores nihil, rem eaque ipsa quaerat. Aspernatur, autem rerum. Id cupiditate distinctio non, commodi doloremque suscipit praesentium soluta, error magnam nisi veritatis nihil, magni, reprehenderit quibusdam sunt? Placeat provident suscipit error in aut sit reprehenderit sint, non nisi autem omnis nostrum assumenda ad, officia voluptatum possimus doloremque molestiae blanditiis quia? Quaerat rem eligendi voluptas necessitatibus nihil perferendis placeat illo dolorem commodi architecto, nobis voluptatibus nesciunt consectetur doloribus quod explicabo tempore? Dolorum, quae reprehenderit iusto cumque debitis magni amet tempora repudiandae. Placeat eos, deleniti iure ratione earum ex et mollitia, odit cumque ea, ducimus impedit quidem minus dicta velit provident id. Dolor consectetur molestiae deserunt voluptatem temporibus dolore quasi, maiores ipsum suscipit, nihil assumenda eveniet! Vel facilis deleniti quam, commodi ipsa saepe magni, esse et aliquam expedita ut omnis. Voluptatem ducimus odio inventore in ipsum dicta, dolorum dolor corporis veniam perferendis. Quae corporis deserunt quis quod soluta iste magni in harum quo inventore eligendi aliquam est illo ipsam aut autem minima, a nostrum placeat sed quaerat earum nisi. Molestiae neque quam temporibus harum velit eius adipisci quibusdam consequuntur cumque tempora, veniam rerum inventore doloribus labore dolor earum voluptates nam. Esse eum sapiente reiciendis architecto repellendus, libero tenetur consectetur ut fuga nesciunt assumenda voluptates quos asperiores cumque dignissimos culpa corporis quo cupiditate. Repudiandae quibusdam deserunt dolorem sapiente soluta dicta ullam et facilis animi fugiat quod laboriosam cum, qui omnis ex doloribus veniam dolor ut assumenda necessitatibus explicabo itaque iusto voluptatibus eveniet! Harum vero eveniet quisquam ex, laborum eum voluptatem ipsum nesciunt, vitae quasi aperiam nulla error aspernatur officia nostrum, similique quis tenetur. Tempore provident totam aliquam similique. Molestias explicabo blanditiis adipisci cupiditate, aspernatur porro repellendus sint fuga cum ea expedita non provident minima architecto ratione, facilis aliquid, necessitatibus excepturi corporis officiis officia distinctio sequi veniam quis! Est aperiam numquam, illo nemo esse voluptatem nobis quisquam culpa. Autem laudantium dolorum quasi repellat tempora dolorem, ut sapiente porro maiores placeat ea facilis assumenda omnis illum laborum. Enim, odio, commodi. Libero, dolore, vitae aliquam expedita nisi, nihil illum quas tempore cupiditate architecto, omnis molestiae exercitationem eaque. Ea nobis illo odio, voluptatum quae delectus laudantium voluptatibus vitae amet deserunt vel in suscipit perferendis facere fuga similique impedit numquam itaque, quas saepe molestias praesentium repellendus aliquam, nesciunt. Maxime, cupiditate distinctio inventore vitae qui suscipit soluta odit sunt molestias voluptate quas, rem, maiores optio ad deleniti accusantium eligendi. Sit, iste, dolor. Labore hic, eveniet officiis, ipsam soluta maxime laborum accusantium velit beatae enim recusandae debitis quidem delectus ad ratione voluptate. Culpa sunt animi architecto, accusantium odio minima officia a aliquam debitis illum ipsa, neque cupiditate? Sint nisi atque reiciendis possimus iure hic in voluptatibus. Magnam inventore distinctio veniam officia, harum incidunt quia ipsum quo est sit accusamus natus quam quis mollitia sunt eveniet dolore, debitis iusto vero reiciendis. Recusandae reiciendis tenetur omnis sequi, aut, dolorem, iusto pariatur illum aspernatur odit delectus eos quos maiores laudantium. Voluptatum maiores veniam suscipit sed voluptas ullam similique unde debitis, aliquam voluptates fugit mollitia ratione quam sapiente alias eius neque ipsum tempora accusamus, fugiat quidem ea quibusdam. Natus quaerat quod sed minus amet tempore blanditiis possimus, modi pariatur error a enim ratione, saepe deserunt veritatis aspernatur iusto ipsum reiciendis. Vel placeat, expedita esse, delectus impedit tenetur reiciendis dolorem cupiditate itaque debitis corrupti! Repellendus placeat numquam nulla, assumenda dolorem amet, adipisci modi natus nobis? Quibusdam fuga, ad. Laudantium, voluptate dolorem odit quam atque eos deleniti culpa, facilis dignissimos veritatis voluptatum aut ad sequi aliquid? Doloribus velit odit facilis dolor omnis ipsa nostrum tenetur porro quisquam quae minima ipsam optio temporibus ratione, obcaecati debitis tempore odio, quo, illo consectetur vitae veritatis ex assumenda! Optio ipsum inventore neque accusamus quidem unde sit, reiciendis odio blanditiis, assumenda. Unde voluptate molestiae cum voluptatum laboriosam, assumenda fugiat incidunt sunt deserunt et, aperiam blanditiis perferendis hic provident inventore doloremque minus cupiditate! Dolores error, a perspiciatis architecto cum. Enim modi, laudantium eos tempore iusto atque non veniam natus, libero culpa mollitia alias ducimus. Ullam culpa dolore facere minima quasi commodi repudiandae neque odit vitae, suscipit, magnam iste praesentium tenetur. Dolorem dolores omnis quos ipsum voluptatibus reiciendis aliquid, laboriosam eius molestiae fugit hic sunt perferendis! Asperiores recusandae ad assumenda, molestias ipsa voluptas consequatur hic repellat nulla optio ex dolore fugit tempora modi at voluptatum, possimus nihil impedit tenetur, sunt necessitatibus voluptate doloribus harum neque totam. Iure quas natus nobis, illum optio voluptatibus velit sed voluptates accusantium quasi? Ratione nemo consectetur repudiandae, perspiciatis voluptates. Reprehenderit praesentium animi delectus dignissimos aspernatur, est soluta iure a recusandae velit dolores voluptates numquam, quas amet dicta odio dolor consequuntur error sunt quam autem ab ratione eveniet suscipit. Voluptatem aperiam itaque, iure, libero nihil ab tenetur blanditiis numquam quos quis aliquid rerum at asperiores? Doloribus blanditiis eaque fugiat ut, odio est molestias! Minus sint optio dicta animi facere est odio alias mollitia. Corporis assumenda unde veritatis eligendi ad enim laboriosam sed tempora ducimus rerum, perferendis modi voluptate doloremque, minus exercitationem! Quis incidunt nobis, suscipit. Nisi fuga voluptates tenetur voluptas deleniti. Consequuntur eveniet nihil pariatur similique iusto, ullam earum, expedita tenetur, tempora blanditiis possimus, facilis quia hic quos. Tempore deserunt ad consequuntur excepturi quod explicabo recusandae non quis eos deleniti magnam, enim, suscipit fugit quidem, incidunt porro. Doloribus nobis adipisci laudantium qui magni neque beatae, recusandae alias fugiat minima voluptatibus quasi officia, doloremque laboriosam.</p>
+	</div>
+</section>
+
+
+<!-- test caruosel -->
+<!-- <div class="owl-carousel owl-theme">
+	<div> Your Content </div>
+	<div> Your Content </div>
+	<div> Your Content </div>
+	<div> Your Content </div>
+	<div> Your Content </div>
+	<div> Your Content </div>
+	<div> Your Content </div>
+  </div> -->
+
+
+	<!-- InstaFeed -->
+	<div id="instagram-feed-demo" class="instagram_feed">
+	</div>
+
+	<!-- Slick slider -->
+	<div class="slider">
+		<div class="slider__item">
+			<img src="images/slider/sl1.jpg" alt="">
+			<p>1. Долина великано</p>
+		</div>
+		<div class="slider__item">
+			<img src="images/slider/sl2.jpg" alt="">
+			<p>2. Толбачинский дол</p>
+		</div>
+		<div class="slider__item">
+			<img src="images/slider/sl3.jpg" alt="">
+			<p>3. lorem3</p>
+		</div>
+		<div class="slider__item">
+			<img src="images/slider/sl4.jpg" alt="">
+			<p>4. lorem3</p>
+		</div>
+		<div class="slider__item">
+			<img src="images/slider/sl5.jpg" alt="">
+			<p>5. lorem3</p>
+		</div>
+	</div>
+
+
+	<script lang="javascript">
+
+		$(document).ready(function(){
+				//   Slick init
+				$('.slider').slick({
+						//accessibility:true,
+						//variableWidth:true,
+						arrows: true,
+						dots: true,
+						adaptiveHeight: true,
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						speed: 500,
+						easing:'_ease_',
+						infinite:false,
+						responsive: [
+			{
+			  breakpoint: 1050,
+			  settings: {
+				// arrows: false,
+				// centerMode: true,
+				// centerPadding: '40px',
+				slidesToShow: 2
+			  }
+			},
+			{
+			  breakpoint: 700,
+			  settings: {
+				// arrows: false,
+				//centerMode: true,
+				// centerPadding: '40px',
+				slidesToShow: 1
+			  }
+			}
+		  ]
+						//initialSlide: 2,
+						//centerMode: true,
+						//variableWidth: true
+						//draggable:false
+						// slidesToScroll: 1
+				});
+			});
+		
+		
+		</script>
+
+
+
+
+	</div>
+
+
+	
+</body>
+</html>
