@@ -61,6 +61,14 @@
 
 		// init carousel
 		$('.owl-carousel').owlCarousel();
+
+
+		// init menu
+		$('.header__burger').click(function (event) {
+			$('.header__burger, .header__menu').toggleClass('active');
+			// alert('hello');
+			$('body').toggleClass('lock');
+		});
 	
 		});
 </script>
@@ -69,24 +77,59 @@
 
 
 	<div class="root">
-		<!-- ФОТО-заглушка -->
 		<section id="welcome">
-			<div class="hiscreen">
-				<div class="welcometext">
-					Приветствую, тебя мой друг на нашем сайте!!!
-				</div>
+			<!-- МЕНЮ -->
+			<div class="menu">
+				<header class="header">
+					<div class="containerX">
+						<div class="header__body">
+							<a href="#" class="header__logo">
+								<img src="images/wp1.jpg" alt="">LOGO
+							</a>
+							<div class="header__burger">
+								<span></span>
+							</div>
+							<nav class="header__menu">
+								<ul class="header__list">
+									<li>
+										<a href="" class="heder__link">Главная</a>
+									</li>
+									<li>
+										<a href="" class="heder__link">График 2020</a>
+									</li>
+									<li>
+										<a href="gallery.html" class="heder__link">ФОТО</a>
+									</li>
+									<li>
+										<a href="reviews.html" class="heder__link">ОТЗЫВЫ</a>
+									</li>
+									<li>
+										<a href="" class="heder__link">О НАС</a>
+									</li>
+									<li>
+										<a href="" class="heder__link">Контакты</a>
+									</li>																			
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</header>
 			</div>
+			<!-- КОНЕЦ МЕНЮ -->
+			<!-- ФОТО-заглушка -->			
+				<div class="hiscreen">
+					<div class="welcometext">
+						Приветствую, тебя мой друг на нашем сайте!!!
+					</div>
+				</div>
+			<!-- КОНЕЦ ФОТО-ЗАГЛУШКИ -->
 		</section>
+		
 
-
-
-		<!-- СЕКЦИЯ МЕНЮ -->
-		<div class="menu">
-			<a href="gallery.html">Gallery</a>
-		</div>
+		
 
 		<!-- СЕКЦИЯ ТУРЫ -->
-		<section id="ToursList">
+		<section id="ToursList" style="padding-top: 30px;">
 
 
 			<!-- Как проверить работу BEETWEEN?
@@ -154,7 +197,7 @@
 
 		<!-- СЕКЦИЯ ПРОГРАММА ПО ДНЯМ -->
 		<section id="TourProgram">
-			<!-- 			<div class="container">
+			<!-- 			<div class="containerX">
 			<div class="row">
 			<div class="col">	 -->
 				<div class="t778__scroll-icon-wrapper"> <svg class="t778__scroll-icon" style="width:22px;fill:#bebebe;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"> <path d="M97.2 298.2S56.1 225 38.8 193.3c-23-42.2-26.8-60-10.9-68.8 9.9-5.5 23.6-3.2 32 11.4l19.6 31.2V44.8s-1.2-32.3 21.8-32.3c24.5 0 22.4 32.3 22.4 32.3v59.4s12.9-9.3 28-5.1c7.7 2.1 16.7 5.8 21.5 18 0 0 30.7-14.9 46 16.8 0 0 35.4-7 35.4 29.7s-44.2 134.6-44.2 134.6H97.2zM249.9.5l-10.6 10.6 24.1 23.8H158.5v15h105l-24.2 23.9 10.6 10.6 42.5-42z" class="st0"></path> </svg></div>			
@@ -217,7 +260,7 @@
 
 		<!-- БЛОК КРАТКАЯ ИНФОРМАЦИЯ -->
 		<section id="advantages">
-			<div class="container">
+			<div class="containerX">
 				<div class="advWrapper">
 					<div class="advantage">
 						<h6>

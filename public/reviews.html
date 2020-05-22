@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+
+    <!-- Put this script tag to the <head> of your page -->
+        <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+
+        <script type="text/javascript">
+        VK.init({apiId: 7464645, onlyWidgets: true});
+        </script>
+        
+        <script type="text/javascript">
+        VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
+        </script>
+
+
+
+    <style>
+        #vk_comments {
+            width: 800px !important;
+            margin: auto;
+        }   
+    </style>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus a placeat dolor doloremque exercitationem aliquam excepturi distinctio odio earum in.</p>
+    <!-- Put this div tag to the place, where the Comments block will be -->
+    <br>
+    <div id="vk_comments"></div>
+
+
+</body>
+</html>
