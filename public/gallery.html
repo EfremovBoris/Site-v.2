@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
 
-
+    <link rel="stylesheet" href="css/ToursList.css">
     <link rel="stylesheet" href="css/chocolat.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/chocolat.js"></script>
 
 
@@ -29,6 +30,7 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             /* align-items: center; */
+            overflow: hidden;
         }
 
         .gallerybox__item {
@@ -73,6 +75,11 @@
 
 </head>
 <body>
+
+<div id="menu">
+    <!-- LOAD MENU HERE -->
+</div>
+ 
 <div class="container">
     <div class="gallerybox">
         <div class="gallerybox__item">
@@ -128,6 +135,14 @@
 		setTitle : function () { return 'set title' },
 		fullScreen: false
 })
+</script>
+
+
+
+<script>
+    $(document).ready(function(){
+        $("#menu").load("components/menu.html");
+    }); 
 </script>
 
 <!-- <script src="js/blueimp-gallery.min.js"></script>
