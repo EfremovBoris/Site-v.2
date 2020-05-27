@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="css/ToursList.css">
+    <link rel="stylesheet" href="css/chocolat.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/chocolat.js"></script>
+
+
+    <title>Gallery DEMO</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1180px;
+            text-align: center;
+            margin: auto;
+        }
+        .gallerybox {
+            padding: 10px;
+            background-color: rosybrown;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            /* align-items: center; */
+            overflow: hidden;
+        }
+
+        .gallerybox__item {
+            /* max-width: 250px; */
+            width: 25%;
+            height: 200px;
+            /* border: 1px solid red; */
+            background-color: #ddd;
+            padding: 10px;
+
+        }
+
+        .gallerybox__item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            /* border: 2px double blue; */
+        }
+
+        @media screen and (max-width: 1040px) {
+            .gallerybox__item {
+                width: 33%;
+            }
+        }
+
+        @media screen and (max-width: 820px) {
+            .gallerybox__item {
+                width: 50%;
+            }
+        }
+        
+        @media screen and (max-width: 570px) {
+            .gallerybox__item {
+                width: 100%;
+            }
+
+            .gallerybox__item img {
+                width: auto;
+            }
+        }        
+    </style>
+
+</head>
+<body>
+
+<div id="main-menu">
+    <!-- LOAD MENU HERE -->
+</div>
+ 
+<div class="container">
+    <div class="gallerybox">
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal1.jpg"><img src="images/gallery/small/gal_thumb1.jpg" alt=""></a>
+        </div>
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal2.jpg"><img src="images/gallery/small/gal_thumb2.jpg" alt=""></a>
+        </div>
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal3.jpg"><img src="images/gallery/small/gal_thumb3.jpg" alt=""></a>
+        </div>    
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal4.jpg"><img src="images/gallery/small/gal_thumb4.jpg" alt=""></a>
+        </div>     
+        
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal5.jpg"><img src="images/gallery/small/gal_thumb5.jpg" alt=""></a>
+        </div>
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal6.jpg"><img src="images/gallery/small/gal_thumb6.jpg" alt=""></a>
+        </div>
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal7.jpg"><img src="images/gallery/small/gal_thumb7.jpg" alt=""></a>
+        </div>    
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal8.jpg"><img src="images/gallery/small/gal_thumb8.jpg" alt=""></a>
+        </div> 
+ 
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal9.jpg"><img src="images/gallery/small/gal_thumb9.jpg" alt=""></a>
+        </div>
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal10.jpg"><img src="images/gallery/small/gal_thumb10.jpg" alt=""></a>
+        </div>
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal11.jpg"><img src="images/gallery/small/gal_thumb11.jpg" alt=""></a>
+        </div>    
+        <div class="gallerybox__item">
+            <a class="chocolat-image" href="images/gallery/gal12.jpg"><img src="images/gallery/small/gal_thumb12.jpg" alt=""></a>
+        </div> 
+        
+    </div>
+</div>
+
+
+<script>
+	Chocolat(document.querySelectorAll('.chocolat-image'), {
+		//container: document.querySelector('.galleryX'),
+		loop: false,
+		imageSize: 'scale-down',
+		linkImages: true,
+		closeOnBackgroundClick: true,
+		setTitle : function () { return 'set title' },
+		fullScreen: false
+})
+</script>
+
+
+
+<script>
+    $(document).ready(function(){
+        $("#main-menu").load("components/menu.html");
+    }); 
+</script>
+
+<!-- <script src="js/blueimp-gallery.min.js"></script>
+<script>
+
+	// Gallery init
+	document.getElementById('gallerybox').onclick = function (event) {
+	  event = event || window.event
+	  var target = event.target || event.srcElement,
+		link = target.src ? target.parentNode : target,
+		options = { index: link, event: event },
+		links = this.getElementsByTagName('a')
+	  blueimp.Gallery(links, options)
+	}
+
+  </script> -->
+
+</body>
+</html>

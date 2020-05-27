@@ -9,7 +9,7 @@
 	<meta name="format-detection" content="telephone=no">
 
 	<!-- maximum-scale=1 это запрет на увеличение сайта!!! -->
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
 	<!--metatextblock-->
 	<title>Походы по Камчатке, треккинг в Непале</title>	
@@ -28,16 +28,19 @@
 	<link rel="canonical" href="https://boris-trip.com">
 	<!--/metatextblock-->
 
+	<!-- УПРАВЛЕНИЕ КЭШИРОВАНИЕМ? Public | Private | no-cache | no-store -->
+	<!-- <meta http-equiv="Cache-control" content="Public"> -->
 	
 	<!-- СВОИ СТИЛИ -->
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/ToursList.css">
 
-	<!-- Bootstrap 4 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<!-- JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>	
+	
+	<!-- TRY FANCYBOX -->
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<script src="js/jquery.fancybox.min.js"></script>
 
 	<!-- InstagramFeed -->
 	<script src="js/jquery.instagramFeed.js"></script>
@@ -70,97 +73,168 @@
 
 
 		$(document).ready(function(){
-		$("p.day-item-title").click(function(){
+			// РЕАЛИЗАЦИЯ ВЫПАДАЮЩИХ БЛОКОВ 
+			// $("p.day-item-title").click(function(){
 
-			$(this).parent().toggleClass("selected-day");
-			var bgpath = $(this).css("background-image");
-			if (bgpath.indexOf("day-open.png") > 0) {
-				$(this).css("background-image", "url('images/day-close.png')");
-			} else {
-				$(this).css("background-image", "url('images/day-open.png')");
-			}
+			// 	$(this).parent().toggleClass("selected-day");
+			// 	var bgpath = $(this).css("background-image");
+			// 	if (bgpath.indexOf("day-open.png") > 0) {
+			// 		$(this).css("background-image", "url('images/day-close.png')");
+			// 	} else {
+			// 		$(this).css("background-image", "url('images/day-open.png')");
+			// 	}
+			// 	$(this).next().toggleClass("hidden-item");
+			// });
 
-			$(this).next().toggleClass("hidden-item");
-		});
+			// init carousel
+			$('.owl-carousel').owlCarousel();
 
-		// init carousel
-		$('.owl-carousel').owlCarousel();
+    	}); 
+	</script>
 
-
-		// init menu
-		$('.header__burger').click(function (event) {
-			$('.header__burger, .header__menu').toggleClass('active');
-			$('body').toggleClass('lock');
-		});
-	
-		});
-</script>
 </head>
 <body>
 
+	<!-- МОДАЛЬНЫЕ ОКНА -->
+	<div id="modal">
+		<div class="content-header">
+			<button class="btn" onclick="javascript:$('#more').toggle();;">Toggle content</button>
+		</div>
+		<div class="content-scroll">
+			<p>
+				Cras at massa a tortor laoreet ullamcorper ac vitae felis. In ut sodales felis. Nam ante diam, porttitor ac sapien eu, hendrerit finibus mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+			</p>
+			<div id="more">
+				<p>
+					Ut auctor, justo et convallis viverra, risus augue egestas orci, vel pellentesque elit orci vel nisi. Duis in vehicula ligula, et finibus velit. Ut eu urna varius ligula tincidunt maximus. Fusce tincidunt tortor ac risus placerat laoreet. Cras feugiat, nibh ut vulputate mollis, diam lectus hendrerit mauris, euismod elementum velit diam sit amet nisl. Curabitur auctor ex felis, quis interdum ligula euismod non. Cras dignissim commodo nibh, a feugiat purus scelerisque at. 
+				</p>
+				<p>
+					Quisque commodo elementum quam, id faucibus dui euismod in. Nam dapibus, libero ut feugiat commodo, velit velit ultricies tortor, auctor eleifend lorem tellus in urna. Phasellus nunc metus, facilisis eget malesuada cursus, tempus vitae nisl. Maecenas condimentum turpis libero, quis varius orci lacinia non. Donec vel massa elementum, molestie tortor vel, laoreet justo. Suspendisse potenti. Maecenas et luctus libero.
+				</p>
+				<p>
+					Proin tincidunt vestibulum velit, a congue odio porta interdum. Nunc congue congue enim vel vestibulum. Fusce ac diam at sem rhoncus tristique. Nullam imperdiet rhoncus mi et feugiat. Praesent tempus convallis mattis. Mauris sit amet ante non dui ullamcorper pretium eget quis lacus. Duis id velit est. Fusce a convallis purus. Nullam non orci risus. Vivamus sed vulputate eros. Sed non bibendum turpis. Sed gravida lorem sem, et hendrerit erat cursus nec. Proin feugiat purus ut varius suscipit. Aenean lobortis sem eget lacinia eleifend. Morbi vulputate sodales lobortis.
+				</p>
+				<p>
+					Nunc vitae est orci. Vivamus dignissim ex eu turpis dignissim, nec finibus dui faucibus. Vestibulum sed orci id elit tincidunt elementum. Aliquam imperdiet dictum tellus, sed iaculis sem ornare sed. Quisque blandit malesuada efficitur. Nulla molestie ultrices ornare. Nulla placerat enim eu pulvinar hendrerit. Pellentesque a consectetur erat. Pellentesque quis enim ut magna tincidunt egestas vel suscipit mauris. Donec porttitor venenatis finibus. Proin sit amet fermentum magna. Quisque lorem nibh, viverra quis libero quis, semper pulvinar sapien.
+				</p>
+				<p>
+					Donec ac sapien vitae turpis malesuada tempor vel ut nulla. Aliquam vehicula facilisis blandit. Suspendisse bibendum erat vel erat sollicitudin, ut imperdiet felis pretium. Nunc convallis, mi a condimentum pretium, nunc purus varius elit, ac tincidunt sapien elit non sem. Praesent id ipsum at mi aliquam accumsan. Fusce dapibus in leo id finibus. Curabitur hendrerit nisl vitae mauris suscipit, vel ultricies mauris dapibus.
+				</p>
+				<p>
+					Nullam in justo nisi. Maecenas tempor lacinia hendrerit. In hac habitasse platea dictumst. Donec lacus sapien, tincidunt in tellus a, vulputate porttitor est. Fusce ac felis eget ligula ullamcorper venenatis. Cras semper, ante sed tempus luctus, elit augue vehicula turpis, eget lobortis dui magna ac eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin metus ut velit lacinia dignissim. Donec dictum sed justo et finibus. Aliquam pharetra dictum iaculis. Nulla facilisi. Curabitur ullamcorper non dui eu eleifend.
+				</p>
+				<p>
+					Maecenas ex turpis, mollis non mauris sit amet, tempus aliquet ex. Vivamus et ultrices tellus. Maecenas tempus diam turpis, vitae consequat nunc pharetra a. Donec porta ex a tellus vehicula placerat. Nullam id pulvinar est. Nulla luctus pretium ligula sit amet porta. Pellentesque fermentum tempor elit, tempus porta sapien cursus et. Sed tortor ligula, ullamcorper eu tortor nec, pulvinar porttitor urna. Quisque eu neque rhoncus, blandit ante sit amet, sodales diam. Mauris interdum dictum massa, in euismod sem venenatis id. Nunc consectetur risus non diam ornare, eu pulvinar augue eleifend. Fusce nec tempor augue, eu ultrices nunc. Etiam nec purus augue. Maecenas elementum, neque viverra sollicitudin rutrum, urna metus malesuada libero, quis eleifend lacus tortor ac turpis. Donec vel felis velit.
+				</p>
+				<p>
+					Vestibulum cursus vitae diam vel ultricies. Donec scelerisque lacinia sodales. Sed facilisis massa in sem auctor, in iaculis velit egestas. Cras commodo risus a metus tristique, a cursus mi dapibus. Phasellus volutpat erat tincidunt augue sollicitudin efficitur. Quisque in ultrices neque, at aliquam turpis. Quisque tincidunt elementum sodales. Nulla auctor efficitur magna, ut semper leo ultricies vel. Aliquam ac odio eu orci elementum bibendum id ut tellus. Sed sed maximus enim, eu mollis elit. Nullam convallis gravida nisi, dignissim posuere nulla ultrices non. Fusce elementum finibus arcu, ac tempor sem facilisis eu. Curabitur semper faucibus maximus.
+				</p>
+				<p>
+					Praesent neque metus, pharetra vitae dolor et, ultricies vehicula massa. Praesent efficitur libero vitae facilisis dignissim. Fusce eleifend volutpat dolor at hendrerit. Proin at euismod lorem. Maecenas eget posuere orci. Donec convallis nisl arcu, in tristique purus consectetur ut. Ut laoreet sed neque sed volutpat. Ut semper tortor et ipsum volutpat porta. Fusce consectetur urna nulla, quis dapibus erat condimentum ut. Praesent a lacinia ante, non congue massa. Morbi congue tortor turpis, vel lacinia erat aliquam nec. Fusce pellentesque odio non volutpat blandit. Nulla in turpis nisl.
+				</p>
+				<p>
+					Proin fringilla rhoncus risus, nec consectetur nunc interdum at. Mauris posuere turpis quam, ut fringilla arcu molestie vulputate. Cras accumsan maximus tortor tristique condimentum. Fusce leo ex, tempus vel ante sed, varius tristique mi. Cras lobortis erat id nisi tempor, non auctor lectus commodo. Quisque id nisi pulvinar, lobortis nulla eu, mollis massa. Nunc fringilla faucibus placerat. Duis eu euismod lorem. In nec ultrices magna, sit amet tincidunt magna. Cras sollicitudin felis tortor, quis iaculis ligula mollis in. Suspendisse tincidunt vel lorem et tincidunt. Etiam tristique dolor sit amet metus consequat ullamcorper. Duis rutrum arcu et dolor commodo, vel scelerisque justo pulvinar.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- END МОДАЛЬНЫЕ ОКНА -->
 
 	<div class="root">
 		<section id="welcome">
 			<!-- МЕНЮ -->
-			<div class="menu">
+			<div id="main-menu">
+				<!-- LOAD MENU HERE -->
 				<header class="header">
-					<div class="containerX">
-						<div class="header__body">
+					<div class="header__body">
+
+						<nav class="header__menu">
 							<a href="#" class="header__logo">
-								<img src="images/wp1.jpg" alt="">LOGO
+								<img src="images/me_logo.jpg" alt="">
 							</a>
-							<div class="header__burger">
-								<span></span>
+
+							<ul class="header__list">
+								<li>
+									<a href="index.html" class="heder__link">Главная!</a>
+								</li>
+								<li>
+									<a href="" class="heder__link">График 2020</a>
+								</li>
+								<li>
+									<a href="gallery.html" class="heder__link">ФОТО</a>
+								</li>
+								<li>
+									<a href="reviews.html" class="heder__link">ОТЗЫВЫ</a>
+								</li>
+								<li>
+									<a href="" class="heder__link">О НАС</a>
+								</li>
+								<li>
+									<a href="" class="heder__link">Контакты</a>
+								</li>																			
+							</ul>
+							<div class="rightside__menu">
+								<div class="right_social_links">
+									<div class="right_social_links_item">
+										<a href="https://www.instagram.com/boris.efremov/" target="_blank">
+											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30">
+												<desc>Instagram</desc>
+												<path d="M15,11.014 C12.801,11.014 11.015,12.797 11.015,15 C11.015,17.202 12.802,18.987 15,18.987 C17.199,18.987 18.987,17.202 18.987,15 C18.987,12.797 17.199,11.014 15,11.014 L15,11.014 Z M15,17.606 C13.556,17.606 12.393,16.439 12.393,15 C12.393,13.561 13.556,12.394 15,12.394 C16.429,12.394 17.607,13.561 17.607,15 C17.607,16.439 16.444,17.606 15,17.606 L15,17.606 Z"></path>
+												<path d="M19.385,9.556 C18.872,9.556 18.465,9.964 18.465,10.477 C18.465,10.989 18.872,11.396 19.385,11.396 C19.898,11.396 20.306,10.989 20.306,10.477 C20.306,9.964 19.897,9.556 19.385,9.556 L19.385,9.556 Z"></path>
+												<path d="M15.002,0.15 C6.798,0.15 0.149,6.797 0.149,15 C0.149,23.201 6.798,29.85 15.002,29.85 C23.201,29.85 29.852,23.202 29.852,15 C29.852,6.797 23.201,0.15 15.002,0.15 L15.002,0.15 Z M22.666,18.265 C22.666,20.688 20.687,22.666 18.25,22.666 L11.75,22.666 C9.312,22.666 7.333,20.687 7.333,18.28 L7.333,11.734 C7.333,9.312 9.311,7.334 11.75,7.334 L18.25,7.334 C20.688,7.334 22.666,9.312 22.666,11.734 L22.666,18.265 L22.666,18.265 Z"></path>
+											</svg>
+										</a>
+									</div>
+								
+									<div class="right_social_links_item">
+										<a href="https://vk.com/lovekamski" target="_blank">
+											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+												<path d="M47.761,24c0,13.121-10.639,23.76-23.76,23.76C10.878,47.76,0.239,37.121,0.239,24c0-13.123,10.639-23.76,23.762-23.76 C37.122,0.24,47.761,10.877,47.761,24 M35.259,28.999c-2.621-2.433-2.271-2.041,0.89-6.25c1.923-2.562,2.696-4.126,2.45-4.796 c-0.227-0.639-1.64-0.469-1.64-0.469l-4.71,0.029c0,0-0.351-0.048-0.609,0.106c-0.249,0.151-0.414,0.505-0.414,0.505 s-0.742,1.982-1.734,3.669c-2.094,3.559-2.935,3.747-3.277,3.524c-0.796-0.516-0.597-2.068-0.597-3.171 c0-3.449,0.522-4.887-1.02-5.259c-0.511-0.124-0.887-0.205-2.195-0.219c-1.678-0.016-3.101,0.007-3.904,0.398 c-0.536,0.263-0.949,0.847-0.697,0.88c0.31,0.041,1.016,0.192,1.388,0.699c0.484,0.656,0.464,2.131,0.464,2.131 s0.282,4.056-0.646,4.561c-0.632,0.347-1.503-0.36-3.37-3.588c-0.958-1.652-1.68-3.481-1.68-3.481s-0.14-0.344-0.392-0.527 c-0.299-0.222-0.722-0.298-0.722-0.298l-4.469,0.018c0,0-0.674-0.003-0.919,0.289c-0.219,0.259-0.018,0.752-0.018,0.752 s3.499,8.104,7.463,12.23c3.638,3.784,7.764,3.36,7.764,3.36h1.867c0,0,0.566,0.113,0.854-0.189 c0.265-0.288,0.256-0.646,0.256-0.646s-0.034-2.512,1.129-2.883c1.15-0.36,2.624,2.429,4.188,3.497 c1.182,0.812,2.079,0.633,2.079,0.633l4.181-0.056c0,0,2.186-0.136,1.149-1.858C38.281,32.451,37.763,31.321,35.259,28.999"></path>
+											</svg>
+										</a>
+									</div>
+									<div class="right_social_links_item">
+										<a href="https://www.facebook.com/boris.efremov.73/" target="_blank">
+											<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+												<path d="M47.761,24c0,13.121-10.638,23.76-23.758,23.76C10.877,47.76,0.239,37.121,0.239,24c0-13.124,10.638-23.76,23.764-23.76 C37.123,0.24,47.761,10.876,47.761,24 M20.033,38.85H26.2V24.01h4.163l0.539-5.242H26.2v-3.083c0-1.156,0.769-1.427,1.308-1.427 h3.318V9.168L26.258,9.15c-5.072,0-6.225,3.796-6.225,6.224v3.394H17.1v5.242h2.933V38.85z"></path>
+											</svg>
+										</a>
+									</div>
+								</div>	
+								<a data-fancybox data-touch="false" href="#modal" class="get-feedback-btn">Консультация</a>																						
+								<!-- <input type="button" value="Консультация" class="get-feedback-btn"> -->
 							</div>
-							<nav class="header__menu">
-								<ul class="header__list">
-									<li>
-										<a href="" class="heder__link">Главная</a>
-									</li>
-									<li>
-										<a href="" class="heder__link">График 2020</a>
-									</li>
-									<li>
-										<a href="gallery.html" class="heder__link">ФОТО</a>
-									</li>
-									<li>
-										<a href="reviews.html" class="heder__link">ОТЗЫВЫ</a>
-									</li>
-									<li>
-										<a href="" class="heder__link">О НАС</a>
-									</li>
-									<li>
-										<a href="" class="heder__link">Контакты</a>
-									</li>																			
-								</ul>
-							</nav>
-						</div>
+
+						</nav>
+						
+						<div class="header__burger">
+							<span></span>
+						</div>						
 					</div>
-				</header>
+				</header>				
 			</div>
 			<!-- КОНЕЦ МЕНЮ -->
 			<!-- ФОТО-заглушка -->			
-				<div class="hiscreen">
-					<div class="welcometext">
-						Приветствую, тебя мой друг на нашем сайте! Это демо - сайт в разработке.
-					</div>
+			<div class="hiscreen">
+				<div class="welcometext">
+					Приветствую, тебя мой друг на нашем сайте! Это демо - сайт в разработке.
 				</div>
+			</div>
 			<!-- КОНЕЦ ФОТО-ЗАГЛУШКИ -->
 		</section>
 		
 
 		
-
 		<!-- СЕКЦИЯ ТУРЫ -->
-		<section id="ToursList" style="padding-top: 30px;">
+		<section id="ToursList">
+			<div class="wrapper">
+				<div class="block-title">
+					<h1>Расписание туров на 2020 год:</h1>
+				</div>
 
-
-			<!-- Как проверить работу BEETWEEN?
-			d-flex justify-content-between
-			 -->
-			<div class="container">	
-				<div class="row bboxsize">
-					<div class="col-md-6 col-lg-4 mb-3 px-3 tourItem">
+				<div class="flex-container">	
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-11  tourItem">
 						<div class="tourWrapper">
 							<a href="#" class="tourCover">
 								<img src="images/TourCover/tour1.jpg" alt="tour1" class="img-fluid">
@@ -170,7 +244,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-6 col-lg-4 mb-3 px-3 tourItem">
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-11  tourItem">
 						<div class="tourWrapper">
 							<a href="#" class="tourCover">
 								<img src="images/TourCover/tour2.jpg" alt="tour1" class="img-fluid">
@@ -180,7 +254,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-6 col-lg-4 mb-3 px-3 tourItem">	
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-11  tourItem">	
 						<div class="tourWrapper">
 							<a href="#" class="tourCover">
 								<img src="images/TourCover/tour3.jpg" alt="tour1" class="img-fluid">
@@ -190,7 +264,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-6 col-lg-4 mb-3 px-3 tourItem">
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-11  tourItem">
 						<div class="tourWrapper">
 							<a href="#" class="tourCover">
 								<img src="images/TourCover/tour1.jpg" alt="tour1" class="img-fluid">
@@ -200,7 +274,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-6 col-lg-4 mb-3 px-3 tourItem">		
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-11  tourItem">		
 						<div class="tourWrapper">
 							<a href="#" class="tourCover">
 								<img src="images/TourCover/tour2.jpg" alt="tour1" class="img-fluid">
@@ -211,22 +285,22 @@
 					</div>					
 				</div>
 			</div>
-
-
 		</section> 
 
 
 
 
 		<!-- СЕКЦИЯ ПРОГРАММА ПО ДНЯМ -->
-		<div class="containerX">
-		<section id="TourProgram">
-
+		<section id="TourProgram"></section>
+			<div class="wrapper">
+				<div class="block-title">
+					<h1>Подробная программа тура:</h1>
+				</div>				
 				<div class="t778__scroll-icon-wrapper"> <svg class="t778__scroll-icon" style="width:22px;fill:#bebebe;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"> <path d="M97.2 298.2S56.1 225 38.8 193.3c-23-42.2-26.8-60-10.9-68.8 9.9-5.5 23.6-3.2 32 11.4l19.6 31.2V44.8s-1.2-32.3 21.8-32.3c24.5 0 22.4 32.3 22.4 32.3v59.4s12.9-9.3 28-5.1c7.7 2.1 16.7 5.8 21.5 18 0 0 30.7-14.9 46 16.8 0 0 35.4-7 35.4 29.7s-44.2 134.6-44.2 134.6H97.2zM249.9.5l-10.6 10.6 24.1 23.8H158.5v15h105l-24.2 23.9 10.6 10.6 42.5-42z" class="st0"></path> </svg></div>			
 				<div class="days-list">
 					<div class="day-item">
 						<p class="day-item-title">День 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis id asperiores nemo mollitia eos totam.</p>
-						<div class="day-item-content hidden-item">
+						<div class="day-item-content">
 								<img src="images/TourCover/tour1.jpg" alt="photo day 1">
 			
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam optio, adipisci perferendis rem eius quia accusamus cumque quo dolorum quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ullam aliquid accusantium maiores voluptas deserunt in nulla dolorem dicta explicabo?</p>
@@ -235,12 +309,10 @@
 								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut illum asperiores reprehenderit ipsa consequatur, labore dolorum alias blanditiis velit mollitia ullam consequuntur et doloribus ex fugiat, earum quaerat officiis optio tempore esse beatae cumque sequi. Eveniet consectetur placeat quaerat numquam ipsum exercitationem doloremque deserunt. Fuga dolor nostrum excepturi provident iste?</p>
 						</div>
 					</div>
-			
-			
-			
+		
 					<div class="day-item">
 						<p class="day-item-title">День 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis id asperiores nemo mollitia eos totam.</p>
-						<div class="day-item-content hidden-item">
+						<div class="day-item-content">
 								<img src="images/TourCover/tour2.jpg" alt="photo day 1">
 			
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam optio, adipisci perferendis rem eius quia accusamus cumque quo dolorum quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ullam aliquid accusantium maiores voluptas deserunt in nulla dolorem dicta explicabo?</p>
@@ -250,10 +322,9 @@
 						</div>
 					</div>
 			
-			
 					<div class="day-item">
 						<p class="day-item-title">День 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis id asperiores nemo mollitia eos totam.</p>
-						<div class="day-item-content hidden-item">
+						<div class="day-item-content">
 								<img src="images/TourCover/tour3.jpg" alt="photo day 1">
 			
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam optio, adipisci perferendis rem eius quia accusamus cumque quo dolorum quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ullam aliquid accusantium maiores voluptas deserunt in nulla dolorem dicta explicabo?</p>
@@ -264,10 +335,8 @@
 					</div>							
 			
 				</div>
-			
-		</div>
-			
-</section>
+			</div>			
+		</section>
 
 
 		<!-- ФОТО-заглушка -->
@@ -279,70 +348,69 @@
 
 		<!-- БЛОК КРАТКАЯ ИНФОРМАЦИЯ -->
 		<section id="advantages">
-			<div class="containerX">
-				<div class="advWrapper">
-					<div class="advantage">
-						<h6>
+			<div class="wrapper">
+				<div class="flex-container">
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-10 advantage">
+						<h3>
 							Проживание в домиках на кордоне Центральном
-						</h6>
+						</h3>
 						<p>
 							Это важно, так как палатки ставить там запрещено, а от палаточных стоянок до источников идти несколько километров. От домиков до купальни идти "два шага".
 						</p>
 					</div>
-					<div class="advantage">
-						<h6>
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-10 advantage">
+						<h3>
 							Заброска продуктов
-						</h6>
+						</h3>
 						<p>
 							Мы каждый год делаем заброску продуктов на кордон Центральный. Таким образом вам меньше придется нести в рюкзаке.
 						</p>
 					</div>
-					<div class="advantage">
-						<h6>
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-10 advantage">
+						<h3>
 							Облегченный провиант
-						</h6>
+						</h3>
 						<p>
 							Для пешеходных групп мы формируем облегченную продуктовую раскладку: в ней присутствуют сушеные овощи и сушеное мясо, а также качественная тушенка в фольгированной упаковке.
 						</p>
 					</div>
-					<div class="advantage">
-						<h6>
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-10 advantage">
+						<h3>
 							Облегченное снаряжение
-						</h6>
+						</h3>
 						<p>
 							Мы используем палатки облегченной конструкции, при этом сохраняющие свою функциональность для северных регионов.s
 						</p>
 					</div>
-					<div class="advantage">
-						<h6>
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-10 advantage">
+						<h3>
 							Наши гиды местные
-						</h6>
+						</h3>
 						<p>
 							Инструктор знает Камчатку и знает маршрут, по которому ведет группу.
 						</p>
 					</div>
-					<div class="advantage">
-						<h6>
+					<div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-10 advantage">
+						<h3>
 							Гостиница до и после похода
-						</h6>
+						</h3>
 						<p>
 							У вас будет возможность отдохнуть и привести себя в порядок после перелета на Камчатку, а также после похода перед обратным вылетом.
 						</p>
 					</div>
-					<!-- <div class="advantage">7</div> -->
-					<!-- <div class="advantage">8</div> -->
+					<!-- <div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-10 advantage">7</div> -->
+					<!-- <div class="flex-xl-4 flex-lg-4 flex-md-6 flex-sm-10 advantage">8</div> -->
 				</div>
-
 			</div>
 		</section>	
 
 
 <!-- ЗАБИВКА ДЛЯ ПРОБЫ -->
-<section>
-	<div>
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus placeat voluptas reprehenderit molestias maiores alias distinctio provident cupiditate. Aspernatur, distinctio cumque facilis eaque quae fuga unde ullam dolorum quo voluptas nesciunt iure quasi ipsam, labore autem excepturi aliquam odit sint voluptatum sapiente ipsum quos consequatur repudiandae. Earum repudiandae sit amet?</p>
-	</div>
-</section>
+	<section>
+		<div class="wrapper">
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus placeat voluptas reprehenderit molestias maiores alias distinctio provident cupiditate. Aspernatur, distinctio cumque facilis eaque quae fuga unde ullam dolorum quo voluptas nesciunt iure quasi ipsam, labore autem excepturi aliquam odit sint voluptatum sapiente ipsum quos consequatur repudiandae. Earum repudiandae sit amet?</p>
+		</div>
+	</section>
 
 
 <!-- test caruosel -->
@@ -358,11 +426,13 @@
 
 
 	<!-- InstaFeed -->
-	<div id="instagram-feed-demo" class="instagram_feed">
+	<div class="wrapper">
+		<div id="instagram-feed-demo" class="instagram_feed">
+		</div>
 	</div>
 
 	<!-- Slick slider -->
-	<div class="containerX">
+	<div class="wrapper">
 		<div class="slider">
 			<div class="slider__item">
 				<img src="images/slider/sl1.jpg" alt="">
@@ -389,7 +459,7 @@
 
 
 
-    <div class="container">
+    <div class="wrapper">
         <form id="wdh_form" action="wdh_send_form.php">
             <input type="text" name="fio" id="frmFIO" placeholder="Ваше имя">
             <input type="tel" name="tel" id="frmPhoneNumber" placeholder="Контактный телефон">
@@ -398,6 +468,14 @@
         </form>
         <div id="wdh_result_form"></div>
     </div>
+
+
+
+	<script>
+		$(document).ready(function(){
+			// $("#main-menu").load("components/menu.html");
+		}); 
+	</script>
 
 	<script lang="javascript">
 
@@ -458,7 +536,15 @@
 
 		</script>
 
-
+<script>
+    $(document).ready(function(){
+        // init menu
+        $('.header__burger').click(function (event) {
+            $('.header__burger, .header__menu').toggleClass('active');
+            $('body').toggleClass('lock');
+        });
+    });
+</script>
 
 
 	</div>

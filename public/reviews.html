@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Отзывы</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/grid.css">
+
     <!-- Put this script tag to the <head> of your page -->
         <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
 
@@ -19,18 +22,31 @@
 
 
     <style>
-        #vk_comments {
+        /* #vk_comments {
             width: 800px !important;
             margin: auto;
-        }   
+        }    */
     </style>
 </head>
 <body>
+    <div id="main-menu">
+        <!-- LOAD MENU HERE -->
+    </div>
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus a placeat dolor doloremque exercitationem aliquam excepturi distinctio odio earum in.</p>
-    <!-- Put this div tag to the place, where the Comments block will be -->
-    <br>
-    <div id="vk_comments"></div>
+    <div class="wrapper">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus a placeat dolor doloremque exercitationem aliquam excepturi distinctio odio earum in.</p>
+        <!-- Put this div tag to the place, where the Comments block will be -->
+        <br>
+
+        <div id="vk_comments"></div>
+    </div>
+    
+
+    <script>
+        $(document).ready(function(){
+            $("#main-menu").load("components/menu.html");
+        }); 
+    </script>
 
 
 </body>
