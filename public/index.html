@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Google analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165306843-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-165306843-1');
+		</script>
+	<!-- /Google analytics -->
+
 	<meta charset="utf-8">
 	<!-- ВРЕМЕННО!!! ЗАПРЕТ ИНДЕКСАЦИИ СТРАНИЦЫ !!! УБРАТЬ ПОЗЖЕ -->
 	<meta name="robots" content="none">
@@ -31,6 +43,9 @@
 	<!-- УПРАВЛЕНИЕ КЭШИРОВАНИЕМ? Public | Private | no-cache | no-store -->
 	<!-- <meta http-equiv="Cache-control" content="Public"> -->
 	
+	<!-- ШРИФТЫ -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
 	<!-- СВОИ СТИЛИ -->
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/ToursList.css">
@@ -45,32 +60,19 @@
 	<!-- InstagramFeed -->
 	<script src="js/jquery.instagramFeed.js"></script>
 	<!-- Owl caruosel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script> -->
 	<!-- Slick -->
 	<link rel="stylesheet" href="css/my-slick.css">
 	<script src="js/slick.min.js"></script>
 
-	<script>
-		(function($){
-				$(window).on('load', function(){
-					$.instagramFeed({
-						'username': 'boris.efremov',
-						'container': "#instagram-feed-demo",
-						'display_profile': true,
-						'display_biography': true,
-						'display_gallery': true,
-						 'get_raw_json': false,
-						'callback': null,
-						'styling': true,
-						'items': 8,
-						'items_per_row': 4,
-						'margin': 1 
-					});
-				});
-			})(jQuery);
+	<!-- Mask input -->
+	<!-- <script src="js/imask.js"></script> -->
 
+
+
+	<script>
 
 		$(document).ready(function(){
 			// РЕАЛИЗАЦИЯ ВЫПАДАЮЩИХ БЛОКОВ 
@@ -94,51 +96,16 @@
 
 </head>
 <body>
-
+	<!-- Progress bar -->
+	<div class="top-scroll">
+		<div class="progress-container">
+		  <div class="progress-bar" id="myBar"></div>
+		</div>
+	  </div>	
+	<!-- END Progress bar -->
 	<!-- МОДАЛЬНЫЕ ОКНА -->
-	<div id="modal">
-		<div class="content-header">
-			<button class="btn" onclick="javascript:$('#more').toggle();;">Toggle content</button>
-		</div>
-		<div class="content-scroll">
-			<p>
-				Cras at massa a tortor laoreet ullamcorper ac vitae felis. In ut sodales felis. Nam ante diam, porttitor ac sapien eu, hendrerit finibus mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-			</p>
-			<div id="more">
-				<p>
-					Ut auctor, justo et convallis viverra, risus augue egestas orci, vel pellentesque elit orci vel nisi. Duis in vehicula ligula, et finibus velit. Ut eu urna varius ligula tincidunt maximus. Fusce tincidunt tortor ac risus placerat laoreet. Cras feugiat, nibh ut vulputate mollis, diam lectus hendrerit mauris, euismod elementum velit diam sit amet nisl. Curabitur auctor ex felis, quis interdum ligula euismod non. Cras dignissim commodo nibh, a feugiat purus scelerisque at. 
-				</p>
-				<p>
-					Quisque commodo elementum quam, id faucibus dui euismod in. Nam dapibus, libero ut feugiat commodo, velit velit ultricies tortor, auctor eleifend lorem tellus in urna. Phasellus nunc metus, facilisis eget malesuada cursus, tempus vitae nisl. Maecenas condimentum turpis libero, quis varius orci lacinia non. Donec vel massa elementum, molestie tortor vel, laoreet justo. Suspendisse potenti. Maecenas et luctus libero.
-				</p>
-				<p>
-					Proin tincidunt vestibulum velit, a congue odio porta interdum. Nunc congue congue enim vel vestibulum. Fusce ac diam at sem rhoncus tristique. Nullam imperdiet rhoncus mi et feugiat. Praesent tempus convallis mattis. Mauris sit amet ante non dui ullamcorper pretium eget quis lacus. Duis id velit est. Fusce a convallis purus. Nullam non orci risus. Vivamus sed vulputate eros. Sed non bibendum turpis. Sed gravida lorem sem, et hendrerit erat cursus nec. Proin feugiat purus ut varius suscipit. Aenean lobortis sem eget lacinia eleifend. Morbi vulputate sodales lobortis.
-				</p>
-				<p>
-					Nunc vitae est orci. Vivamus dignissim ex eu turpis dignissim, nec finibus dui faucibus. Vestibulum sed orci id elit tincidunt elementum. Aliquam imperdiet dictum tellus, sed iaculis sem ornare sed. Quisque blandit malesuada efficitur. Nulla molestie ultrices ornare. Nulla placerat enim eu pulvinar hendrerit. Pellentesque a consectetur erat. Pellentesque quis enim ut magna tincidunt egestas vel suscipit mauris. Donec porttitor venenatis finibus. Proin sit amet fermentum magna. Quisque lorem nibh, viverra quis libero quis, semper pulvinar sapien.
-				</p>
-				<p>
-					Donec ac sapien vitae turpis malesuada tempor vel ut nulla. Aliquam vehicula facilisis blandit. Suspendisse bibendum erat vel erat sollicitudin, ut imperdiet felis pretium. Nunc convallis, mi a condimentum pretium, nunc purus varius elit, ac tincidunt sapien elit non sem. Praesent id ipsum at mi aliquam accumsan. Fusce dapibus in leo id finibus. Curabitur hendrerit nisl vitae mauris suscipit, vel ultricies mauris dapibus.
-				</p>
-				<p>
-					Nullam in justo nisi. Maecenas tempor lacinia hendrerit. In hac habitasse platea dictumst. Donec lacus sapien, tincidunt in tellus a, vulputate porttitor est. Fusce ac felis eget ligula ullamcorper venenatis. Cras semper, ante sed tempus luctus, elit augue vehicula turpis, eget lobortis dui magna ac eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin metus ut velit lacinia dignissim. Donec dictum sed justo et finibus. Aliquam pharetra dictum iaculis. Nulla facilisi. Curabitur ullamcorper non dui eu eleifend.
-				</p>
-				<p>
-					Maecenas ex turpis, mollis non mauris sit amet, tempus aliquet ex. Vivamus et ultrices tellus. Maecenas tempus diam turpis, vitae consequat nunc pharetra a. Donec porta ex a tellus vehicula placerat. Nullam id pulvinar est. Nulla luctus pretium ligula sit amet porta. Pellentesque fermentum tempor elit, tempus porta sapien cursus et. Sed tortor ligula, ullamcorper eu tortor nec, pulvinar porttitor urna. Quisque eu neque rhoncus, blandit ante sit amet, sodales diam. Mauris interdum dictum massa, in euismod sem venenatis id. Nunc consectetur risus non diam ornare, eu pulvinar augue eleifend. Fusce nec tempor augue, eu ultrices nunc. Etiam nec purus augue. Maecenas elementum, neque viverra sollicitudin rutrum, urna metus malesuada libero, quis eleifend lacus tortor ac turpis. Donec vel felis velit.
-				</p>
-				<p>
-					Vestibulum cursus vitae diam vel ultricies. Donec scelerisque lacinia sodales. Sed facilisis massa in sem auctor, in iaculis velit egestas. Cras commodo risus a metus tristique, a cursus mi dapibus. Phasellus volutpat erat tincidunt augue sollicitudin efficitur. Quisque in ultrices neque, at aliquam turpis. Quisque tincidunt elementum sodales. Nulla auctor efficitur magna, ut semper leo ultricies vel. Aliquam ac odio eu orci elementum bibendum id ut tellus. Sed sed maximus enim, eu mollis elit. Nullam convallis gravida nisi, dignissim posuere nulla ultrices non. Fusce elementum finibus arcu, ac tempor sem facilisis eu. Curabitur semper faucibus maximus.
-				</p>
-				<p>
-					Praesent neque metus, pharetra vitae dolor et, ultricies vehicula massa. Praesent efficitur libero vitae facilisis dignissim. Fusce eleifend volutpat dolor at hendrerit. Proin at euismod lorem. Maecenas eget posuere orci. Donec convallis nisl arcu, in tristique purus consectetur ut. Ut laoreet sed neque sed volutpat. Ut semper tortor et ipsum volutpat porta. Fusce consectetur urna nulla, quis dapibus erat condimentum ut. Praesent a lacinia ante, non congue massa. Morbi congue tortor turpis, vel lacinia erat aliquam nec. Fusce pellentesque odio non volutpat blandit. Nulla in turpis nisl.
-				</p>
-				<p>
-					Proin fringilla rhoncus risus, nec consectetur nunc interdum at. Mauris posuere turpis quam, ut fringilla arcu molestie vulputate. Cras accumsan maximus tortor tristique condimentum. Fusce leo ex, tempus vel ante sed, varius tristique mi. Cras lobortis erat id nisi tempor, non auctor lectus commodo. Quisque id nisi pulvinar, lobortis nulla eu, mollis massa. Nunc fringilla faucibus placerat. Duis eu euismod lorem. In nec ultrices magna, sit amet tincidunt magna. Cras sollicitudin felis tortor, quis iaculis ligula mollis in. Suspendisse tincidunt vel lorem et tincidunt. Etiam tristique dolor sit amet metus consequat ullamcorper. Duis rutrum arcu et dolor commodo, vel scelerisque justo pulvinar.
-				</p>
-			</div>
-		</div>
-	</div>
-
+	<!-- код перенесен в отдельный get-consult.html -->
+	
 	<!-- END МОДАЛЬНЫЕ ОКНА -->
 
 	<div class="root">
@@ -156,7 +123,7 @@
 
 							<ul class="header__list">
 								<li>
-									<a href="index.html" class="heder__link">Главная!</a>
+									<a href="index.html" class="heder__link">Главная</a>
 								</li>
 								<li>
 									<a href="" class="heder__link">График 2020</a>
@@ -202,8 +169,7 @@
 										</a>
 									</div>
 								</div>	
-								<a data-fancybox data-touch="false" href="#modal" class="get-feedback-btn">Консультация</a>																						
-								<!-- <input type="button" value="Консультация" class="get-feedback-btn"> -->
+								<a data-fancybox data-type="ajax" data-src="https://boris-trip.com/get-consult.html"  class="get-feedback-btn">Консультация</a>
 							</div>
 
 						</nav>
@@ -224,13 +190,12 @@
 			<!-- КОНЕЦ ФОТО-ЗАГЛУШКИ -->
 		</section>
 		
-
 		
 		<!-- СЕКЦИЯ ТУРЫ -->
 		<section id="ToursList">
 			<div class="wrapper">
 				<div class="block-title">
-					<h1>Расписание туров на 2020 год:</h1>
+					<h4>Расписание туров на 2020 год:</h4>
 				</div>
 
 				<div class="flex-container">	
@@ -289,12 +254,11 @@
 
 
 
-
 		<!-- СЕКЦИЯ ПРОГРАММА ПО ДНЯМ -->
 		<section id="TourProgram"></section>
 			<div class="wrapper">
 				<div class="block-title">
-					<h1>Подробная программа тура:</h1>
+					<h4>Подробная программа тура:</h4>
 				</div>				
 				<div class="t778__scroll-icon-wrapper"> <svg class="t778__scroll-icon" style="width:22px;fill:#bebebe;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"> <path d="M97.2 298.2S56.1 225 38.8 193.3c-23-42.2-26.8-60-10.9-68.8 9.9-5.5 23.6-3.2 32 11.4l19.6 31.2V44.8s-1.2-32.3 21.8-32.3c24.5 0 22.4 32.3 22.4 32.3v59.4s12.9-9.3 28-5.1c7.7 2.1 16.7 5.8 21.5 18 0 0 30.7-14.9 46 16.8 0 0 35.4-7 35.4 29.7s-44.2 134.6-44.2 134.6H97.2zM249.9.5l-10.6 10.6 24.1 23.8H158.5v15h105l-24.2 23.9 10.6 10.6 42.5-42z" class="st0"></path> </svg></div>			
 				<div class="days-list">
@@ -413,23 +377,34 @@
 	</section>
 
 
-<!-- test caruosel -->
-<!-- <div class="owl-carousel owl-theme">
-	<div> Your Content </div>
-	<div> Your Content </div>
-	<div> Your Content </div>
-	<div> Your Content </div>
-	<div> Your Content </div>
-	<div> Your Content </div>
-	<div> Your Content </div>
-  </div> -->
-
 
 	<!-- InstaFeed -->
 	<div class="wrapper">
-		<div id="instagram-feed-demo" class="instagram_feed">
+		<div id="instagram-feed-demo" class="instagram_feed clearfix">
 		</div>
 	</div>
+		
+
+	<script>
+		(function($){
+		$(window).on('load', function(){
+			$.instagramFeed({
+				'username': 'boris.efremov',
+				'container': "#instagram-feed-demo",
+				'display_profile': true,
+				'display_biography': true,
+				'display_gallery': true,
+					'get_raw_json': false,
+				'callback': null,
+				'styling': true,
+				'items': 8,
+				'items_per_row': 4,
+				'margin': 1 
+			});
+		});
+	})(jQuery);
+	</script>
+
 
 	<!-- Slick slider -->
 	<div class="wrapper">
@@ -458,28 +433,36 @@
 	</div>
 
 
-
-    <div class="wrapper">
-        <form id="wdh_form" action="wdh_send_form.php">
-            <input type="text" name="fio" id="frmFIO" placeholder="Ваше имя">
-            <input type="tel" name="tel" id="frmPhoneNumber" placeholder="Контактный телефон">
-            <input type="email" name="email" id="frmEmail">
-            <input type="submit" name="RequestFrm" value="ОТПРАВИТЬ">
-        </form>
-        <div id="wdh_result_form"></div>
-    </div>
+	<!-- Disable sending Form by press ENTER -->
+	<script>
+		// DEBUG!!!
+		window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='textarea'){e.preventDefault();return false;}}},true);
+	</script>
 
 
 
 	<script>
 		$(document).ready(function(){
 			// $("#main-menu").load("components/menu.html");
+
 		}); 
 	</script>
 
 	<script lang="javascript">
 
 		$(document).ready(function(){
+
+				// Pregress bar init
+				// When the user scrolls the page, execute myFunction
+				window.onscroll = function() {myFunction()};
+
+				function myFunction() {
+				var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+				var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+				var scrolled = (winScroll / height) * 100;
+				document.getElementById("myBar").style.width = scrolled + "%";
+				}				
+
 				//   Slick init
 				$('.slider').slick({
 						//accessibility:true,
@@ -519,20 +502,7 @@
 						// slidesToScroll: 1
 				});
 			});
-		
-			$("#wdh_form").submit(function(e){
-            e.preventDefault();
-            $.ajax({
-                type: "POST",
-                url: "wdh_send_form.php",
-                data: $("#wdh_form").serialize(),
-                success: function(data) {
-                    // $("#wdh_result_form").css("display:block;");
-                    $("#wdh_result_form").html(data);
-                }
-            });
-        });		
-
+				
 
 		</script>
 
