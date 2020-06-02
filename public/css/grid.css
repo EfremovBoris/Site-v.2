@@ -134,7 +134,7 @@
         display: none!important
     }
     .wrapper {
-        max-width: 960px
+        max-width: 1200px
     }
     .flex-lg-12 {
         padding: 0 15px;
@@ -191,7 +191,7 @@
         display: none!important
     }
     .wrapper {
-        max-width: 720px
+        max-width: 900px
     }
     .flex-md-12 {
         padding: 0 15px;
@@ -248,55 +248,55 @@
         display: none!important
     }
     .wrapper {
-        max-width: 540px;
-        padding: 0 15px
+        max-width: 730px;
+        padding: 0 10px
     }
     .flex-sm-12 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 100%
     }
     .flex-sm-11 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 91.66667%
     }
     .flex-sm-10 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 83.33333%
     }
     .flex-sm-9 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 75%
     }
     .flex-sm-8 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 66.66667%
     }
     .flex-sm-7 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 58.33333%
     }
     .flex-sm-6 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 50%
     }
     .flex-sm-5 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 41.66667%
     }
     .flex-sm-4 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 33.33333%
     }
     .flex-sm-3 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 25%
     }
     .flex-sm-2 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 16.66667%
     }
     .flex-sm-1 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 8.33333%
     }
 }
@@ -314,51 +314,51 @@
         display: none!important
     }
     .flex-xs-12 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 100%
     }
     .flex-xs-11 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 91.66667%
     }
     .flex-xs-10 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 83.33333%
     }
     .flex-xs-9 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 75%
     }
     .flex-xs-8 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 66.66667%
     }
     .flex-xs-7 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 58.33333%
     }
     .flex-xs-6 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 50%
     }
     .flex-xs-5 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 41.66667%
     }
     .flex-xs-4 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 33.33333%
     }
     .flex-xs-3 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 25%
     }
     .flex-xs-2 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 16.66667%
     }
     .flex-xs-1 {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 8.33333%
     }
 
