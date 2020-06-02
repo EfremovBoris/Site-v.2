@@ -1,3 +1,14 @@
+<!-- /////////////////////////   PROGRESS BAR   ///////////////////////////////// -->
+<div class="top-scroll">
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+</div>	
+<!-- END Progress bar ////////////-->
+
+
+<!-- /////////////////////////   MAIN MENU   ///////////////////////////////// -->
+                
 <header class="header">
     <div class="header__body">
 
@@ -55,7 +66,7 @@
                     </div>
                 </div>	
                 
-                <a data-fancybox data-type="ajax" data-src="https://boris-trip.com/get-consult.html" href="javascript:;" class="get-feedback-btn">Консультация</a>
+                <a data-fancybox data-type="ajax" data-src="https://boris-trip.com/components/get-consult.html" href="javascript:;" class="get-feedback-btn">Консультация</a>
                 <!-- <a data-fancybox data-touch="false" href="#modal" class="get-feedback-btn">Консультация</a>																						 -->
                 <!-- <input type="button" value="Консультация" class="get-feedback-btn"> -->
             </div>
@@ -66,14 +77,4 @@
             <span></span>
         </div>						
     </div>
-</header>	
-
-<script>
-    $(document).ready(function(){
-        // init menu
-        $('.header__burger').click(function (event) {
-            $('.header__burger, .header__menu').toggleClass('active');
-            $('body').toggleClass('lock');
-        });
-    });
-</script>
+</header>

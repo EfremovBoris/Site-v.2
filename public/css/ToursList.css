@@ -53,14 +53,11 @@ body {
 }
 
 .main {
-	min-height: calc(100vh - 86px);
+	/* footer height check below */
+	min-height: calc(100vh - 64px); 
 	padding-top: 90px;
 }
 
-/* .menu {
-	background-color: rgba(68,93,227,.5);
-	color: #fff;
-} */
 
 .img-fluid {
 	width: 100%;
@@ -109,7 +106,7 @@ background: linear-gradient(180deg, rgba(177,80,180,0.2805497198879552) 23%, rgb
 }
 
 .welcometext {
-	padding: 0 10px;
+	padding: 0 15px;
 	font-size: 30px;
 	color: #fff;
 	z-index: 2;
@@ -379,14 +376,36 @@ em {
 
 
 .tourWrapper:hover {
-	box-shadow: 2px -3px 0 2px rgb(70, 69, 69), 0 0 0;
+	box-shadow: 2px 2px 0 1px rgb(70, 69, 69), 0 0 0;
 }
 
 .tour-content-text {
 	padding: 10px;
 	color: #000;
-	/* height: auto; */
 }
+
+.tour-content-btn {
+	padding: 10px;
+	display: inline-block;
+}
+
+.get-tourinfo-btn {
+	height: 30px;
+	display: flex;
+	align-items: center;
+	font-size: 0.8rem;
+	border: black 1px solid;
+	border-radius: 5px;
+	background-color: #d90070;
+	color: #fff;
+	padding: 5px 10px;
+	margin-left: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
 
 
 /* КОНЕЦ ТУРЫ на ГЛАВНОЙ */
@@ -572,9 +591,9 @@ p.day-item-title {
 	/* bottom: 0; */
 	background-color: #6B6B6B;
 	color: #fff;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	width: 100%;
-	padding: 20px;
+	padding: 10px;
 	text-align: center;
 
 }

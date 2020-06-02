@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-
-    <link rel="stylesheet" href="css/ToursList.css">
-    <link rel="stylesheet" href="css/grid.css">
-    <!-- <link rel="stylesheet" href="css/chocolat.css">
-    <script src="js/chocolat.js"></script> -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- TRY FANCYBOX -->
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <script src="js/jquery.fancybox.min.js"></script>
-
-
     <title>Фото галлерея из туров</title>
+    
+    
+	<!-- ext CSS  -->    
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+	<!-- view CSS  -->
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/ToursList.css">
+    
 
     <style>
         .gallerybox__item {
@@ -34,7 +30,6 @@
         .gallerybox__item img:hover {
             box-shadow: 1px 1px 10px blue;
         }        
-
     </style>
 
 </head>
@@ -97,26 +92,13 @@
     </div>
     <!-- END of FOOTER -->
 
-    <script>
-    // 	Chocolat(document.querySelectorAll('.chocolat-image'), {
-    // 		loop: false,
-    // 		imageSize: 'scale-down',
-    // 		linkImages: true,
-    // 		closeOnBackgroundClick: true,
-    // 		setTitle : function () { return 'set title' },
-    // 		fullScreen: false
-    // })
-    </script>
 
+    <!-- ext JS ////////////-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-            $("#main-menu").load("components/menu.html");
-            $("#footer").load("components/footer.html");
-        }); 
-    </script>
-
-
+	<!-- view JS ////////////-->
+    <script src="js/core.js"></script>
 
 </body>
 </html>

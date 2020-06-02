@@ -5,26 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Отзывы</title>
 
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/ToursList.css">
-    <!-- <link rel="stylesheet" href="css/chocolat.css">
-    <script src="js/chocolat.js"></script> -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- TRY FANCYBOX -->
+	<!-- ext CSS  -->    
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <script src="js/jquery.fancybox.min.js"></script>
 
+	<!-- view CSS  -->
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/ToursList.css">  
 
     <!-- Put this script tag to the <head> of your page -->
     <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
 
     <script type="text/javascript">
-    VK.init({apiId: 7464645, onlyWidgets: true});
+        VK.init({apiId: 7464645, onlyWidgets: true});
     </script>
-    
-    <script type="text/javascript">
-    VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
+    <script>
+        VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
     </script>
 </head>
 <body>
@@ -48,13 +43,12 @@
     </div>
     <!-- END of FOOTER -->
 
-    <script>
-        $(document).ready(function(){
-            $("#main-menu").load("components/menu.html");
-            $("#footer").load("components/footer.html");
-        }); 
-    </script>
+    <!-- ext JS ////////////-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
 
+	<!-- view JS ////////////-->
+    <script src="js/core.js"></script>
 
 </body>
 </html>
