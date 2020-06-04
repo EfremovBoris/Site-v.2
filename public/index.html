@@ -50,6 +50,7 @@
 	<!-- Fonts -->
 
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
 	<!-- ext CSS  -->
 
@@ -75,6 +76,7 @@
 			<!-- later CUT XXX  -->
 			<div id="main-menuXXX">   
 
+
 				<!-- Progress bar ///////////////////-->
 				<div class="top-scroll">
 					<div class="progress-container">
@@ -97,7 +99,7 @@
 									<a href="index.html" class="heder__link">Главная</a>
 								</li>
 								<li>
-									<a href="" class="heder__link">График 2020</a>
+									<a href="index.html#schedule" class="heder__link">График 2020</a>
 								</li>
 								<li>
 									<a href="gallery.html" class="heder__link">ФОТО</a>
@@ -109,7 +111,7 @@
 									<a href="about us.html" class="heder__link">О НАС</a>
 								</li>
 								<li>
-									<a href="" class="heder__link">Контакты</a>
+									<a href="video.html" class="heder__link">Контакты</a>
 								</li>																			
 							</ul>
 							<div class="rightside__menu">
@@ -149,7 +151,7 @@
 							<span></span>
 						</div>						
 					</div>
-				</header>				
+				</header>
 			</div>
 			<!-- КОНЕЦ МЕНЮ -->
 
@@ -163,8 +165,9 @@
 		</section>
 		
 		
+
 		<!-- СЕКЦИЯ ТУРЫ -->
-		<section id="ToursList">
+		<section id="schedule">
 			<div class="wrapper">
 				<div class="block-title">
 					<h4>Расписание туров на 2020 год:</h4>
@@ -369,7 +372,8 @@
 
 
 	<!-- InstaFeed -->
-	<div class="wrapper">
+
+	<div id="insta" class="wrapper">
 		<div id="instagram-feed-demo" class="instagram_feed clearfix">
 		</div>
 	</div>
@@ -404,13 +408,16 @@
 	<!-- FOOTER -->
 	<div id="footer" class="footer">
 		<!-- load footer here -->
+		<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."footer.html");  ?>
 	</div>
 	<!-- END of FOOTER -->
 
 
 	<!-- ext JS ////////////-->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<script src="js/jquery.min.js"></script>
+
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/jquery.instagramFeed.js"></script>
 	<!-- <script src="js/owl.carousel.min.js"></script> -->
@@ -426,10 +433,10 @@
 	<!-- Code aux ////////////-->
 
 	<!-- Disable sending Form by press ENTER -->
-	<script>
+	<!-- <script>
 		// DEBUG!!! not working
 		window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='textarea'){e.preventDefault();return false;}}},true);
-	</script>
+	</script> -->
 
 
 	<script>

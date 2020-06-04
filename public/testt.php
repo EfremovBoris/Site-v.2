@@ -1,0 +1,1 @@
+<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>

@@ -17,18 +17,28 @@
     <style>
         .gallerybox__item {
             padding: 5px 10px;
+            /* border: 1px solid red; */
         }
 
-        .gallerybox__item img {
-            width: 100%;
-            height: 100%;
-            border: 2px solid #fff;            
+        .gallerybox__item_inside {
+            overflow: hidden;
+            border: 2px solid rgb(255, 255, 255);            
             border-radius: 10px;
-            cursor: pointer !important;                        
+            cursor: pointer !important;
         }
 
-        .gallerybox__item img:hover {
-            box-shadow: 1px 1px 10px blue;
+        .gallerybox__item_inside img {
+            width: 100%;
+            transform: scale(1.05);
+            object-fit: cover;
+            transition: transform .5s ease;
+            /* filter: grayscale(40%); */
+        }
+
+        .gallerybox__item_inside img:hover {
+            transform: scale(1.3);
+            /* filter: grayscale(0%); */
+            /* box-shadow: 1px 1px 10px blue; */
         }        
     </style>
 
@@ -37,48 +47,73 @@
 
     <div id="main-menu">
         <!-- LOAD MENU HERE -->
+        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>
     </div>
 
     <div class="main">
         <div class="wrapper">
             <div class="flex-container" style="overflow: hidden;">
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" data-caption="My caption 1" class="chocolat-image" href="images/gallery/gal1.jpg"><img src="images/gallery/small/gal_thumb1.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" data-caption="My caption 1" class="chocolat-image" href="images/gallery/gal1.jpg"><img src="images/gallery/small/gal_thumb1.jpg" alt=""></a>
+                    </div>
                 </div>
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" data-caption="My caption 2" class="chocolat-image" href="images/gallery/gal2.jpg"><img src="images/gallery/small/gal_thumb2.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" data-caption="My caption 2" class="chocolat-image" href="images/gallery/gal2.jpg"><img src="images/gallery/small/gal_thumb2.jpg" alt=""></a>
+                    </div>
                 </div>
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal3.jpg"><img src="images/gallery/small/gal_thumb3.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal3.jpg"><img src="images/gallery/small/gal_thumb3.jpg" alt=""></a>
+                    </div>
                 </div>    
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal4.jpg"><img src="images/gallery/small/gal_thumb4.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal4.jpg"><img src="images/gallery/small/gal_thumb4.jpg" alt=""></a>
+                    </div>
                 </div>     
                 
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal5.jpg"><img src="images/gallery/small/gal_thumb5.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal5.jpg"><img src="images/gallery/small/gal_thumb5.jpg" alt=""></a>
+                    </div>
                 </div>
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal6.jpg"><img src="images/gallery/small/gal_thumb6.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal6.jpg"><img src="images/gallery/small/gal_thumb6.jpg" alt=""></a>
+                    </div>
                 </div>
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal7.jpg"><img src="images/gallery/small/gal_thumb7.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal7.jpg"><img src="images/gallery/small/gal_thumb7.jpg" alt=""></a>
+                    </div>
                 </div>    
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal8.jpg"><img src="images/gallery/small/gal_thumb8.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal8.jpg"><img src="images/gallery/small/gal_thumb8.jpg" alt=""></a>
+                    </div>
                 </div> 
         
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal9.jpg"><img src="images/gallery/small/gal_thumb9.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal9.jpg"><img src="images/gallery/small/gal_thumb9.jpg" alt=""></a>
+                    </div>
                 </div>
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal10.jpg"><img src="images/gallery/small/gal_thumb10.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal10.jpg"><img src="images/gallery/small/gal_thumb10.jpg" alt=""></a>
+                    </div>
                 </div>
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal11.jpg"><img src="images/gallery/small/gal_thumb11.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal11.jpg"><img src="images/gallery/small/gal_thumb11.jpg" alt=""></a>
+                    </div>
                 </div>    
                 <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal12.jpg"><img src="images/gallery/small/gal_thumb12.jpg" alt=""></a>
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal12.jpg"><img src="images/gallery/small/gal_thumb12.jpg" alt=""></a>
+                    </div>
                 </div> 
                 
             </div>
@@ -89,6 +124,7 @@
     <!-- FOOTER -->
     <div id="footer" class="footer">
         <!-- load footer here -->
+        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."footer.html");  ?>
     </div>
     <!-- END of FOOTER -->
 

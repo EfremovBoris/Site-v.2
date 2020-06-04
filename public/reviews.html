@@ -21,10 +21,15 @@
     <script>
         VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
     </script>
+
+    <!-- FACEBOOK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v7.0&appId=726283924830914&autoLogAppEvents=1"></script>
 </head>
 <body>
     <div id="main-menu">
         <!-- LOAD MENU HERE -->
+        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>
     </div>
 
     <div class="main">
@@ -34,12 +39,15 @@
             <br>
 
             <div id="vk_comments"></div>
+
+            <div class="fb-comments" data-href="https://boris-trip.com/reviews.html" data-numposts="5" data-width=""></div>
         </div>
     </div>
 
     <!-- FOOTER -->
     <div id="footer" class="footer">
         <!-- load footer here -->
+        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."footer.html");  ?>
     </div>
     <!-- END of FOOTER -->
 

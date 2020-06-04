@@ -1,7 +1,8 @@
     // Load const components /////////////////////////////////////////////////
-    $("#main-menu").load("components/menu.html");
-    $("#footer").load("components/footer.html");
+    // $("#main-menu").load("components/menu.html");
+    // $("#footer").load("components/footer.html");
 
+    
 
     $(document).ready(function(){
 
@@ -17,9 +18,22 @@
 
         // init BURGER menu /////////////////////////////////////////////////
         $('.header__burger').click(function (event) {
+            // alert('hello');
             $('.header__burger, .header__menu').toggleClass('active');
             $('body').toggleClass('lock');
         });
+
+        //  GO to TOP button activation  /////////////////////////////////////////////////
+        
+        // function scrollFunction() {
+        //     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        //       document.getElementById("navbar").style.padding = "30px 10px";
+        //       document.getElementById("logo").style.fontSize = "25px";
+        //     } else {
+        //       document.getElementById("navbar").style.padding = "80px 10px";
+        //       document.getElementById("logo").style.fontSize = "35px";
+        //     }
+        //   }
 
 
         // InstagramFeed init /////////////////////////////////////////////////
