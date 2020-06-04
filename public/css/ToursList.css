@@ -399,6 +399,19 @@ background: linear-gradient(180deg, rgba(177,80,180,0.2805497198879552) 23%, rgb
 	}
 
 
+	/* Scroll to top */
+	.scroll-top-btn {
+		display: none;
+		position: fixed;
+		z-index: 100000;
+		right: 30px;
+		bottom: 50px;
+		min-width: 50px;
+		min-height: 50px;
+		background-color: orange;
+		border-radius: 50%;
+	}	
+
 	/* menu EFFECTS */
 	.header__menu ul>li>a:hover {
 		color: #8ac832;
