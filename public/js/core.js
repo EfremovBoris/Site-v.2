@@ -71,6 +71,21 @@
             });
 
 
+			// Accordion component onClick handler /////////////////////////////////////////////////
+			$(".acc-header").click(function(){
+				var isopen = $(this).hasClass("_opened");
+				if (isopen == false) {
+					// $(this).children(".acc-header-btn").toggleClass("rotated90");
+					$(this).next('.acc-content').css('max-height', '500px');
+				} else {
+					// $(this).children(".acc-header-btn").toggleClass("rotated90");
+					$(this).next('.acc-content').css('max-height', '0');
+				}
+				$(this).children(".acc-header-btn").toggleClass("rotated90");
+				$(this).toggleClass("_opened");
+			});
+
+
         // InstagramFeed init /////////////////////////////////////////////////
         (function($){
             $(window).on('load', function(){
