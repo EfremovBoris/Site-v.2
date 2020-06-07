@@ -32,15 +32,15 @@
                             <p>Камчатка с Севера на Юг</p>
                         </div>
                         <div class="slider__item">
-                            <img src="images/TourCover/ko_main1.jpg" alt="">
+                            <img data-src="images/TourCover/ko_main1.jpg" class="lazyload" alt="">
                             <p>Налычево - природный парк</p>
                         </div>
                         <div class="slider__item">
-                            <img src="images/TourCover/bak_main1.jpg" alt="">
+                            <img data-src="images/TourCover/bak_main1.jpg" class="lazyload" alt="">
                             <p>Ожерелье озер Бакенинга</p>
                         </div>
                         <div class="slider__item">
-                            <img src="images/TourCover/kazbek_geo_main1.jpg" alt="">
+                            <img data-src="images/TourCover/kazbek_geo_main1.jpg" class="lazyload" alt="">
                             <p>Казбек!</p>
                         </div>
                     </div>
@@ -229,8 +229,9 @@
 
 
         <!-- Google maps embed -->
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JZduRuQFfiCdsVvQQlPJaAaKEBGwOrup&z=10" width="640" height="480"></iframe>
-                     
+        <div class="thumb-wrap">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JZduRuQFfiCdsVvQQlPJaAaKEBGwOrup&z=10"></iframe>
+        </div>             
 
     </div>
 
@@ -247,6 +248,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/lazysizes.min.js" async></script>
 
 	<!-- view JS ////////////-->
     <script src="js/core.js"></script>    

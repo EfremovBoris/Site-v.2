@@ -84,7 +84,7 @@
 .slider .slick-arrow{
     position: absolute;
     top: 0;
-    z-index: 3;
+    z-index: 1;
     font-size: 0;  /*hide caption of buttons*/
     height: 100%;
     width: 40px;
