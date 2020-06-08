@@ -580,6 +580,7 @@ em {
 .day-item {
 	margin-bottom: 10px;
 	padding-bottom: 30px;
+	background-color: #fff;
 }
 
 .day-item-title {
@@ -903,3 +904,46 @@ em {
 	border-width: 0;
 	outline-width: 0;
   }
+
+
+
+  /* Show more details in block */
+
+  .show-more-block:not(.expanded) {
+    max-height: 300px;
+    cursor: pointer;
+}
+
+.show-more-block {
+    overflow-y: hidden;
+    position: relative;
+}
+
+
+.show-more-block:not(.expanded):after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    content: "";
+    background: linear-gradient(to top,rgba(255,255,255,1) 20%,rgba(255,255,255,0) 100%);
+	margin: 0;
+	/* border: 1px solid red; */
+}
+
+
+.show-more-block:not(.expanded):before {
+	position: absolute;
+	left: 10px;
+	top: 85%;
+	content: "еще \2192";
+	/*\2023 00BB 2192*/
+	color: rgb(245, 222, 10);
+	font-size: 14px;
+	font-weight: 700;
+	background-color: rgba(10, 10, 10, .5);
+	padding: 2px 5px;
+	z-index: 1;
+	border-radius: 10px;
+}

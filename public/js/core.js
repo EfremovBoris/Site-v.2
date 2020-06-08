@@ -86,6 +86,12 @@
 			});
 
 
+		// "More" text block onClick handler /////////////////////////////////////////////////
+		$('.show-more-block').click(function(e) {  
+			$(this).toggleClass('expanded');
+		});
+
+
         // InstagramFeed init /////////////////////////////////////////////////
         (function($){
             $(window).on('load', function(){
