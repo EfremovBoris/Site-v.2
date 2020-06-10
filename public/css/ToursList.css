@@ -1,6 +1,6 @@
 /* Import modules */
-@import "/public/css/toggle-switch.css";
-
+@import "toggle-switch.css";
+@import "gallery.css";
 
 
 :root {
@@ -63,7 +63,9 @@ h6 {
     font-size: 16px;
 }
 
-
+li {
+	list-style: none;
+}
 /* Progress bar */
 
 .top-scroll {
@@ -96,8 +98,7 @@ section:target:before {
     content: "";
     display: block;
     height: 80px;
-	margin-top: -80px;
-	/* display: hidden; */
+	margin-top: -80px; /* height of header*/
 }
 
 
@@ -737,14 +738,6 @@ em {
 
 /* МЕДИА-ЗАПРОСЫ */
 
-
-.owl-carousel div {
-	height: 50px;
-	background-color: #F88310;
-}
-
-
-
 @keyframes t778__icon-anim {
 	0% {
 		transform: translate3d(-20px, 0, 0);
@@ -956,7 +949,6 @@ em {
 	/* border: 1px solid red; */
 }
 
-
 .show-more-block:not(.expanded):before {
 	position: absolute;
 	left: 10px;
@@ -988,3 +980,68 @@ svg#ig-icon path {
   svg#vk-icon path {
 	fill: #db7324;
   }
+
+
+  /* tour Include | Exclude */
+
+
+#tour-includes ul>li:before {
+	content: "\2713 \00a0";
+	color: green;
+	font-weight: 600;
+	font-size: 15px;
+  }
+
+
+  #tour-excludes ul>li:before {
+	content: "\2715 \00a0";
+	color: red;
+	font-weight: 600;
+	font-size: 15px;
+  }
+
+
+
+  /* FeedBack Slider */
+
+  .feedback {
+	  display: flex;
+	  align-items: stretch;
+	  /* border: 1px solid red; */
+}
+.feedback__photo {
+	flex: 0 0 200px;
+}
+
+.feedback__photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
+	/* border: 1px solid green; */
+}
+
+.feedback__text {
+	flex: 1;
+	background-color: lightgray;
+	padding: 40px 45px;
+}
+
+
+@media screen and (max-width: 767px) {
+	.feedback {
+		flex-direction: column;
+	}
+	.feedback__photo {
+		/* flex: 0; */
+	}
+
+	.feedback__photo img {
+		width: 100%;
+		min-height: 200px;
+	}
+
+	.feedback__text {
+		padding: 25px 20px;
+	}
+}
