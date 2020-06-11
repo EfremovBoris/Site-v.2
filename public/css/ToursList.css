@@ -96,11 +96,10 @@ li {
 /* Right now not work correctly */
 section:target:before {
     content: "";
-    display: block;
+	display: block;
     height: 80px;
-	margin-top: -80px; /* height of header*/
+	margin-top: -80px;
 }
-
 
 html, body {
 	background-color: #F9E0E0;
@@ -612,10 +611,10 @@ em {
 	/* cursor: pointer; */
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 700;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	text-align: center;
 	color: blueviolet;
-	padding: 5px 10px;
+	padding: 10px 10px;
 /*
     padding-left: 50px;
     padding-right: 20px;
@@ -651,6 +650,43 @@ em {
 	margin-right: 10px;
 	display: none;
 }
+
+
+/* Tabs for day-by-day programm */
+
+.days-list>div:not(:first-child) {
+	display: none;
+}
+
+/* Style the tab */
+.tab {
+	overflow: hidden;
+	background-color: #f1f1f1;
+  }
+  
+  .tab button {
+	background-color: inherit;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 10px 20px;
+	transition: 0.3s;
+	font-size: 16px;
+  }
+  
+  .tab button:hover {
+	background-color: #ddd;
+  }
+  
+  .tab button.active {
+	border-top: 3px solid orangered;
+	background-color: #fff;
+	font-weight: 600;
+  }
+
+/* End of day-by-day */
+
+
 @media screen and (max-width: 600px){
 
 	.days-list {
@@ -663,7 +699,8 @@ em {
 	.day-item {
 		min-width: 70%;
 		margin: 10px 20px;
-		background-color: burlywood;
+		display: block !important;   /*FIX tab view*/
+		padding-bottom: 0;		
 	}
 
 	.day-item:last-child {
@@ -712,6 +749,24 @@ em {
 		-webkit-animation: t778__icon-anim 1.5s infinite;
 		animation: t778__icon-anim 1.5s infinite;
 	}
+
+
+	/* Tabs for day-by-day programm */
+
+	/* not first 2 items... */
+	.days-list>div:nth-child(n+3) {
+		display: block;
+	}
+
+	/* first 2 items */
+	.days-list>div:not(:nth-child(n+3)) {
+		display: none !important;
+	}
+
+	/* End of day-by-day */
+
+
+
 }
 
 
@@ -909,7 +964,7 @@ em {
 .thumb-wrap {
 	position: relative;
 	padding-bottom: 75%; /* 56.25% задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
-	height: 0;
+	height: auto;
 	overflow: hidden;
   }
   .thumb-wrap iframe {
@@ -952,7 +1007,7 @@ em {
 .show-more-block:not(.expanded):before {
 	position: absolute;
 	left: 10px;
-	top: 85%;
+	top: 77%;
 	content: "еще \2192";
 	/*\2023 00BB 2192*/
 	color: rgb(245, 222, 10);

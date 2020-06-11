@@ -146,16 +146,39 @@
 
 
 
-
-
 		<!-- СЕКЦИЯ ПРОГРАММА ПО ДНЯМ -->
 		<section id="TourProgram"></section>
             <div class="block-title">
                 <h4>Подробная программа тура:</h4>
             </div>				
             <div class="t778__scroll-icon-wrapper"> <svg class="t778__scroll-icon" style="width:22px;fill:#bebebe;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"> <path d="M97.2 298.2S56.1 225 38.8 193.3c-23-42.2-26.8-60-10.9-68.8 9.9-5.5 23.6-3.2 32 11.4l19.6 31.2V44.8s-1.2-32.3 21.8-32.3c24.5 0 22.4 32.3 22.4 32.3v59.4s12.9-9.3 28-5.1c7.7 2.1 16.7 5.8 21.5 18 0 0 30.7-14.9 46 16.8 0 0 35.4-7 35.4 29.7s-44.2 134.6-44.2 134.6H97.2zM249.9.5l-10.6 10.6 24.1 23.8H158.5v15h105l-24.2 23.9 10.6 10.6 42.5-42z" class="st0"></path> </svg></div>			
+            
+          
+            
             <div class="days-list">
-                <div class="day-item">
+
+                <div class="tab">
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday0')">Карта маршрута</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday1')" id="defaultOpen">День 1</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday2')">День 2</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday3')">День 3</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday4')">День 4</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday5')">День 5</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday6')">День 6</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday7')">День 7</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday8')">День 8</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday9')">День 9</button>
+                </div>  
+
+
+                <div id="tday0" class="day-item">
+                    <!-- Google maps embed -->
+                    <div class="thumb-wrap">
+                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JZduRuQFfiCdsVvQQlPJaAaKEBGwOrup&z=10"></iframe>
+                    </div>             
+                </div>
+
+                <div id="tday1" class="day-item">
                     <p class="day-item-title">День 1. Прилет, экскурсия по городу, поездка на берег Тихого океана.</p>
                     <div class="day-item-content">
                             <img src="images/TourCover/tour1.jpg" alt="photo day 1">
@@ -167,7 +190,7 @@
                     </div>
                 </div>
     
-                <div class="day-item">
+                <div id="tday2" class="day-item">
                     <p class="day-item-title">День 2. Переезд на "серер" в поселок Козыревск (500 км.).</p>
                     <div class="day-item-content">
                             <img src="images/TourCover/tour2.jpg" alt="photo day 1">
@@ -179,7 +202,7 @@
                     </div>
                 </div>
         
-                <div class="day-item">
+                <div id="tday3" class="day-item">
                     <p class="day-item-title">День 3. Переезд к вулкану Толбачик, шлаковые вулканические конусы 1975 года, лавовая пещера.</p>
                     <div class="day-item-content">
                             <img src="images/TourCover/tour3.jpg" alt="photo day 1">
@@ -191,7 +214,7 @@
                     </div>
                 </div>							
         
-                <div class="day-item">
+                <div id="tday4" class="day-item">
                     <p class="day-item-title">День 4. Восхождение на вулкан Плоский Толбачик (20 км пешком, набор высоты 1700 метров).</p>
                     <div class="day-item-content">
                             <img src="images/TourCover/tour3.jpg" alt="photo day 1">
@@ -201,7 +224,7 @@
                     </div>
                 </div>	
              
-                <div class="day-item">
+                <div id="tday5" class="day-item">
                     <p class="day-item-title">День 5. Переход на стоянку "Толуд" (11 км с рюкзаком).</p>
                     <div class="day-item-content">
                             <img src="images/TourCover/tour3.jpg" alt="photo day 1">
@@ -211,7 +234,7 @@
                     </div>
                 </div>	
                 
-                <div class="day-item">
+                <div id="tday6" class="day-item">
                     <p class="day-item-title">День 6. Переход в долину трех вулканов (16 км с рюкзаком).</p>
                     <div class="day-item-content">
                             <img src="images/TourCover/tour3.jpg" alt="photo day 1">
@@ -221,7 +244,7 @@
                     </div>
 				</div>   
 				             
-                <div class="day-item">
+                <div id="tday7" class="day-item">
                     <p class="day-item-title">День 7. Переход к кратеру Юпитер (12 км с рюкзаком).</p>
                     <div class="day-item-content">
                             <img src="images/TourCover/tour3.jpg" alt="photo day 1">
@@ -231,7 +254,7 @@
                     </div>
 				</div>
 				
-                <div class="day-item">
+                <div id="tday8" class="day-item">
                     <p class="day-item-title">День 8. Радиальный выход на плечо вулкана Зимина налегке (15 км пешком).</p>
                     <div class="day-item-content">
                             <img src="images/TourCover/tour3.jpg" alt="photo day 1">
@@ -241,7 +264,7 @@
                     </div>
 				</div>				
 				
-                <div class="day-item">
+                <div id="tday9" class="day-item">
                     <p class="day-item-title">День 9. Переход к ручью Бараний (16 км с рюкзаком).</p>
                     <div class="day-item-content">
                             <img src="images/TourCover/tour3.jpg" alt="photo day 1">
@@ -381,7 +404,26 @@
     <script src="js/owl.carousel.min.js"></script>
 
 	<!-- view JS ////////////-->
-    <script src="js/core.js"></script>    
+    <script src="js/core.js"></script> 
+    
+    
+    <script>
+    function openDayInfo(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("day-item");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    document.getElementById("defaultOpen").click();
+    </script>
 
 </body>
 </html>
