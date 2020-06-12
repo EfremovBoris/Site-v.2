@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/ToursList.css">
     <link rel="stylesheet" href="css/my-slick-tour.css">
-
+    
 </head>
 <body>
     <div id="main-menu">
@@ -288,7 +288,7 @@
                         <div class="acc-header-title">
                             <p>Что включено в стоимость?</p>
                         </div>
-                        <div class="acc-header-btn"><img class="acc-btn" src="images/scr.png" alt=""></div>
+                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
                     </div>
                     <div id="tour-includes" class="acc-content">
                         <div class="acc-content-desc">
@@ -312,7 +312,7 @@
                         <div class="acc-header-title">
                             <p>Что НЕ включено в стоимость?</p>
                         </div>
-                        <div class="acc-header-btn"><img class="acc-btn" src="images/scr.png" alt=""></div>
+                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
                     </div>
                     <div id="tour-excludes" class="acc-content">
                         <div class="acc-content-desc">
@@ -406,24 +406,9 @@
 	<!-- view JS ////////////-->
     <script src="js/core.js"></script> 
     
-    
-    <script>
-    function openDayInfo(evt, tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("day-item");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-    
-    document.getElementById("defaultOpen").click();
-    </script>
+    <!-- Important: Open Default Tab -->
+    <script>document.getElementById("defaultOpen").click();</script>    
+
 
 </body>
 </html>

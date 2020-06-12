@@ -5,7 +5,7 @@
  */
 
 .owl-carousel {
-    width: calc(100% - 60px);
+    width: calc(100% - 90px);
     margin: 0 auto;
 }
 
@@ -22,7 +22,7 @@
  
  .owl-theme .owl-nav button {	 
 	 height: 100%;
-	 width: 30px;
+	 width: 45px;
 	 position: absolute;
 	 top: 50%;
 	 transform: translate(0, -50%);
@@ -33,18 +33,18 @@
 }
 
 .owl-carousel .owl-nav button.owl-next {
-	right: -30px;
+	right: -45px;
 	font-size: 0;
 	background-image: url("../images/next.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 .owl-carousel .owl-nav button.owl-prev {
-	left: -30px;
+	left: -45px;
 	font-size: 0;
 	background-image: url("../images/prev.png");
 	background-position: center center;
-	background-repeat: no-repeat;	
+    background-repeat: no-repeat;	
 }
  
  .owl-theme .owl-nav [class*=owl-] {
@@ -65,7 +65,7 @@
  }
  
  .owl-theme .owl-nav .disabled {
-     opacity: .5;
+     opacity: .2;
      cursor: default
  }
  

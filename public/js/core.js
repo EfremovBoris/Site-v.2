@@ -2,8 +2,24 @@
     // $("#main-menu").load("components/menu.html");
     // $("#footer").load("components/footer.html");
 
-    
+    // Tabs select login /////////////////////////////////////////////////
+    // may be it's better to parameterize classes Day-item & Tablinks
+    function openDayInfo(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("day-item");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }    
 
+
+    
     $(document).ready(function(){
 
         // Pregress bar init /////////////////////////////////////////////////
@@ -81,7 +97,8 @@
 					// $(this).children(".acc-header-btn").toggleClass("rotated90");
 					$(this).next('.acc-content').css('max-height', '0');
 				}
-				$(this).children(".acc-header-btn").toggleClass("rotated90");
+        // $(this).children(".acc-header-btn").toggleClass("rotated90");
+        $(this).find("img").toggleClass("rotated45");
 				$(this).toggleClass("_opened");
 			});
 

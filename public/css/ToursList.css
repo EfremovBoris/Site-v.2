@@ -890,8 +890,7 @@ em {
 }
 
 .acc-header {
-	display: flex;
-	align-items: center;
+	position: relative;
 	overflow: hidden;
 }
 
@@ -899,42 +898,66 @@ em {
 	cursor: pointer;
 	font-size: 18px;
 	font-weight: 500;
-	flex: 1 0;
-	padding: 25px 10px;
+	padding: 25px 65px 25px 10px;
 }
 
 .acc-header-btn {
-	flex: 0 0 60px;
-	padding: 0 10px;
-	transition: transform .4s ease-in-out;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	/* border: 1px solid red; */
+	width: 40px !important;
+	height: 40px !important;
+	/* padding: 8px; */
+	border-radius: 50%;
+	background-color: burlywood;
+	margin-right: 10px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
 }
 
 .acc-header-btn img {
 	width: 100%;
 	height: auto;
+	transition: transform .2s ease-in-out;
+	-webkit-transition: transform .2s ease-in-out;
+	-moz-transition: transform .2s ease-in-out;
+	-ms-transition: transform .2s ease-in-out;
+	-o-transition: transform .2s ease-in-out;
 }
 
 .acc-content {
 	max-height: 0px;
 	overflow: hidden;
 	padding: 0 20px;
-	transition: max-height ease-in-out .3s,opacity ease-in-out .3s
+	transition: max-height ease-in-out .2s,opacity ease-in-out .3s;
+	-webkit-transition: max-height ease-in-out .2s,opacity ease-in-out .3s;
+	-moz-transition: max-height ease-in-out .2s,opacity ease-in-out .3s;
+	-ms-transition: max-height ease-in-out .2s,opacity ease-in-out .3s;
+	-o-transition: max-height ease-in-out .2s,opacity ease-in-out .3s;
 }
 .acc-content-desc {
 	padding: 20px 0;
 	/* border-bottom: 2px solid #000; */
 }
 
-.rotated90 {
-	transform: rotate(90deg);
-	-ms-transform: rotate(90deg); /* IE 9 */
-	-moz-transform: rotate(90deg); /* Firefox */
-	-webkit-transform: rotate(90deg); /* Safari and Chrome */
-	-o-transform: rotate(90deg); /* Opera */
-  }
+.rotated45 {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+}
 
-._opened, .acc-header:hover {
-  background-color: rgb(228, 228, 228);
+.acc-header:hover .acc-header-btn {
+  background-color: chocolate;
 }
 
 /* END of Accordion component */
@@ -1089,11 +1112,12 @@ svg#ig-icon path {
 	}
 	.feedback__photo {
 		/* flex: 0; */
+		min-height: 270px;
 	}
 
 	.feedback__photo img {
 		width: 100%;
-		min-height: 200px;
+		min-height: 100%;
 	}
 
 	.feedback__text {
