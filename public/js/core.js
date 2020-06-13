@@ -199,6 +199,19 @@
     });
 
 
+    //   Form on Submit handler /////////////////////////////////////////////////////
+    $("#reqst_form").submit(function(e){
+      e.preventDefault();
+      $.ajax({
+          type: "POST",
+          url: "wdh_send_form.php",
+          data: $("#reqst_form").serialize(),
+          success: function(data) {
+              $("#wdh_result_form").html(data);
+              document.getElementById('reqst_form').reset();
+          }
+      });
+  });
 
 // 	Chocolat(document.querySelectorAll('.chocolat-image'), {
 // 		loop: false,

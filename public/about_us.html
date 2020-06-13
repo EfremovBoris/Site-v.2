@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне</title>
+
+	<!-- ext CSS  -->    
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+	<!-- view CSS  -->
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">    
+
+</head>
+<body>
+
+
+    <div id="main-menu">
+        <!-- LOAD MENU HERE -->
+        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>
+    </div>
+
+    <div class="main">
+
+            <div class="about-block flex-container">
+                <div class="featureListItem flex-xl-10 flex-lg-10 flex-md-10 flex-sm-12">
+                    <div class="featureListItem__text">
+                        <div class="text-wrap">
+                            <p><strong>Люблю путешествовать...</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempore earum delectus, possimus ipsa reprehenderit illum omnis libero nulla dolor.</p>
+                        </div>
+                    </div>
+                    <div class="featureListItem__photo">
+                        <img src="images/TourCover/acap_main_small1.jpg" alt="">
+                    </div>
+                </div>
+        
+                <div class="featureListItem flex-xl-10 flex-lg-10 flex-md-10 flex-sm-12">
+                    <div class="featureListItem__text">
+                        <div class="text-wrap">
+                            <p><strong>Люблю поить вкусным чаем</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempore earum delectus, possimus ipsa reprehenderit illum omnis libero nulla dolor.</p>
+                        </div>
+                    </div>
+                    <div class="featureListItem__photo">
+                        <img src="images/TourCover/acap_main_small1.jpg" alt="">
+                    </div>
+                </div>
+        
+                <div class="featureListItem flex-xl-10 flex-lg-10 flex-md-10 flex-sm-12">
+                    <div class="featureListItem__text">
+                        <div class="text-wrap">
+                            <p><strong>Люблю горные лыжи</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempore earum delectus, possimus ipsa reprehenderit illum omnis libero nulla dolor.</p>
+                        </div>
+                    </div>
+                    <div class="featureListItem__photo">
+                        <img src="images/TourCover/acap_main_small1.jpg" alt="">
+                    </div>
+                </div>
+        
+                <div class="featureListItem flex-xl-10 flex-lg-10 flex-md-10 flex-sm-12">
+                    <div class="featureListItem__text">
+                        <div class="text-wrap">
+                            <p><strong>Люблю плавать</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempore earum delectus, possimus ipsa reprehenderit illum omnis libero nulla dolor.</p>
+                        </div>
+                    </div>
+                    <div class="featureListItem__photo">
+                        <img src="images/TourCover/acap_main_small1.jpg" alt="">
+                    </div>
+                </div>        
+               
+            </div>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet debitis perspiciatis amet nemo voluptatem at vel vero dolore asperiores aspernatur. Voluptates fugit provident nam! Saepe quos rem reprehenderit nesciunt quasi doloribus dolorum ducimus similique, praesentium quibusdam odit eveniet quis eaque illum sint, harum non voluptas. Doloribus dolores voluptatibus doloremque ducimus.</p>
+
+            <div class="hiscreen-form">
+				<div class="info-box-form">
+
+                    
+                    <form id="reqst_form">
+                        <!-- <label for="form_fio">Ваши ФИО:</label><br> -->
+                        <input onkeyup="check_input(this)" type="text" id="form_fio" name="form_fio"
+                        title="Укажите ФИО" placeholder="Ефремов Борис Валерьевич" required>
+                        <br>
+                        <!-- <label for="form_email">Email:</label><br> -->
+                        <input onkeyup="check_input(this)" type="text" id="form_email" name="form_email"
+                        pattern="^[^ ]+@[^ ]+\.[a-z]{2,}" title="Укажите почту" placeholder="lovekamski@mail.ru" required>
+                        <br>
+                        <!-- <label for="form_comments">Доп. информация:</label><br> -->
+                        <textarea name="form_comments" id="form_comments" cols="80" rows="1" value="" placeholder="Сколько вас человек, вопросы, пожелания, интересующая программа..." form="reqst_form"></textarea>
+                        
+                        
+                        <br>
+        
+                        <!-- <label>Телефон <span class="desc" >+{7} (000) 000-00-00</span></label> -->
+                        <input id="form_phone" name="form_phone" type="text" value="" placeholder="+7 (911) 786-00-67" required>
+                        <div class="unmasked-value desc" style="display: none;">unmasked: <span id="phone-unmasked"></span><span id="phone-complete" class="example__complete"></span></div>
+        
+                        <!-- SUBMIT -->
+                        <br>
+                        <input type="submit" value="Отправить заявку...">
+                        <br>
+                        <div id="wdh_result_form"></div>
+                    </form>
+
+				</div>
+			</div>
+    </div>
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <div id="footer" class="footer">
+        <!-- load footer here -->
+        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."footer.html");  ?>
+    </div>
+    <!-- END of FOOTER -->
+        
+    <!-- ext JS ////////////-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+
+	<!-- view JS ////////////-->
+    <script src="js/core.js"></script>
+
+</body>
+</html>
