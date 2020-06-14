@@ -2,6 +2,10 @@
     // $("#main-menu").load("components/menu.html");
     // $("#footer").load("components/footer.html");
 
+    // check selector existance
+    // if ( $( "#myDiv" ).length ) {"do smth"}
+
+
     // Tabs select login /////////////////////////////////////////////////
     // may be it's better to parameterize classes Day-item & Tablinks
     function openDayInfo(evt, tabName) {
@@ -18,8 +22,70 @@
       evt.currentTarget.className += " active";
     }    
 
+    // Form input validation /////////////////////////////////////////////////
+    function check_input(e) {
+      let input_src = document.getElementById(e.id)
+      let input_regexp = "";
 
+      switch(e.id) {
+      case "form_fio":
+          input_regexp = /([А-Яа-я]{2,} +){2}[А-Яа-я]{2,}/g;
+      break;
+      case "form_email":
+          input_regexp = /^[^ ]+@[^ ]+\.[a-z]{2,}/g;
+      break;
+      default:
+      }
+
+      if (input_src.value.match(input_regexp)) {
+          input_src.style.borderColor = "#108339"; //OK color
+      } else
+      {
+          input_src.style.borderColor = "#DF1515"; //Wrong color
+      }
+      if (input_src.value == "") {
+          input_src.style.borderColor = "#AAA9A9";
+      }
+  }
+
+  // Mask for cellphone /////////////////////////////////////////////////
+  var element = document.getElementById("form_phone");
+  if (typeof(element) != 'undefined' && element != null){
+      var phoneMask = IMask(document.getElementById('form_phone'), {
+        mask: '+{7} (000) 000-00-00'
+        }).on('accept', function() {
+        document.getElementById('phone-complete').style.display = '';
+        document.getElementById('phone-unmasked').innerHTML = phoneMask.unmaskedValue;
+        }).on('complete', function() {
+        document.getElementById('phone-complete').style.display = 'inline-block';
+        });
+  };
+  
     
+    element = document.getElementById("instagram-feed-demo");
+    if (typeof(element) != 'undefined' && element != null){
+        (function($){
+          $(window).on('load', function(){
+              $.instagramFeed({
+                  'username': 'boris.efremov',
+                  'container': "#instagram-feed-demo",
+                  'display_profile': true,
+                  'display_biography': true,
+                  'display_gallery': true,
+                      'get_raw_json': false,
+                  'callback': null,
+                  'styling': true,
+                  'items': 8,
+                  'items_per_row': 4,
+                  'margin': 1 
+              });
+          });
+      })(jQuery);
+    };
+
+
+
+
     $(document).ready(function(){
 
         // Pregress bar init /////////////////////////////////////////////////
@@ -103,113 +169,134 @@
 			});
 
 
-		// "More" text block onClick handler /////////////////////////////////////////////////
-		$('.show-more-block').click(function(e) {  
-			$(this).toggleClass('expanded');
-		});
+      // "More" text block onClick handler /////////////////////////////////////////////////
+      $('.show-more-block').click(function(e) {  
+        $(this).toggleClass('expanded');
+      });
 
 
         // InstagramFeed init /////////////////////////////////////////////////
-        (function($){
-            $(window).on('load', function(){
-                $.instagramFeed({
-                    'username': 'boris.efremov',
-                    'container': "#instagram-feed-demo",
-                    'display_profile': true,
-                    'display_biography': true,
-                    'display_gallery': true,
-                        'get_raw_json': false,
-                    'callback': null,
-                    'styling': true,
-                    'items': 8,
-                    'items_per_row': 4,
-                    'margin': 1 
-                });
-            });
-        })(jQuery);
 
+        
+        // if ( $( "#instagram-feed-demo" ).length ) {
+          // (function($){
+          //     $(window).on('load', function(){
+          //         $.instagramFeed({
+          //             'username': 'boris.efremov',
+          //             'container': "#instagram-feed-demo",
+          //             'display_profile': true,
+          //             'display_biography': true,
+          //             'display_gallery': true,
+          //                 'get_raw_json': false,
+          //             'callback': null,
+          //             'styling': true,
+          //             'items': 8,
+          //             'items_per_row': 4,
+          //             'margin': 1 
+          //         });
+          //     });
+          // })(jQuery);
+        // }; //end IF
+        
         //   Slick init /////////////////////////////////////////////////////
-        // $('.slider').css('height', $(window).height() + 'px'); //test LINE
-
-        $('.slider').slick({
-            //accessibility:true,
-            //variableWidth:true,
-            // lazyLoad: 'ondemand',
-            arrows: true,
-            // dots: true,
-            // adaptiveHeight: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed: 500,
-            easing:'_ease_',
-            infinite:false,
-            responsive: [
-            {
-                breakpoint: 1050,
-                settings: {
-                    // arrows: false,
-                    // centerMode: true,
-                    // centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            },
+        if ( $( ".slider" ).length ) {
+            $('.slider').slick({
+                //accessibility:true,
+                //variableWidth:true,
+                // lazyLoad: 'ondemand',
+                arrows: true,
+                // dots: true,
+                // adaptiveHeight: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                speed: 500,
+                easing:'_ease_',
+                infinite:false,
+                responsive: [
                 {
-                breakpoint: 700,
-                settings: {
-                    // arrows: false,
-                    //centerMode: true,
-                    // centerPadding: '40px',
-                    slidesToShow: 1
+                    breakpoint: 1050,
+                    settings: {
+                        // arrows: false,
+                        // centerMode: true,
+                        // centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                },
+                    {
+                    breakpoint: 700,
+                    settings: {
+                        // arrows: false,
+                        //centerMode: true,
+                        // centerPadding: '40px',
+                        slidesToShow: 1
+                    }
                 }
-            }
-            ]
-            
-            //initialSlide: 2,
-            //centerMode: true,
-            //variableWidth: true
-            //draggable:false
-            // slidesToScroll: 1
-        });
-
+                ]
+                
+                //initialSlide: 2,
+                //centerMode: true,
+                //variableWidth: true
+                //draggable:false
+                // slidesToScroll: 1
+            });
+      }; //end if exist
 
 
         //   FEEDBACK Slick init /////////////////////////////////////////////////////
-        $('.owl-carousel').owlCarousel({
-          items: 1,
-          // center: true,
-          loop:false,
-          // margin:10,
-           nav:true,
-        dots:true,
-        autoHeight:true
-        // navContainer:'#gallery',
-          // responsive:{
-          //     0:{
-          //         items:1
-          //     },
-          //     600:{
-          //         items:2
-          //     },
-          //     1000:{
-          //         items:3
-          //     }
-          // }
-      });
-
+        if ( $( ".owl-carousel" ).length ) {
+                $('.owl-carousel').owlCarousel({
+                  items: 1,
+                  // center: true,
+                  loop:false,
+                  // margin:10,
+                  nav:true,
+                dots:true,
+                autoHeight:true
+                // navContainer:'#gallery',
+                  // responsive:{
+                  //     0:{
+                  //         items:1
+                  //     },
+                  //     600:{
+                  //         items:2
+                  //     },
+                  //     1000:{
+                  //         items:3
+                  //     }
+                  // }
+              });
+        }; // end IF
     });
 
 
     //   Form on Submit handler /////////////////////////////////////////////////////
+    function clearBox(elementID)
+    {
+        let itemx = document.getElementById(elementID);
+        itemx.innerHTML = "";
+        itemx.classList.remove("success");
+        itemx.classList.remove("error");
+    }
+
     $("#reqst_form").submit(function(e){
       e.preventDefault();
+      // set hidden value
+      $("input[id=src-page]").val(window.location.href);
       $.ajax({
           type: "POST",
           url: "wdh_send_form.php",
           data: $("#reqst_form").serialize(),
           success: function(data) {
               $("#wdh_result_form").html(data);
+              $("#wdh_result_form").toggleClass('success');
               document.getElementById('reqst_form').reset();
+              setTimeout(clearBox, 5000, "wdh_result_form");
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+              $("#wdh_result_form").html(xhr.status + '; '+ thrownError);
+              $("#wdh_result_form").toggleClass('error');
           }
+
       });
   });
 

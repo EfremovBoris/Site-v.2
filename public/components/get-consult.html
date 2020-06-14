@@ -19,7 +19,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
         }
 
-
         #modal .fancybox-close-small {
             top: 15px;
         }
@@ -46,24 +45,20 @@
             <span>Получить консультацию</span>
         </div>
         <div class="content-scroll">
-            <form id="reqst_form">
-                <!-- <label for="form_fio">Ваши ФИО:</label><br> -->
-                <input onkeyup="check_input(this)" type="text" id="form_fio" name="form_fio"
+            <form id="reqst_form_modal">
+                <input onkeyup="check_input_modal(this)" type="text" id="form_fio_modal" name="form_fio"
                 title="Укажите ФИО" placeholder="Ефремов Борис Валерьевич" required>
                 <br>
-                <!-- <label for="form_email">Email:</label><br> -->
-                <input onkeyup="check_input(this)" type="text" id="form_email" name="form_email"
-                pattern="^[^ ]+@[^ ]+\.[a-z]{2,}" title="Укажите почту" placeholder="lovekamski@mail.ru" required>
+                <input onkeyup="check_input_modal(this)" type="text" id="form_email_modal" name="form_email"
+                pattern="^[^ ]+@[^ ]+\.[a-z]{2,}" title="Укажите почту в формате mybox@mail.ru" placeholder="lovekamski@mail.ru" required>
                 <br>
-                <!-- <label for="form_comments">Доп. информация:</label><br> -->
-                <input type="textarea" id="form_comments" name="form_comments" rows="5"
-                title="Комментарии" placeholder="Сколько вас человек, вопросы, пожелания, интересующая программа...">
+                <textarea name="form_comments" id="form_comments" cols="80" rows="2" placeholder="Сколько вас человек, вопросы, пожелания, интересующая программа..." form="reqst_form_modal"></textarea>
                 <br>
 
-                <!-- <label>Телефон <span class="desc" >+{7} (000) 000-00-00</span></label> -->
-                <input id="form_phone" name="form_phone" type="text" value="" placeholder="+7 (911) 786-00-67" required>
+                <input id="form_phone_modal" name="form_phone" type="text" value="" placeholder="+7 (911) 786-00-67" required>
                 <div class="unmasked-value desc" style="display: none;">unmasked: <span id="phone-unmasked"></span><span id="phone-complete" class="example__complete"></span></div>
 
+                <input type="hidden" id="src-page" name="src-page" value="">
                 <!-- SUBMIT -->
                 <br>
                 <input type="submit" value="Отправить заявку...">
@@ -74,7 +69,7 @@
     </div>
 
     <script>
-        var phoneMask = IMask(document.getElementById('form_phone'), {
+        var phoneMask = IMask(document.getElementById('form_phone_modal'), {
         mask: '+{7} (000) 000-00-00'
         }).on('accept', function() {
         document.getElementById('phone-complete').style.display = '';
@@ -85,15 +80,16 @@
     </script>
 
     <script>
-        function check_input(e) {
+        function check_input_modal(e) {
+            // alert(e.id); //debug
             let input_src = document.getElementById(e.id)
             let input_regexp = "";
 
             switch(e.id) {
-            case "form_fio":
+            case "form_fio_modal":
                 input_regexp = /([А-Яа-я]{2,} +){2}[А-Яа-я]{2,}/g;
             break;
-            case "form_email":
+            case "form_email_modal":
                 input_regexp = /^[^ ]+@[^ ]+\.[a-z]{2,}/g;
             break;
             default:
@@ -110,15 +106,17 @@
             }
         }
 
-        $("#reqst_form").submit(function(e){
+        $("#reqst_form_modal").submit(function(e){
                 e.preventDefault();
+                // set hidden value
+                $("input[id=src-page]").val("popup_get-consult");                
                 $.ajax({
                     type: "POST",
                     url: "wdh_send_form.php",
-                    data: $("#reqst_form").serialize(),
+                    data: $("#reqst_form_modal").serialize(),
                     success: function(data) {
                         $("#wdh_result_form").html(data);
-                        document.getElementById('reqst_form').reset();
+                        document.getElementById('reqst_form_modal').reset();
                     }
                 });
             });		

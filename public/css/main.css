@@ -868,6 +868,7 @@ em {
 		box-shadow: 1px 1px 1px #999;
 		resize: vertical;
 		width: 100%;
+		margin-bottom: 20px;
 	}
 
 	input[type="submit"] {
@@ -885,6 +886,18 @@ em {
 		font-size: 0.8rem;
 	}
 
+
+	#wdh_result_form {
+		padding: 5px 10px;
+	}
+
+	#wdh_result_form.success {
+		background-color: green;
+	}	
+
+	#wdh_result_form.error {
+		background-color: rgb(238, 87, 87);
+	}	
 
 /* /ФОРМЫ И ЭЛЕМЕНТЫ */
 

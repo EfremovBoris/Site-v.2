@@ -20,10 +20,11 @@ if (isset($_POST["form_fio"]) && isset($_POST["form_email"]) ) {
 
     $body .= "Комментарии: " . $_POST['form_comments'] . "\r\n";
     $body .= "Телефон: " . $_POST['form_phone'] . "\r\n";
+    $body .= "Со страницы: " . $_POST['src-page'] . "\r\n";
 
     $body .= "Дата обращения: ".date('D, d M Y h:i:s O')."\r\n";
     
-    $headers = "Content-type: text/html; charset=utf-8\r\n";
+    $headers = "Content-type: text/plain; charset=utf-8\r\n";
     $headers .= "From: info@boris-trip.com\r\n";
     $headers .= "Bcc: kamarkadash@gmail.com\r\n";   
 

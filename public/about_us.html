@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обо мне</title>
+	<!-- Setup FAVICON -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
 	<!-- ext CSS  -->    
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -77,38 +80,10 @@
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet debitis perspiciatis amet nemo voluptatem at vel vero dolore asperiores aspernatur. Voluptates fugit provident nam! Saepe quos rem reprehenderit nesciunt quasi doloribus dolorum ducimus similique, praesentium quibusdam odit eveniet quis eaque illum sint, harum non voluptas. Doloribus dolores voluptatibus doloremque ducimus.</p>
 
-            <div class="hiscreen-form">
-				<div class="info-box-form">
 
-                    
-                    <form id="reqst_form">
-                        <!-- <label for="form_fio">Ваши ФИО:</label><br> -->
-                        <input onkeyup="check_input(this)" type="text" id="form_fio" name="form_fio"
-                        title="Укажите ФИО" placeholder="Ефремов Борис Валерьевич" required>
-                        <br>
-                        <!-- <label for="form_email">Email:</label><br> -->
-                        <input onkeyup="check_input(this)" type="text" id="form_email" name="form_email"
-                        pattern="^[^ ]+@[^ ]+\.[a-z]{2,}" title="Укажите почту" placeholder="lovekamski@mail.ru" required>
-                        <br>
-                        <!-- <label for="form_comments">Доп. информация:</label><br> -->
-                        <textarea name="form_comments" id="form_comments" cols="80" rows="1" value="" placeholder="Сколько вас человек, вопросы, пожелания, интересующая программа..." form="reqst_form"></textarea>
-                        
-                        
-                        <br>
-        
-                        <!-- <label>Телефон <span class="desc" >+{7} (000) 000-00-00</span></label> -->
-                        <input id="form_phone" name="form_phone" type="text" value="" placeholder="+7 (911) 786-00-67" required>
-                        <div class="unmasked-value desc" style="display: none;">unmasked: <span id="phone-unmasked"></span><span id="phone-complete" class="example__complete"></span></div>
-        
-                        <!-- SUBMIT -->
-                        <br>
-                        <input type="submit" value="Отправить заявку...">
-                        <br>
-                        <div id="wdh_result_form"></div>
-                    </form>
+            <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."form_request.html");  ?>
 
-				</div>
-			</div>
+
     </div>
 
 
@@ -126,9 +101,11 @@
     <!-- ext JS ////////////-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/imask.js"></script>
 
 	<!-- view JS ////////////-->
     <script src="js/core.js"></script>
+
 
 </body>
 </html>
