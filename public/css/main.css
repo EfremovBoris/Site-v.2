@@ -92,7 +92,7 @@ section:target:before {
 }
 
 html, body {
-	background-color: #F9E0E0;
+	background-color: #f7e7d0; /*#f3e5e5;*/
 	font-family: 'Ubuntu', sans-serif;
 	height: 100%;
 	/* below attempt to push footer down...try one more time */
@@ -173,6 +173,12 @@ html, body {
 	display: flex;
 	justify-content: center;
 	align-items: center;	
+}
+
+
+#ko .hiscreen-form {
+	background-image: url(../images/tours/ksu/wall/wall_ko.jpg);
+	background-position: 50% 110%;	
 }
 
 .hiscreen404 {
@@ -598,7 +604,7 @@ em {
 /* ПРОГРАММА ТУРА ПО ДНЯМ*/
 
 .days-list {
-	max-width: 800px;
+	max-width: 900px;
 	margin: 0 auto;
 }
 
@@ -636,8 +642,9 @@ em {
 .day-item-content img {
 	display: block;
 	width: 100%;
-	height: auto;
-	object-fit: cover;
+    height: 270px;
+    object-fit: scale-down;
+
 	margin: 10px auto;
 }
 
@@ -704,6 +711,11 @@ em {
 		padding-bottom: 0;		
 	}
 
+	.day-item-content img {
+		height: auto;
+		object-fit: cover;
+	}
+
 	.day-item:last-child {
 		/**
 		 * This is the first part of a flexbox hack.
@@ -735,7 +747,7 @@ em {
 
 
 	.day-item-content {
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	.day-item-title {

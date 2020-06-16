@@ -61,7 +61,7 @@
         });
   };
   
-    
+    // InstagramFeed init /////////////////////////////////////////////////
     element = document.getElementById("instagram-feed-demo");
     if (typeof(element) != 'undefined' && element != null){
         (function($){
@@ -175,28 +175,6 @@
       });
 
 
-        // InstagramFeed init /////////////////////////////////////////////////
-
-        
-        // if ( $( "#instagram-feed-demo" ).length ) {
-          // (function($){
-          //     $(window).on('load', function(){
-          //         $.instagramFeed({
-          //             'username': 'boris.efremov',
-          //             'container': "#instagram-feed-demo",
-          //             'display_profile': true,
-          //             'display_biography': true,
-          //             'display_gallery': true,
-          //                 'get_raw_json': false,
-          //             'callback': null,
-          //             'styling': true,
-          //             'items': 8,
-          //             'items_per_row': 4,
-          //             'margin': 1 
-          //         });
-          //     });
-          // })(jQuery);
-        // }; //end IF
         
         //   Slick init /////////////////////////////////////////////////////
         if ( $( ".slider" ).length ) {
@@ -242,7 +220,7 @@
       }; //end if exist
 
 
-        //   FEEDBACK Slick init /////////////////////////////////////////////////////
+        //   FEEDBACK owl init /////////////////////////////////////////////////////
         if ( $( ".owl-carousel" ).length ) {
                 $('.owl-carousel').owlCarousel({
                   items: 1,
