@@ -1,66 +1,121 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Отзывы</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Отзывы</title>
 
-	<!-- Setup FAVICON -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        
-	<!-- ext CSS  -->    
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+		<!-- Setup FAVICON -->
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link
+			rel="shortcut icon"
+			href="images/favicon.ico"
+			type="image/x-icon"
+		/>
 
-	<!-- view CSS  -->
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/main.css">  
+		<!-- ext CSS  -->
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
 
-    <!-- Put this script tag to the <head> of your page -->
-    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+		<!-- view CSS  -->
+		<link rel="stylesheet" href="css/grid.css" />
+		<link rel="stylesheet" href="css/main.css" />
 
-    <script type="text/javascript">
-        VK.init({apiId: 7464645, onlyWidgets: true});
-    </script>
-    <script>
-        VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
-    </script>
+		<!-- Put this script tag to the <head> of your page -->
+		<script src="https://vk.com/js/api/openapi.js?168"></script>
 
-    <!-- FACEBOOK -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v7.0&appId=726283924830914&autoLogAppEvents=1"></script>
-</head>
-<body>
-    <div id="main-menu">
-        <!-- LOAD MENU HERE -->
-        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>
-    </div>
+		<script>
+			VK.init({ apiId: 7464645, onlyWidgets: true });
+		</script>
+		<script>
+			VK.Widgets.Comments("vk_comments", { limit: 5, attach: "*" });
+		</script>
 
-    <div class="main">
-        <div class="wrapper">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus a placeat dolor doloremque exercitationem aliquam excepturi distinctio odio earum in.</p>
-            <!-- Put this div tag to the place, where the Comments block will be -->
-            <br>
+		<!-- FACEBOOK -->
+		<div id="fb-root"></div>
+		<script
+			async
+			defer
+			crossorigin="anonymous"
+			src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v7.0&appId=726283924830914&autoLogAppEvents=1"
+		></script>
+	</head>
+	<body>
+		<div id="main-menu">
+			<!-- LOAD MENU HERE -->
+			<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>
+		</div>
 
-            <div id="vk_comments"></div>
+		<div class="main">
+			<div class="wrapper">
+				<div class="text-wrapper">
+					<h4>ОТЗЫВЫ О ПОХОДАХ</h4>
+					<p>
+						Мир туристов тесен и возможно вы ходили со мной в походы
+						(Камчатка, Непал,...).
+					</p>
+					<p>
+						Здесь вы можете оставить свои впечатления о походе в
+						целом и обо мне как о организаторе/гиде в частности.
+						Каждый отзыв важен, так как помогает предоставлять более
+						качественный сервис в будущем.
+					</p>
+					<p>
+						Отзыв можно оставить посредством VKontakte, Facebook,
+						Google Forms так и в произвольной форме (e-mail,
+						whatsapp)...
+					</p>
+					<p>
+						Если отзыв оставлен не через социальные сети, то просьба
+						указать ссылки на соцсети в которых вы активны, чтобы
+						подлинность отзывы не вызывала сомнений:)
+					</p>
+				</div>
+				<!-- Put this div tag to the place, where the Comments block will be -->
+				<br />
 
-            <div class="fb-comments" data-href="https://boris-trip.com/reviews.html" data-numposts="5" data-width=""></div>
-        </div>
-    </div>
+				<div
+					class="vk-wrapper"
+					style="max-width: 800px; margin: 0 auto;"
+				>
+					<div id="vk_comments"></div>
+				</div>
 
-    <!-- FOOTER -->
-    <div id="footer" class="footer">
-        <!-- load footer here -->
-        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."footer.html");  ?>
-    </div>
-    <!-- END of FOOTER -->
+				<div
+					class="fb-wrapper"
+					style="
+						background-color: rgb(221, 224, 223);
+						padding: 20px 0;
+						text-align: center;
+					"
+				>
+					<div
+						class="fb-comments"
+						data-href="https://boris-trip.com/reviews.html"
+						data-numposts="5"
+						data-width=""
+					></div>
+				</div>
 
-    <!-- ext JS ////////////-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
+				<div class="thumb-wrap">
+					<iframe
+						src="https://docs.google.com/forms/d/e/1FAIpQLSfAxiXZ_iQ49GXG00FzqNwjKZvGlQyzDsV_PMGrwmbJQk3eKQ/viewform?embedded=true"
+					>Loading…</iframe>
+				</div>
+			</div>
+		</div>
 
-	<!-- view JS ////////////-->
-    <script src="js/core.js"></script>
+		<!-- FOOTER -->
+		<div id="footer" class="footer">
+			<!-- load footer here -->
+			<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."footer.html");  ?>
+		</div>
+		<!-- END of FOOTER -->
 
-</body>
+		<!-- ext JS ////////////-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/jquery.fancybox.min.js"></script>
+
+		<!-- view JS ////////////-->
+		<script src="js/core.js"></script>
+	</body>
 </html>

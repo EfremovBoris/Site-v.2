@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фото галлерея из туров</title>
+    
+    <!-- Setup FAVICON -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+	<!-- ext CSS  -->    
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+	<!-- view CSS  -->
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+
+    <div id="main-menu">
+        <!-- LOAD MENU HERE -->
+        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>
+    </div>
+
+    <div class="main">
+        <div class="wrapper">
+            <div class="flex-container" style="overflow: hidden;">
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" data-caption="My caption 1" class="chocolat-image" href="images/gallery/gal1.jpg"><img src="images/gallery/small/gal_thumb1.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" data-caption="My caption 2" class="chocolat-image" href="images/gallery/gal2.jpg"><img src="images/gallery/small/gal_thumb2.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal3.jpg"><img src="images/gallery/small/gal_thumb3.jpg" alt=""></a>
+                    </div>
+                </div>    
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal4.jpg"><img src="images/gallery/small/gal_thumb4.jpg" alt=""></a>
+                    </div>
+                </div>     
+                
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal5.jpg"><img src="images/gallery/small/gal_thumb5.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal6.jpg"><img src="images/gallery/small/gal_thumb6.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal7.jpg"><img src="images/gallery/small/gal_thumb7.jpg" alt=""></a>
+                    </div>
+                </div>    
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal8.jpg"><img src="images/gallery/small/gal_thumb8.jpg" alt=""></a>
+                    </div>
+                </div> 
+        
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal9.jpg"><img src="images/gallery/small/gal_thumb9.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal10.jpg"><img src="images/gallery/small/gal_thumb10.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal11.jpg"><img src="images/gallery/small/gal_thumb11.jpg" alt=""></a>
+                    </div>
+                </div>    
+                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                    <div class="gallerybox__item_inside">
+                        <a data-fancybox="gallery" class="chocolat-image" href="images/gallery/gal12.jpg"><img src="images/gallery/small/gal_thumb12.jpg" alt=""></a>
+                    </div>
+                </div> 
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <div id="footer" class="footer">
+        <!-- load footer here -->
+        <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."footer.html");  ?>
+    </div>
+    <!-- END of FOOTER -->
+
+
+    <!-- ext JS ////////////-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+
+	<!-- view JS ////////////-->
+    <script src="js/core.js"></script>
+
+</body>
+</html>

@@ -11,8 +11,8 @@
 }
 
 .gallerybox__item_inside img {
+    display: block;
     width: 100%;
-    transform: scale(1.05);
     object-fit: cover;
     transition: transform .5s ease;
     /* filter: grayscale(40%); */
