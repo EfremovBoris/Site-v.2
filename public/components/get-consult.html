@@ -49,13 +49,13 @@
                 <input onkeyup="check_input_modal(this)" type="text" id="form_fio_modal" name="form_fio"
                 title="Укажите ФИО" placeholder="Ефремов Борис Валерьевич" required>
                 <br>
-                <input onkeyup="check_input_modal(this)" type="text" id="form_email_modal" name="form_email"
+                <input onkeyup="check_input_modal(this)" type="text" inputmode="email" id="form_email_modal" name="form_email"
                 pattern="^[^ ]+@[^ ]+\.[a-z]{2,}" title="Укажите почту в формате mybox@mail.ru" placeholder="lovekamski@mail.ru" required>
                 <br>
                 <textarea name="form_comments" id="form_comments" cols="80" rows="2" placeholder="Сколько вас человек, вопросы, пожелания, интересующая программа..." form="reqst_form_modal"></textarea>
                 <br>
 
-                <input id="form_phone_modal" name="form_phone" type="text" value="" placeholder="+7 (911) 786-00-67" required>
+                <input id="form_phone_modal" name="form_phone" type="text" inputmode="tel" value="" placeholder="+7 (911) 786-00-67" required>
                 <div class="unmasked-value desc" style="display: none;">unmasked: <span id="phone-unmasked"></span><span id="phone-complete" class="example__complete"></span></div>
 
                 <input type="hidden" id="src-page" name="src-page" value="">
