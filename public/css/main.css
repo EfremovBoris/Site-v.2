@@ -147,7 +147,8 @@ section:target:before {
 body {
 	background-color: #f7e7d0; /*#f3e5e5;*/
 	font-family: 'Ubuntu', sans-serif;
-	height: 100%;	
+	/* Do i need line below?!!! */
+	/* height: 100%; */
 }
 
 .text-wrapper p,
@@ -185,8 +186,8 @@ body {
 
 .main {
 	/* footer height check below */
-	min-height: calc(100vh - 64px); 
-	padding-top: 80px;
+	/* min-height: calc(100vh - 64px); 
+	padding-top: 80px; */
 }
 
 
@@ -262,6 +263,7 @@ body {
 .hiscreen-form {
 	position: relative;
 	height: 100vh;
+	
 	background-image: url(../images/form_bg.jpg);
 	background-position: 50% 90%;
 	background-repeat: no-repeat;
@@ -269,7 +271,7 @@ body {
 	/* display: flex;
 	justify-content: center;
 	align-items: center;	 */
-	overflow: auto;
+	overflow: hidden;
 }
 
 
@@ -313,15 +315,19 @@ body {
 
 
 .info-box-form {
-	position: absolute;
+	/* position: absolute; */
+	margin-left: auto;
+	margin-right: auto;
+	transform: translateY(25%);
+
 	padding: 20px 30px;
 	color: #fff;
 	font-size: 1.2rem;
 	width: 40%;
 	background-color: rgba(130, 130, 130, 0.4);
-	left: 50%;
+	/* left: 50%;
 	bottom: 10%;
-	transform: translatex(-50%);
+	transform: translatex(-50%); */
 }
 
 @media screen and (max-width: 767px) {
@@ -340,6 +346,11 @@ body {
 		width: 80%;
 		background-color: rgba(130, 130, 130, 0.4);
 		overflow: hidden;
+	}
+
+	/* debug */
+	.hiscreen-form {
+		height: 750px;
 	}
 
 
@@ -593,7 +604,7 @@ body {
 
 		.main {
 			/* footer aux */
-			padding-top: 50px;
+			/* padding-top: 50px; */
 		}
 
 		.header__menu ul>li>a:after {
@@ -973,9 +984,8 @@ em {
 		height: 56px;
 		font-size: 1rem;
 		font-weight: bold;
-		line-height: 1.7rem;
+		line-height: 1.6;
 		width: 100%;
-		/* outline: none; */
 		
 		border-radius: 5px;
 		padding: 0 10px;
@@ -987,8 +997,8 @@ em {
 		input[type="tel"]
 		{
 			height: 40px;
-			font-size: .9rem;
 			font-weight: bold;
+			font-size: .9rem;
 			line-height: 1.3rem;
 		}
 	}
@@ -1115,7 +1125,32 @@ em {
 
 }
 
+.footer-content {
+	display: flex;
+	justify-content: center;
+}
 
+.footer-content>div {
+	padding: 0 10px;
+}
+
+.callback-block {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.callback-block div {
+	display: inline-block;
+	padding: 0 6px;
+	margin-top: 10px;
+}
+
+.callback-block div>a>img {
+	display: block;
+	width: 100%;
+	height: 100%;;
+	cursor: pointer;
+}
 
 
 

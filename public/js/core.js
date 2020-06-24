@@ -86,7 +86,11 @@
 
 
 
+
+
+
     $(document).ready(function(){
+
 
         // Pregress bar init /////////////////////////////////////////////////
         window.onscroll = function() {myFunction()};
