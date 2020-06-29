@@ -30,10 +30,14 @@
 
     <!-- ФОТО-заглушка -->			
     <div class="hiscreen">
-        <div class="welcometext">
-            <h1>Поход в Налычево</h1><br>
-            Отдохни душой и телом... <br>
-            <a href="#hiscreen-form" class="get-feedback-btn">Оставить заявку...</a>
+        <div class="welcometext" style="text-align: left;">
+            <h1 class="tour-header">Поход в Налычево</h1><br>
+            <div class="tour-header-desc" style="text-align: left;">
+                Отдохни душой и телом...
+            </div> 
+            <div class="tour-header-btn" style="text-align: left;">
+                <a href="#hiscreen-form" class="get-feedback-btn">Оставить заявку...</a>
+            </div>           
         </div>
     </div>
     <!-- КОНЕЦ ФОТО-ЗАГЛУШКИ -->
@@ -110,13 +114,17 @@
                     <li>Гидов: <strong>1-2</strong></li>
                     <li>Группа: <strong>8-16</strong> человек</li>
                     <li>Дней: <strong>12</strong></li>
-                    <li>Километраж: <strong>140+</strong> км</li>
-                        <span style="padding-left: 30px;"> - под рюкзаком: <strong>101</strong></span><br>
-                        <span style="padding-left: 30px;">- налегке: <strong>40+</strong></span>
-                    <li>Проживание на маршруте: </li>
-                    <span style="padding-left: 30px;">- палатки: <strong>3</strong></span><br>
-                    <span style="padding-left: 30px;">- базы и прюты: <strong>5</strong></span><br>
-                    <span style="padding-left: 30px;">- гостиницы: <strong>2</strong></span>
+                    <li>Километраж: <strong>140+</strong> км
+                        <ul>
+                            <li> - под рюкзаком: <strong>101</strong></li>
+                            <li>- налегке: <strong>40+</strong></li>
+                        </ul></li>
+                    <li>Проживание на маршруте: 
+                        <ul>
+                            <li>- палатки: <strong>3</strong></li>
+                            <li>- базы и прюты: <strong>5</strong></li>
+                            <li>- гостиницы: <strong>2</strong></li>
+                        </ul></li>
                     <li>Высоты ночевок (внум):<strong>400 (6 ночей)-600 (1 ночь)-900 (1 ночь)</strong></li>
                 </ul>
             </div>
@@ -214,8 +222,6 @@
     </div>
 
 
-
-
         <!-- СЕКЦИЯ ПРОГРАММА ПО ДНЯМ -->
     <div class="wrapper">
         <div class="extra-wrapper">
@@ -225,6 +231,7 @@
             </div>
         </div>
     </div>
+
 
 		<section id="TourProgram">
 
@@ -241,11 +248,13 @@
                     <button class="tablinks" onclick="openDayInfo(event, 'tday7')">День 7</button>
                     <button class="tablinks" onclick="openDayInfo(event, 'tday8')">День 8</button>
                     <button class="tablinks" onclick="openDayInfo(event, 'tday9')">День 9</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday10')">День 10</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday11')">День 11</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'tday12')">День 12</button>
                 </div>  
 
 
                 <div id="tday0" class="day-item">
-                    <!-- Google maps embed -->
                     <div class="thumb-wrap">                    
                         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1nDG8lgY7Bg_PeauC16zpsSF7D6M1TdW8&z=10"></iframe>
                     </div>             
@@ -341,7 +350,7 @@
                     </div>
 				</div>
 
-                <div id="tday9" class="day-item">
+                <div id="tday10" class="day-item">
                     <p class="day-item-title">День 10. Обратный путь. Семеновский кордон.</p>
                     <div class="day-item-content">
                             <img src="images/tours/ko/gallery/small/ko_small_9_.jpg" alt="photo day 1">
@@ -351,7 +360,7 @@
                     </div>
 				</div>
 
-                <div id="tday9" class="day-item">
+                <div id="tday11" class="day-item">
                     <p class="day-item-title">День 11. Финиш в пос. Пиначево. Зеленовские озерки.</p>
                     <div class="day-item-content">
                             <img src="images/tours/ko/gallery/small/ko_small_9_.jpg" alt="photo day 1">
@@ -361,7 +370,7 @@
                     </div>
 				</div>
 
-                <div id="tday9" class="day-item">
+                <div id="tday12" class="day-item">
                     <p class="day-item-title">День 12. Рыбный рынок, магазин сувениров, трансфер в аэропорт. До скорых встреч, Камчатка!</p>
                     <div class="day-item-content">
                             <img src="images/tours/ko/gallery/small/ko_small_9_.jpg" alt="photo day 1">
@@ -374,6 +383,8 @@
 
             </div>
         </section>
+
+
 
     <div class="wrapper">
         <div class="extra-wrapper">
@@ -433,11 +444,13 @@
     </div>
     </div>
 
+
     <div class="wrapper">
         <div class="extra-wrapper">
             <h4>ОТЗЫВЫ О НАС</h4>
         </div>   
     </div>
+
 
 	<!-- Slick slider RESPONSES -->
 	<div class="wrapper9" style="max-width: 1200px; margin: 0 auto;">
@@ -484,8 +497,6 @@
             <h4>ОСТАВИТЬ ЗАЯВКУ&nbsp;&#10140;</h4>
         </div>
     </div>
-
-
 
 
     <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."form_request.html");  ?>
