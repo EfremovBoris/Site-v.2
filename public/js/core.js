@@ -266,7 +266,7 @@
       $("input[id=src-page]").val(window.location.href);
       $.ajax({
           type: "POST",
-          url: "wdh_send_form.php",
+          url: "components/wdh_send_form.php",
           data: $("#reqst_form").serialize(),
           success: function(data) {
               $("#wdh_result_form").html(data);

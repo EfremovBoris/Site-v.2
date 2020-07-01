@@ -119,6 +119,11 @@ h6 {
 li {
 	list-style: none;
 }
+
+.highlight-yellow {
+	background-color: rgba(255, 215, 0, .8); /*#FFD700*/
+}
+
 /* Progress bar */
 
 .top-scroll {
@@ -211,7 +216,7 @@ body {
 	position: relative;
 	height: 90vh;
 
-	background-image: url(../images/bigwall.jpg);
+	background-image: url(../images/tours/ko/cover/ko_cover_04.jpg);
 	background-position: 50% 60%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -224,7 +229,7 @@ body {
 
 
 #ko .hiscreen {
-	background-image: url(../images/TourCover/ko_main1.jpg);
+	background-image: url(../images/tours/ko/cover/ko_cover_02.jpg);
 	display: block;
 }
 
@@ -273,7 +278,7 @@ body {
 
 .hiscreen2 {
 	height: 100vh;
-	background-image: url(../images/bigwall2.jpg);
+	background-image: url(../images/tours/ko/cover/ko_cover_05.jpg);
 	background-position: 50% 10%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -288,7 +293,7 @@ body {
 	position: relative;
 	height: 100vh;
 	
-	background-image: url(../images/form_bg.jpg);
+	background-image: url(../images/tours/ksu/cover/ksu_cover_08.jpg);
 	background-position: 50% 90%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -300,13 +305,13 @@ body {
 
 
 #ko .hiscreen-form {
-	background-image: url(../images/tours/ksu/wall/wall_ko.jpg);
+	background-image: url(../images/tours/ksu/cover/ksu_cover_07.jpg);
 	background-position: 50% 80%;	
 }
 
 .hiscreen404 {
 	height: 100vh;
-	background-image: url(../images/bigwall2.jpg);
+	background-image: url(../images/tours/ko/cover/ko_cover_05.jpg);
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -1439,4 +1444,14 @@ svg#ig-icon path {
 
 .fill {
 	background-color: #74a707;
+}
+
+
+
+
+/* AUX */
+
+.basic-list>li {
+	list-style: square !important;
+	margin-left: 50px;
 }
