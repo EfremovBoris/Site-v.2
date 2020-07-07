@@ -162,7 +162,7 @@
 				var isopen = $(this).hasClass("_opened");
 				if (isopen == false) {
 					// $(this).children(".acc-header-btn").toggleClass("rotated90");
-					$(this).next('.acc-content').css('max-height', '500px');
+					$(this).next('.acc-content').css('max-height', '700px');
 				} else {
 					// $(this).children(".acc-header-btn").toggleClass("rotated90");
 					$(this).next('.acc-content').css('max-height', '0');

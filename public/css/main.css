@@ -7,11 +7,13 @@
 	--wrapper-read-block: 900px;
 	--tab-tour-desc-width: 900px;
 	--extra-padding: 15px;
+	--main-menu-height: 80px;
 }
 
 @media screen and (max-width: 767px) {
     :root {
-        --extra-padding: 10px;
+		--extra-padding: 10px;
+		--main-menu-height: 50px;
     }
 }
 
@@ -155,8 +157,8 @@ li {
 section:target:before {
     content: "";
 	display: block;
-    height: 80px;
-	margin-top: -80px;
+    height: var(--main-menu-height);
+	margin-top: -(var(--main-menu-height));
 }
 
 body {
@@ -164,6 +166,9 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 	/* Do i need line below?!!! */
 	/* height: 100%; */
+
+	/* Menu padding */
+	padding-top: var(--main-menu-height);
 }
 
 .text-wrapper p,
@@ -202,7 +207,7 @@ body {
 .main {
 	/* footer height check below */
 	/* min-height: calc(100vh - 64px); 
-	padding-top: 80px; */
+	padding-top: var(--main-menu-height); */
 }
 
 
@@ -214,7 +219,7 @@ body {
 
 .hiscreen {
 	position: relative;
-	height: 90vh;
+	height: 80vh;
 
 	background-image: url(../images/tours/ko/cover/ko_cover_04.jpg);
 	background-position: 50% 60%;
@@ -262,7 +267,7 @@ body {
 	top: 0;
 	right: 0;
 	width: 100%;
-	height: 90vh;
+	height: 100%;
     z-index: 1;
 	background: rgb(177,80,180);
 	background: linear-gradient(180deg, rgba(177,80,180,0.2805497198879552) 23%, rgba(0,212,255,0.23573179271708689) 72%);
@@ -439,7 +444,7 @@ body {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		height: 80px;
+		height: var(--main-menu-height);
 		align-items: center;
 		padding: 0 20px;
 	}
@@ -554,7 +559,6 @@ body {
 		}
 
 		.header__body {
-			height: 50px;
 			justify-content: flex-end;
 		}
 		.header__burger {
@@ -571,6 +575,7 @@ body {
 			left: 0;
 			width: 100%;
 			height: 3px;
+			border-radius: 1.5px;
 			top: 9px;
 			transition: all 0.3s ease 0s;
 		}
@@ -582,6 +587,7 @@ body {
 			position: absolute;
 			width: 100%;
 			height: 3px;
+			border-radius: 1.5px;
 			left: 0;
 			transition: all 0.3s ease 0s;
 		}
