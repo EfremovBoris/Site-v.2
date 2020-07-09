@@ -60,46 +60,67 @@
 						качественный сервис в будущем.
 					</p>
 					<p>
-						Отзыв можно оставить посредством VKontakte, Facebook,
-						Google Forms так и в произвольной форме (e-mail,
-						whatsapp)...
+						Отзыв можно оставить посредством:
+						
+						<ul class="basic-list">
+							<li>ВКонтакте</li>
+							<li>Facebook</li>
+							<li>формы Google (нажать <b>Submit</b> для отправки)</li>
+							<li>произвольной форме (E-mail,
+								WhatsApp)</li>
+						</ul>
 					</p>
 					<p>
 						Если отзыв оставлен не через социальные сети, то просьба
-						указать ссылки на соцсети в которых вы активны, чтобы
-						подлинность отзыва не вызывала сомнений:)
+						указать ссылки на соцсети, в которых вы активны, чтобы
+						указать автора отзыва.
 					</p>
 				</div>
 				<!-- Put this div tag to the place, where the Comments block will be -->
 				<br />
 
-				<div
-					class="vk-wrapper"
-					style="max-width: 800px; margin: 0 auto;"
-				>
-					<div id="vk_comments"></div>
+
+                <div class="tab">
+                    <button class="tablinks" onclick="openDayInfo(event, 'respVK', 'resp-channel')" id="defaultOpen">ВКонтакте</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'respFB', 'resp-channel')">Facebook</button>
+                    <button class="tablinks" onclick="openDayInfo(event, 'respGF', 'resp-channel')">форма Google</button>
+                </div>  
+
+				<div class="feedback-channels">
+					<div id="respVK"
+						class="vk-wrapper resp-channel"
+						style="max-width: 800px; margin: 0 auto;"
+					>
+						<div id="vk_comments"></div>
+					</div>
+
+					<div id="respFB"
+						class="fb-wrapper resp-channel"
+						style="
+							background-color: rgb(221, 224, 223);
+							padding: 20px 0;
+							text-align: center;
+						"
+					>
+						<div
+							class="fb-comments"
+							data-href="https://boris-trip.com/reviews.html"
+							data-numposts="5"
+							data-width=""
+						></div>
+					</div>
+
+					<div id="respGF" class="thumb-wrap resp-channel">
+						<iframe
+							src="https://docs.google.com/forms/d/e/1FAIpQLSfAxiXZ_iQ49GXG00FzqNwjKZvGlQyzDsV_PMGrwmbJQk3eKQ/viewform?embedded=true"
+						>Loading…</iframe>
+					</div>
 				</div>
 
-				<div
-					class="fb-wrapper"
-					style="
-						background-color: rgb(221, 224, 223);
-						padding: 20px 0;
-						text-align: center;
-					"
-				>
-					<div
-						class="fb-comments"
-						data-href="https://boris-trip.com/reviews.html"
-						data-numposts="5"
-						data-width=""
-					></div>
-				</div>
 
-				<div class="thumb-wrap">
-					<iframe
-						src="https://docs.google.com/forms/d/e/1FAIpQLSfAxiXZ_iQ49GXG00FzqNwjKZvGlQyzDsV_PMGrwmbJQk3eKQ/viewform?embedded=true"
-					>Loading…</iframe>
+				<!-- empty block for scrolling -->
+				<div style="height: 150px;">
+					&nbsp;
 				</div>
 			</div>
 		</div>
@@ -117,5 +138,7 @@
 
 		<!-- view JS ////////////-->
 		<script src="js/core.js"></script>
+		<!-- Important: Open Default Tab -->
+		<script>document.getElementById("defaultOpen").click();</script>    
 	</body>
 </html>

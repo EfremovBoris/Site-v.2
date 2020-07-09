@@ -7,10 +7,10 @@
 
 
     // Tabs select login /////////////////////////////////////////////////
-    // may be it's better to parameterize classes Day-item & Tablinks
-    function openDayInfo(evt, tabName) {
+    // may be it's better to parameterize class Tablinks
+    function openDayInfo(evt, tabName, childClass) {
       var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("day-item");
+      tabcontent = document.getElementsByClassName(childClass);
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
@@ -184,42 +184,66 @@
         if ( $( ".slider" ).length ) {
             $('.slider').slick({
                 //accessibility:true,
-                //variableWidth:true,
+                // variableWidth:true,
                 // lazyLoad: 'ondemand',
                 arrows: true,
                 // dots: true,
                 // adaptiveHeight: true,
-                slidesToShow: 1,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 speed: 500,
                 easing:'_ease_',
                 infinite:false,
                 responsive: [
-                {
-                    breakpoint: 1050,
+
+                  {
+                    breakpoint: 2000,
                     settings: {
                         // arrows: false,
                         // centerMode: true,
                         // centerPadding: '40px',
-                        slidesToShow: 1
+                        // variableWidth:true,
+                        slidesToShow: 4
+                    }
+                },
+
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        // arrows: false,
+                        // centerMode: true,
+                        // centerPadding: '40px',
+                        // variableWidth:true,
+                        slidesToShow: 3
                     }
                 },
                     {
-                    breakpoint: 700,
+                    breakpoint: 1000,
                     settings: {
                         // arrows: false,
-                        //centerMode: true,
+                        // centerMode: true,
                         // centerPadding: '40px',
-                        slidesToShow: 1
+                        slidesToShow: 4
                     }
-                }
+
+                },
+                {
+                  breakpoint: 450,
+                  settings: {
+                      // arrows: false,
+                      // centerMode: true,
+                      // centerPadding: '30px',
+                      slidesToShow: 1
+                  }
+
+              }
+
                 ]
                 
                 //initialSlide: 2,
                 //centerMode: true,
                 //variableWidth: true
                 //draggable:false
-                // slidesToScroll: 1
             });
       }; //end if exist
 

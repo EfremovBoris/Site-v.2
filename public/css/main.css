@@ -1,5 +1,5 @@
 /* Import modules */
-@import "toggle-switch.css";
+/* @import "toggle-switch.css"; */
 @import "gallery.css";
 
 
@@ -819,6 +819,12 @@ em {
 	display: none;
 }
 
+
+.feedback-channels>div:not(:first-child) {
+	display: none;
+}
+
+
 /* Style the tab */
 .tab {
 	overflow: hidden;
@@ -1557,7 +1563,6 @@ label.label4fz {
 
 .faq__item-question {
 	font-size: 1.2rem;
-	color: blue;
 }
 
 .faq__item-answer {
