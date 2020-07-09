@@ -5,7 +5,7 @@
             <form id="reqst_form">
                 <div>
                     <input onkeyup="check_input(this)" type="text" id="form_fio" name="form_fio"
-                    title="Укажите ФИО" placeholder="Ефремов Борис Валерьевич" required>
+                    title="Укажите ФИО" placeholder="Иванов Иван Иванович" required>
                 </div>
                 <div>
                     <input onkeyup="check_input(this)" type="text" inputmode="email" id="form_email" name="form_email"
@@ -21,7 +21,12 @@
                 <input type="hidden" id="src-page" name="src-page" value="">
                 <!-- SUBMIT -->
                 
-                <input type="submit" value="Хочу в поход!">
+                <label class="label4fz" for="persFZ">
+                    <input type="checkbox" id="persFZ" onchange="document.getElementById('iwonnago').disabled = !this.checked;" />
+                    <span style="word-break: break-word;">&nbsp;Я согласен на <a href="/politika-konfidentsialnosti.html" target="_blank">обработку персональных&nbsp;данных</a></span>
+                </label>
+
+                <input type="submit" id="iwonnago" value="Хочу в поход!" disabled>
                 
                 <div id="wdh_result_form"></div>
             </form>

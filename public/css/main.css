@@ -8,12 +8,18 @@
 	--tab-tour-desc-width: 900px;
 	--extra-padding: 15px;
 	--main-menu-height: 80px;
+	--photo-size: 200px;
+	--photo-padding: 20px;
+	--faq-item-gap: 30px;
 }
 
 @media screen and (max-width: 767px) {
     :root {
 		--extra-padding: 10px;
 		--main-menu-height: 50px;
+		--photo-size: 100px;
+		--photo-padding: 10px;
+		--faq-item-gap: 15px;
     }
 }
 
@@ -56,7 +62,7 @@
 
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
-a, a:visited, a:hover {text-decoration: none;}
+a, a:visited, a:hover {text-decoration: none; color: #fff;}
 
 
 html {
@@ -76,6 +82,15 @@ h1,h2,h3,h4,h5,h6{
     margin: 30px 0;
     /* color: #252525; */
 }
+
+
+@media (max-width: 767px) {
+	h1,h2,h3,h4,h5,h6{
+		line-height: 1.2;
+		margin: 15px 0;
+	}	
+}
+
 
 h1 {
 	font-size: 2rem;
@@ -163,7 +178,9 @@ section:target:before {
 
 body {
 	background-color: #f7e7d0; /*#f3e5e5;*/
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'PT Sans', sans-serif;
+	/* font-family: 'Istok Web', sans-serif; */
+	
 	/* Do i need line below?!!! */
 	/* height: 100%; */
 
@@ -1063,6 +1080,11 @@ em {
 		background-color: #FFA13C;
 	}
 
+
+	input[type="checkbox"] {
+		display: inline-block;
+	}
+
 	#wdh_result_form {
 		padding: 5px 10px;
 	}
@@ -1103,6 +1125,7 @@ em {
 }
 
 .acc-header-title {
+	word-break: break-all;
 	cursor: pointer;
 	font-size: 18px;
 	font-weight: 500;
@@ -1461,3 +1484,85 @@ svg#ig-icon path {
 	list-style: square !important;
 	margin-left: 50px;
 }
+
+
+label.label4fz {
+    margin: 6px auto 10px;
+    padding: 0;
+    display: block;
+}
+
+
+.fancybox-content {
+	background: #968c8d !important;
+}
+
+
+/* about page */
+.contact-me {
+    width: 100%;
+    height: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #1c1a1c;
+	color: #fff;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.contact-me__photo {
+    flex: 0 0 calc(var(--photo-size)+(2*var(--photo-padding)));
+    padding: 20px var(--photo-padding) 30px;
+}
+
+.contact-me__photo .photo {
+    width: var(--photo-size);
+    height: var(--photo-size);
+    border-radius: 50%;
+	border: 2px solid #fff;
+	overflow: hidden;
+}
+
+.photo img {
+	width: 100%;
+	height: 100%;
+}
+
+.contact-me__desc {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (min-width: 767px) {
+	.contact-me__desc {
+		flex: 0;
+	}
+}
+
+
+
+
+/* FAQ */
+.faq {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
+	grid-gap: var(--faq-item-gap);
+	}
+
+.faq__item {
+	/* border: 1px solid red; */
+	padding: 10px 5px;
+	min-height: 100px;
+}
+
+.faq__item-question {
+	font-size: 1.2rem;
+	color: blue;
+}
+
+.faq__item-answer {
+	padding-left: 30px;
+	padding-top: 10px;
+}
+
+

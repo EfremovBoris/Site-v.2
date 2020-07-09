@@ -47,7 +47,7 @@
         <div class="content-scroll">
             <form id="reqst_form_modal">
                 <input onkeyup="check_input_modal(this)" type="text" id="form_fio_modal" name="form_fio"
-                title="Укажите ФИО" placeholder="Ефремов Борис Валерьевич" required>
+                title="Укажите ФИО" placeholder="Иванов Иван Иванович" required>
                 <br>
                 <input onkeyup="check_input_modal(this)" type="text" inputmode="email" id="form_email_modal" name="form_email"
                 pattern="^[^ ]+@[^ ]+\.[a-z]{2,}" title="Укажите почту в формате mybox@mail.ru" placeholder="lovekamski@mail.ru" required>
@@ -61,7 +61,12 @@
                 <input type="hidden" id="src-page" name="src-page" value="">
                 <!-- SUBMIT -->
                 <br>
-                <input type="submit" value="Отправить заявку...">
+                <label class="label4fz" for="persFZ">
+                    <input type="checkbox" id="persFZ" onchange="document.getElementById('iwonnago2').disabled = !this.checked;" />
+                    <span style="word-break: break-word;">&nbsp;Я согласен на <a href="/politika-konfidentsialnosti.html" target="_blank">обработку персональных&nbsp;данных</a></span>
+                </label>
+
+                <input type="submit" id="iwonnago2" value="Отправить заявку..." disabled>
                 <br>
                 <div id="wdh_result_form"></div>
             </form>
