@@ -189,7 +189,8 @@ body {
 }
 
 .text-wrapper p,
-.show-more-block p
+.show-more-block p,
+.about-me p
 {
 	text-indent: 20px;
 	line-height: 1.6;
@@ -277,6 +278,58 @@ body {
 		transform: translateY(-15%);
 	}
 }
+
+
+#aboutus .hiscreen-form {
+	background-image: url(../images/me_tolbachik-2.jpg);
+	display: block;
+	background-position: 55% 30%;
+	overflow: hidden;
+}
+
+#aboutus .welcometext {
+	display: inline-block;
+	position: absolute;
+	height: 90%;
+	width: 70%;
+	max-width: 1280px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* padding make x-scroll */
+	padding: 0 30px;
+	font-size: 20px;
+	/* border: 1px solid red; */
+}
+
+#aboutus .about-me {
+	height: 70%;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: rgba(104, 102, 94, 0.5);
+	overflow-y: scroll;
+}
+
+.about-me p {
+	letter-spacing: .5px;
+}
+
+@media screen and (max-width: 767px) {
+	#aboutus .welcometext {
+		width: 90%;
+		height: 90%;
+		padding: 0 10px;
+		font-size: 16px;
+	}
+
+	.about-me p {
+		letter-spacing: 0;
+	}
+
+}
+
+
+
 
 .hiscreen::after {
 	content: '';
@@ -1563,6 +1616,7 @@ label.label4fz {
 
 .faq__item-question {
 	font-size: 1.2rem;
+	font-weight: bold;
 }
 
 .faq__item-answer {
