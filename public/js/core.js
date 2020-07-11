@@ -253,7 +253,7 @@
                 $('.owl-carousel').owlCarousel({
                   items: 1,
                   // center: true,
-                  loop:false,
+                  loop:true,
                   // margin:10,
                   nav:true,
                 dots:true,
@@ -297,6 +297,9 @@
               $("#wdh_result_form").toggleClass('success');
               document.getElementById('reqst_form').reset();
               setTimeout(clearBox, 5000, "wdh_result_form");
+
+              // debug - open popup "ThankYou" page on submit
+              $.fancybox.open([ $('#thank-you-page') ]);
           },
           error: function (xhr, ajaxOptions, thrownError) {
               $("#wdh_result_form").html(xhr.status + '; '+ thrownError);

@@ -64,6 +64,8 @@
 a:focus,a:active{outline: none;}
 a, a:visited, a:hover {text-decoration: none; color: #fff;}
 
+a.darker, a.darker:visited, a.darker:hover {text-decoration: none; color: #EB1416;}
+
 
 html {
 	font-size: 18px;
@@ -190,7 +192,8 @@ body {
 
 .text-wrapper p,
 .show-more-block p,
-.about-me p
+.about-me p,
+.info-box2 p
 {
 	text-indent: 20px;
 	line-height: 1.6;
@@ -280,13 +283,6 @@ body {
 }
 
 
-#aboutus .hiscreen-form {
-	background-image: url(../images/me_tolbachik-2.jpg);
-	display: block;
-	background-position: 55% 30%;
-	overflow: hidden;
-}
-
 #aboutus .welcometext {
 	display: inline-block;
 	position: absolute;
@@ -310,7 +306,8 @@ body {
 	overflow-y: scroll;
 }
 
-.about-me p {
+.about-me p,
+.info-box2 p {
 	letter-spacing: .5px;
 }
 
@@ -322,7 +319,8 @@ body {
 		font-size: 16px;
 	}
 
-	.about-me p {
+	.about-me p,
+	.info-box2 p {
 		letter-spacing: 0;
 	}
 
@@ -362,6 +360,18 @@ body {
 	justify-content: center;
 	align-items: center;	
 }
+
+
+.hiscreen3 {
+	position: relative;
+	height: 100vh;
+	background-image: url(../images/me_tolbachik-2.jpg);
+	background-position: 55% 30%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
 
 
 .hiscreen-form {
@@ -410,11 +420,12 @@ body {
 
 
 .info-box2 {
+	border-radius: 10px;
 	padding: 30px;
 	color: #fff;
 	font-size: 1.2rem;
 	width: 50%;
-	background-color: rgba(130, 130, 130, 0.4);
+	background-color: rgba(130, 130, 130, 0.65);
 }
 
 
@@ -422,10 +433,10 @@ body {
 	/* position: absolute; */
 	margin-left: auto;
 	margin-right: auto;
-	transform: translateY(25%);
+	transform: translateY(50%);
 
 	padding: 20px 30px;
-	color: #fff;
+	color: #fff !important;
 	width: 40%;
 	background-color: rgba(130, 130, 130, 0.4);
 	/* left: 50%;
@@ -565,11 +576,16 @@ body {
 		padding-bottom: 7px;
 		position: relative; 
 	}
-	.heder__link {
+	.header__link {
 		color: #FFDA35;
 		text-transform: uppercase;
+		text-decoration: none;
 		/* font-size:18px; */
 		font-size: calc(16px + 4 * ((100vw - 320px) / 1140));
+	}
+
+	.header__link:hover {
+		color: #FFDA35 !important;
 	}
 
 	.header__menu {
@@ -1434,24 +1450,47 @@ svg#ig-icon path {
 }
 .featureListItem {
 	display: flex;
+	width: 50%;
 	/* border: 1px solid blue; */
 }
 
-.featureListItem:nth-child(2n) .featureListItem__text:after {
+/* 3,4 7,8 11,12 */
+.featureListItem:nth-child(4n+3) .featureListItem__text:after {
 	left: -40px;
 	border-width: 20px;
 	border-left-color: transparent;
 	border-right-color: #fff;
 }
 
-.featureListItem:nth-child(2n){
+/* 4 8 12 */
+.featureListItem:nth-child(4n) .featureListItem__text:after {
+	left: -40px;
+	border-width: 20px;
+	border-left-color: transparent;
+	border-right-color: #fff;
+}
+
+
+/* 3,4 7,8 11,12 */
+.featureListItem:nth-child(4n+3),
+.featureListItem:nth-child(4n)
+{
 	flex-direction: row-reverse;
 }
+
+/* 1,2 5,6 9,10 */
+/* .featureListItem:nth-child(4n+3),
+.featureListItem:nth-child(4n) */
+
+/* 1,2 5,6 9,10 */
+/* .featureListItem:nth-child(4n+1),
+.featureListItem:nth-child(4n+2) */
+
 
 .featureListItem__text {
 	position: relative;
 	padding: 10px 20px;
-	/* flex: 0 0 50%; */
+	flex: 0 0 50%;
 	background-color: #fff;
 
 	display: flex;
@@ -1472,9 +1511,11 @@ svg#ig-icon path {
 	border-width: 20px;
 	border-left-color: #fff;
 	transform: translate(0, -50%);
+	/* background-color: yellow; */
 }
 
 .featureListItem__photo {
+	height: 300px;
 	flex: 0 0 50%;
 	/* border: 1px solid red; */
 	overflow: hidden;
@@ -1489,7 +1530,34 @@ svg#ig-icon path {
 }
 
 
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 960px) {
+
+	.featureListItem:nth-child(2n) .featureListItem__text:after {
+		left: -40px;
+		border-width: 20px;
+		border-left-color: transparent;
+		border-right-color: #fff;
+		/* background-color: red; */
+	}
+
+	/* reset */
+	.featureListItem:nth-child(n){
+		flex-direction: row;
+	}
+
+	.featureListItem:nth-child(2n){
+		flex-direction: row-reverse;
+	}
+
+	.featureListItem {
+		width: 100%;
+	}
+
+}
+
+
+@media screen and (max-width: 460px) {
 
 	.featureListItem {
 		display: block;
@@ -1501,7 +1569,6 @@ svg#ig-icon path {
 	.featureListItem__text::after {
 		border-width: 0;
 	}	
-
 
 	.featureListItem:nth-child(2n) .featureListItem__text:after {
 		border-width: 0;
@@ -1564,7 +1631,7 @@ label.label4fz {
 	display: flex;
 	justify-content: center;
 	background-color: #1c1a1c;
-	color: #fff;
+	color: #fff !important;
 	font-family: 'PT Sans', sans-serif;
 }
 
@@ -1597,7 +1664,6 @@ label.label4fz {
 		flex: 0;
 	}
 }
-
 
 
 

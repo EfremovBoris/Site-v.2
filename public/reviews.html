@@ -50,77 +50,74 @@
 				<div class="text-wrapper">
 					<h4>ОТЗЫВЫ О ПОХОДАХ</h4>
 					<p>
-						Мир туристов тесен и возможно вы ходили со мной в походы
-						(Камчатка, Непал,...).
-					</p>
-					<p>
-						Здесь вы можете оставить свои впечатления о походе в
-						целом и обо мне как о организаторе/гиде в частности.
-						Каждый отзыв важен, так как помогает предоставлять более
-						качественный сервис в будущем.
-					</p>
-					<p>
-						Отзыв можно оставить посредством:
-						
+						Отзыв можно оставить посредством:						
 						<ul class="basic-list">
-							<li>ВКонтакте</li>
-							<li>Facebook</li>
+							<li>ВКонтакте (VK)</li>
+							<li>Facebook (FB)</li>
 							<li>формы Google (нажать <b>Submit</b> для отправки)</li>
 							<li>произвольной форме (E-mail,
 								WhatsApp)</li>
-						</ul>
+						</ul>						
 					</p>
 					<p>
 						Если отзыв оставлен не через социальные сети, то просьба
 						указать ссылки на соцсети, в которых вы активны, чтобы
 						указать автора отзыва.
 					</p>
-				</div>
-				<!-- Put this div tag to the place, where the Comments block will be -->
-				<br />
-
-
-                <div class="tab">
-                    <button class="tablinks" onclick="openDayInfo(event, 'respVK', 'resp-channel')" id="defaultOpen">ВКонтакте</button>
-                    <button class="tablinks" onclick="openDayInfo(event, 'respFB', 'resp-channel')">Facebook</button>
-                    <button class="tablinks" onclick="openDayInfo(event, 'respGF', 'resp-channel')">форма Google</button>
-                </div>  
-
-				<div class="feedback-channels">
-					<div id="respVK"
-						class="vk-wrapper resp-channel"
-						style="max-width: 800px; margin: 0 auto;"
-					>
-						<div id="vk_comments"></div>
-					</div>
-
-					<div id="respFB"
-						class="fb-wrapper resp-channel"
-						style="
-							background-color: rgb(221, 224, 223);
-							padding: 20px 0;
-							text-align: center;
-						"
-					>
-						<div
-							class="fb-comments"
-							data-href="https://boris-trip.com/reviews.html"
-							data-numposts="5"
-							data-width=""
-						></div>
-					</div>
-
-					<div id="respGF" class="thumb-wrap resp-channel">
-						<iframe
-							src="https://docs.google.com/forms/d/e/1FAIpQLSfAxiXZ_iQ49GXG00FzqNwjKZvGlQyzDsV_PMGrwmbJQk3eKQ/viewform?embedded=true"
-						>Loading…</iframe>
-					</div>
+					<p class="highlight-yellow">&#8595;&#8595;&#8595;Выберите нужную <b>закладку</b> (VK, Facebook, Google) щелкнув по ней!&nbsp;&#8595;&#8595;&#8595;</p>
 				</div>
 
 
-				<!-- empty block for scrolling -->
-				<div style="height: 150px;">
-					&nbsp;
+				<div class="text-wrapper">
+					<div class="tab">
+						<button class="tablinks" onclick="openDayInfo(event, 'respVK', 'resp-channel')" id="defaultOpen">VK</button>
+						<button class="tablinks" onclick="openDayInfo(event, 'respFB', 'resp-channel')">FB</button>
+						<button class="tablinks" onclick="openDayInfo(event, 'respGF', 'resp-channel')">форма Google</button>
+					</div>  
+				
+					<div class="feedback-channels" style="background-color: #fff;">
+						<div id="respVK"
+							class="vk-wrapper resp-channel"
+							style="max-width: 800px; margin: 0 auto; padding: 15px 5px;"
+						>
+							<div id="vk_comments"></div>
+						</div>
+
+						<div id="respFB"
+							class="fb-wrapper resp-channel"
+							style="
+								padding: 15px 0;
+								text-align: center;
+							"
+						>
+							<div
+								class="fb-comments"
+								data-href="https://boris-trip.com/reviews.html"
+								data-numposts="5"
+								data-width=""
+							></div>
+						</div>
+
+						<div id="respGF" class="thumb-wrap resp-channel" style="min-height: 400px;">
+							<iframe
+								src="https://docs.google.com/forms/d/e/1FAIpQLSfAxiXZ_iQ49GXG00FzqNwjKZvGlQyzDsV_PMGrwmbJQk3eKQ/viewform?embedded=true"
+							>Loading…</iframe>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-wrapper">
+					<h4>P.S.:</h4>
+					<p>
+						Мир туристов тесен и возможно вы ходили со мной в походы
+						(Камчатка, Непал,...).
+					</p>
+					<p>
+						Здесь вы можете оставить свои впечатления о походе в
+						целом и обо мне как о гиде/организаторе в частности.
+					</p>
+					<p class="highlight-yellow">Каждый отзыв важен, так как помогает предоставлять более
+						качественный сервис в будущем.</p>	
 				</div>
 			</div>
 		</div>
