@@ -17,12 +17,13 @@
 .slick-slide{}
 /* Слайд активный (показывается) */
 
-.slick-current.slick-active p {
+.slick-current.slick-active>div {
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    top: calc(50% - 36px);
+    top: 50%;
+    transform: translateY(-50%);
     color: #fff;
     font-size: 30px;
 }
@@ -55,33 +56,28 @@
 
 
 /* конкретный слайдер */
-.slider {
+.slider-tour {
     padding-top: 0;
     position: relative;
     background-color: rgb(173, 71, 71);
     overflow: hidden;
     /* border: 2px solid blue; */
-    /* height: calc (100vh - 62x); */
-    height: 85vh;
+    height: calc(100vh - (var(--main-menu-height)));
 
 }
 
 .slider__item {
     text-align: center;
     position: relative;
-    height: 100%;
-    /* border: 1px solid green; */
 }
 
 .slider__item img {
-    /* width: calc(100% - 140px); */
     width: 100%;
-    height: 100vh; 
+    height: calc(100vh - (var(--main-menu-height)));;
     object-fit: cover;
-    
 }
 
-.slider .slick-arrow{
+.slider-tour .slick-arrow{
     position: absolute;
     top: 0;
     z-index: 1;
@@ -93,38 +89,38 @@
     /* border: 1px yellow solid; */
 } 
 
-.slider .slick-arrow.slick-prev{
+.slider-tour .slick-arrow.slick-prev{
     left: 2%;
-    background: url('../images/left-arrow.svg') center no-repeat;
-    background-size: 150%;
+    background: url('../images/left-arrow.svg') 50% 65% no-repeat;
+    background-size: 110%;
 }
 
-.slider .slick-arrow.slick-next{
+.slider-tour .slick-arrow.slick-next{
     right: 2%;
-    background: url('../images/right-arrow.svg') center no-repeat;
-    background-size: 150%;
+    background: url('../images/right-arrow.svg') 50% 65% no-repeat;
+    background-size: 110%;
 }
 
-.slider .slick-arrow.slick-disabled {
+.slider-tour .slick-arrow.slick-disabled {
     opacity: 0.3;
 }
 
-.slider .slick-dots{
+.slider-tour .slick-dots{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.slider .slick-dots li{
+.slider-tour .slick-dots li{
     list-style: none;
     margin: 0 10px;
 }
 /* Активная точка */
-.slider .slick-dots li.slick-active button{
+.slider-tour .slick-dots li.slick-active button{
     border: 1px solid #fff;
     background-color: transparent;
 }
 /* Элемент точки */
-.slider .slick-dots li button{
+.slider-tour .slick-dots li button{
     outline: none;
     font-size: 0;
     width: 10px;

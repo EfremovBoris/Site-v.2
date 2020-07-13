@@ -283,6 +283,28 @@ body {
 }
 
 
+#bak .hiscreen {
+	background-image: url(../images/tours/bak/cover/bak_cover_02.jpg);
+	display: block;
+	background-position: 40% 60%;
+}
+
+#bak .hiscreen::after {
+	background: none;
+}
+
+
+#bak .welcometext {
+	display: inline-block;
+	position: absolute;
+
+	left: 20%;
+	top: 20%;
+	/* padding make x-scroll */
+	padding: 0 30px;
+}
+
+
 #aboutus .welcometext {
 	display: inline-block;
 	position: absolute;
@@ -393,6 +415,13 @@ body {
 	background-image: url(../images/tours/ksu/cover/ksu_cover_07.jpg);
 	background-position: 50% 80%;	
 }
+
+
+#bak .hiscreen-form {
+	background-image: url(../images/tours/bak/cover/bak_cover_01.jpg);
+	background-position: 50% 80%;	
+}
+
 
 .hiscreen404 {
 	height: 100vh;

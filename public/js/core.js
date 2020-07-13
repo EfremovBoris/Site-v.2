@@ -248,6 +248,35 @@
       }; //end if exist
 
 
+
+
+
+      if ( $( ".slider-tour" ).length ) {
+        $('.slider-tour').slick({
+            //accessibility:true,
+            // variableWidth:true,
+            // lazyLoad: 'ondemand',
+            arrows: true,
+            // dots: true,
+            // adaptiveHeight: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 500,
+            easing:'_ease_',
+            infinite:false,
+            // autoplay:true,
+            autoplayspeed: 4000,
+            pauseOnHover:true
+            //initialSlide: 2,
+            //centerMode: true,
+            //variableWidth: true
+            //draggable:false
+        });
+  }; //end if exist
+
+
+
+
         //   FEEDBACK owl init /////////////////////////////////////////////////////
         if ( $( ".owl-carousel" ).length ) {
                 $('.owl-carousel').owlCarousel({
