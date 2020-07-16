@@ -243,7 +243,7 @@ body {
 	height: 80vh;
 
 	background-image: url(../images/tours/ko/cover/ko_cover_04.jpg);
-	background-position: 50% 60%;
+	background-position: 55% 1%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -257,6 +257,7 @@ body {
 #ko .hiscreen {
 	background-image: url(../images/tours/ko/cover/ko_cover_02.jpg);
 	display: block;
+	background-position: 50% 60%;
 }
 
 #ko .hiscreen::after {
@@ -942,6 +943,7 @@ em {
   
   .tab button:hover {
 	background-color: #ddd;
+	color: #3066e2;
   }
   
   .tab button.active {
