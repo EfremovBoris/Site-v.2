@@ -75,6 +75,7 @@
     width: 100%;
     height: calc(100vh - (var(--main-menu-height)));;
     object-fit: cover;
+    object-position: 50% 30%;
 }
 
 .slider-tour .slick-arrow{

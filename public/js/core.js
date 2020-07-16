@@ -112,7 +112,7 @@
         //  GO to TOP button activation  /////////////////////////////////////////////////
         $(document).scroll(function() {
             var y = $(this).scrollTop();
-            if (y > 200) {
+            if (y > 500) {
               $('.scroll-top-btn').fadeIn();
             } else {
               $('.scroll-top-btn').fadeOut();
