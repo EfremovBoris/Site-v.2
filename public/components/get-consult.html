@@ -117,11 +117,14 @@
                 $("input[id=src-page]").val("popup_get-consult");                
                 $.ajax({
                     type: "POST",
-                    url: "wdh_send_form.php",
+                    url: "components/wdh_send_form.php",
                     data: $("#reqst_form_modal").serialize(),
                     success: function(data) {
                         $("#wdh_result_form").html(data);
                         document.getElementById('reqst_form_modal').reset();
+                        // window.alert("Заявка на консультацию отправлена. Мы с вами свяжемся!");
+                        // debug - open popup "ThankYou" page on submit
+                        // $.fancybox.open([ $('#thank-you-page') ]);
                     }
                 });
             });		
