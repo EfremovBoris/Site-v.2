@@ -1,13 +1,21 @@
 User-Agent: *
-Disallow: /
+
+# Forbid EVERYTHING for DEBUGGING...CODING
+# Disallow: /
 
 
-#Disallow: /components/
-#Disallow: /tilda/form*
+Disallow: /components/
+Disallow: /image_src/
+
+Disallow: /gallery_flex.html
+Disallow: /403.html
+Disallow: /404.html
+Disallow: /politika-konfidentsialnosti.html
+
+Disallow: /test.php
+
+
 #Disallow: /tilda/popup*
-#Disallow: /tilda/cart*
-#Disallow: /tilda/product*
-
-#Sitemap: https://boris-trip.com/sitemap.xml
 
 Host: https://boris-trip.com
+Sitemap: https://boris-trip.com/sitemap.xml
