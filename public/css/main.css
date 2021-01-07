@@ -171,11 +171,10 @@ li {
 /* Основа */
 
 /* Right now not work correctly */
-section:target:before {
+div:target:before {
     content: "";
 	display: block;
     height: var(--main-menu-height);
-	margin-top: -(var(--main-menu-height));
 }
 
 body {
@@ -222,6 +221,19 @@ body {
 		border-bottom: 4px solid #000;
 		padding: 15px;
 	}	
+}
+
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
 }
 
 
@@ -916,7 +928,7 @@ em {
 /* Tabs for day-by-day programm */
 
 .days-list>div:not(:first-child) {
-	display: none;
+	/* display: none; */
 }
 
 
@@ -1026,12 +1038,17 @@ em {
 	/* Tabs for day-by-day programm */
 
 	/* not first 2 items... */
-	.days-list>div:nth-child(n+3) {
+	/* .days-list>div:nth-child(n+3) {
 		display: block;
-	}
+	} */
 
 	/* first 2 items */
-	.days-list>div:not(:nth-child(n+3)) {
+	/* .days-list>div:not(:nth-child(n+3)) {
+		display: none !important;
+	} */
+
+	/* Hide map on Phone */
+	.days-list>div:first-child {
 		display: none !important;
 	}
 

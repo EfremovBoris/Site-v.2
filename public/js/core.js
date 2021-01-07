@@ -133,13 +133,17 @@
               ) {
                 // Figure out element to scroll to
                 var target = $(this.hash);
+
+                // need to use headerHeight
+                // headerHeight = $(".header__body").height(); // Get fixed header height
+
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 // Does a scroll target exist?
                 if (target.length) {
                   // Only prevent default if animation is actually gonna happen
                   event.preventDefault();
                   $('html, body').animate({
-                    scrollTop: target.offset().top  // -80 //fixed header height
+                    scrollTop: target.offset().top // - 80 fixed header height
                   }, 1000, function() {
                     // Callback after animation
                     // Must change focus!
