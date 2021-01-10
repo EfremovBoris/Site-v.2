@@ -1829,3 +1829,65 @@ label.label4fz {
 .cv-num-list li h4 {
     margin: 0 0 10px 0
 }
+
+
+
+/* Read more|less with summary\details */
+
+/*  HOW TO USE IT
+
+<div class="more-text">
+....some text...
+<details>
+<summary></summary>
+...rest of the text....
+</details>
+</div>
+
+*/
+
+.more-text {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+summary {
+	outline: none;
+    color: red;
+    border-radius: 5px;
+    border: 1px solid blue;
+    padding: 0 5px;
+}
+
+summary:hover {
+    color: black;
+}
+
+[open] summary {
+    position: absolute;
+    bottom: -1.5em;
+	left: 0;
+}
+
+summary::before {
+  content: "...Показать еще";
+}        
+
+[open] summary::before {
+  content: "Скрыть";
+}
+
+details {
+  display: inline;
+  transition: all ease-in-out .9s;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* NEXT SECTION */
