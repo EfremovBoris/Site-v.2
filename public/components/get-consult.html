@@ -42,10 +42,11 @@
 <body>
     <div id="modal">
         <div class="content-header">
-            <span>Получить консультацию</span>
+            <span>Заявка на получение консультации</span>
         </div>
         <div class="content-scroll">
             <form id="reqst_form_modal">
+                <label for="form_fio_modal">Мы расскажем о наших турах, ответим на ваши вопросы и поможем с выбором тура с учетом ваших интересов и физической подготовки</label><br>
                 <input onkeyup="check_input_modal(this)" type="text" id="form_fio_modal" name="form_fio"
                 title="Укажите ФИО" placeholder="Иванов Иван Иванович" required>
                 <br>
@@ -66,7 +67,7 @@
                     <span style="word-break: break-word;">&nbsp;Я согласен на <a href="/politika-konfidentsialnosti.html" target="_blank">обработку персональных&nbsp;данных</a></span>
                 </label>
 
-                <input type="submit" id="iwonnago2" value="Отправить заявку..." disabled>
+                <input type="submit" id="iwonnago2" value="Получить консультацию" disabled>
                 <br>
                 <div id="wdh_result_form"></div>
             </form>
