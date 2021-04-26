@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.green.min.css">
+    <link rel="stylesheet" href="css/splide.min.css">
 
 	<!-- view CSS  -->
     <link rel="stylesheet" href="css/grid.css">
@@ -73,13 +74,13 @@
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
                 <div>
                     <span style="font-size: 1.1rem;"><strong>Стоимость</strong></span>
-                    <p>47.000 &#8381;</p>
+                    <p>49.000 &#8381;</p>
                 </div>
             </div>
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
                 <div>
                     <span style="font-size: 1.1rem;"><strong>Мест в группе</strong></span>
-                    <p>осталось 16 мест</p>
+                    <p>свободно 7 мест из 12</p>
                 </div>
             </div> 
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
@@ -97,6 +98,42 @@
                 </div>
             </div>                               
         </div>
+
+
+
+        <div class="text-wrapper">
+            <div class="xtra-pad">
+                <h4>ВАЖНАЯ ИНФОРМАЦИЯ</h4>
+                <div class="message-blue">
+                    <p class="message-content">Состоится ли поход и сколько участников уже набрано?</p>
+                </div>
+                
+                <div class="message-orange">
+                    <p class="message-content">Минимальное количество участников - 5 человек и они уже набраны (билеты куплены). Так что поход состоится 100%!</p>
+                </div>
+                
+                
+                <div class="message-blue">
+                    <p class="message-content">Хочу с вами в поход!  Мои действия, что с предоплатой?</p>
+                </div>
+                
+                <div class="message-orange">
+                    <p class="message-content">Самое ГЛАВНОЕ - КУПИТЬ БИЛЕТЫ НА КАМЧАТКУ! Прилет в день начала тура (11 сентября, лучше на день раньше) и вылет в последний (23 сентября или позже). Далее <span style="background-color: darkorange;">&nbsp;до 15 июЛя&nbsp;</span> переводите предоплату на закупку продуктов и организацию тура в размере 10.000 рублей.</p>
+                </div>
+                
+                
+                <div class="message-blue">
+                    <p class="message-content">У меня есть вопросы по туру - к кому обратиться!?</p>
+                </div>
+                
+                <div class="message-orange">
+                    <p class="message-content">В первую очередь, к гиду-организатору тура <a href="https://www.instagram.com/boris.efremov/" style="color: red;" target="_blank">Ефремову Борису (+7 928 450 5536)</a> либо к Валентину Яковенко (врио руководителя ТК "Камчатка") по номеру +7 914 627 1762 (!разница с Москвой +9 часов!). <br><span style="background-color: darkorange;">&nbsp;С 1 по 28 мая 2021&nbsp;</span> гид тура БУДЕТ ВНЕ ЗОНЫ ДЕЙСТВИЯ СЕТИ на сборах в Архызе.</p>
+                </div>
+            </div>
+        </div>
+
+
+
 
         <div class="text-wrapper intro">
             <h4>ОПИСАНИЕ</h4>
@@ -130,7 +167,7 @@
 				<div><h4>ПОХОД В ЦИФРАХ</h4></div>
                 <ul>
                     <li>Гидов: <strong>1-2</strong></li>
-                    <li>Группа: <strong>8-16</strong> человек</li>
+                    <li>Группа: <strong>8-12</strong> человек</li>
                     <li>Дней: <strong>13</strong></li>
                     <li>Километраж: <strong>110</strong> км
                         <ul>
@@ -270,6 +307,40 @@
                     <button class="tablinks" onclick="openDayInfo(event, 'tday12','day-item')">День 12</button>
                     <button class="tablinks" onclick="openDayInfo(event, 'tday13','day-item')">День 13</button>
                 </div>   -->
+
+
+                <div class="scrollmenu" style="width: calc(100% - 4em); margin-left: auto; margin-right: auto;">
+
+                    <div class="splide" data-splide='{
+                        "autoWidth":true,
+                        "gap": "10px",
+                        "pagination":false,
+                        "arrows":true,
+                        "direction":"ltr"
+                    }'>
+                        <div class="splide__track">
+                            <ul id="splide__list" class="splide__list">
+                                <li id="day0" class="splide__slide" arrind=0>Карта маршрута</li>
+                                <li id="day1" class="splide__slide" arrind=1>День 1</li>
+                                <li id="day2" class="splide__slide" arrind=2>День 2</li>
+                                <li id="day3" class="splide__slide" arrind=3>День 3</li>
+                                <li id="day4" class="splide__slide" arrind=4>День 4</li>
+                                <li id="day5" class="splide__slide" arrind=5>День 5</li>
+                                <li id="day6" class="splide__slide" arrind=6>День 6</li>
+                                <li id="day7" class="splide__slide" arrind=7>День 7</li>
+                                <li id="day8" class="splide__slide" arrind=8>День 8</li>
+                                <li id="day9" class="splide__slide" arrind=9>День 9</li>
+                                <li id="day10" class="splide__slide" arrind=10>День 10</li>
+                                <li id="day11" class="splide__slide" arrind=11>День 11</li>
+                                <li id="day12" class="splide__slide" arrind=12>День 12</li>
+                                <li id="day13" class="splide__slide" arrind=13>День 13</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div id="tday0" class="day-item">
                     <div class="thumb-wrap">
                         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ozIAIN8GJPrhaoh23z8pAtTrOQhrw0e-&z=10"></iframe>
@@ -311,7 +382,7 @@
                 <div id="tday4" class="day-item">
                     <p class="day-item-title">День 4. Переход к Верхне-Авачинскому озеру.</p>
                     <div class="day-item-content">
-                            <img src="images/tours/bak/small/bak_small_3.jpg" alt="photo day 1">
+                            <img src="images/tours/bak/small/bak_small_30.jpg" alt="photo day 1">
                             <div class="show-more-block">
                                 <p>Ранний завтрак, сбор лагеря и пора в путь. Сегодня у нас очень насыщенный день: по знакомой дорожке идем на перевал Майский (1262 м), проходим тундру и спускаемся к озеру Медвежьему где делаем перекус. Желающие могут порыбачить ведь в озере есть голец. После отдыха делаем короткий переход к озеру Верхне-Авачинскому и вот здесь нужно будет приложить усилия: хорошая и не очень тропа, кусты, заросли стланика, овраги, камни — такой вот набор. Ставим лагерь, дежурные готовят ужин, а остальные собирают дрова или ловят рыбу. Сегодня в меню уха и запеченная рыбка.</p>
                                 <p class="highlight-yellow">Переход — 15 км, через перевал 1260 метров. Высота ночевки — 800 м.</p>
@@ -322,7 +393,7 @@
                 <div id="tday5" class="day-item">
                     <p class="day-item-title">День 5. Верхне-Авачинское озеро.</p>
                     <div class="day-item-content">
-                            <img src="images/tours/bak/small/bak_small_6.jpg" alt="photo day 1">
+                            <img src="images/tours/bak/small/bak_small_12.jpg" alt="photo day 1">
                             <div class="show-more-block">
                                 <p>Сегодня день отдыха и рыбалки ведь далее по маршруту возможности порыбачить уже не будет. Проведем весь день на озере Верхне-Авачинском, здесь весьма красиво и сытно:) Наловим рыбы, приготовим ее в разных вариантах, проведем фотосессии и наберемся сил перед завтрашним днем. Для желающих возможен радиальный выход на ближайшую вершину, с которой открываются чудесные виды.</p>
                                 <p class="highlight-yellow">Высота ночевки — 800 м.</p>
@@ -333,7 +404,7 @@
                 <div id="tday6" class="day-item">
                     <p class="day-item-title">День 6. "7 перевалов", часть 1.</p>
                     <div class="day-item-content">
-                            <img src="images/tours/bak/small/bak_small_5.jpg" alt="photo day 1">
+                            <img src="images/tours/bak/small/bak_small_35.jpg" alt="photo day 1">
                             <div class="show-more-block">
                                 <p>Наш путь начнется с брода реки Средняя Авача, берущей начало из озера. Мы перейдем реку у самого истока, где вода ниже колена и слабое течение. Далее следует одно из главных испытаний сегодняшнего дня в виде крутого подъема на поросший стлаником склон хребта. Необходимо подняться всего на 260 метров по вертикали, но это будет настоящее приключение. Поднявшись, мы насладимся прекрасным видом Бакенинга, Верхне-Авачинского озера и его окрестностей. В ближайшие два дня мы пересечем весь хребет через 7 "перевалов" и доберемся до Тимоновских горячих источников. Перевалы символические 100-200 метров и главная сложность это подойти к ним, для этого порой нужно обходить глубокие труднопроходимые овраги. Отсутствие троп, необходимость распутывать лабиринты зарослей стланика, двигаясь то вверх, то вниз, утомляет. Пройдя 4 "перевала", приходим на место стоянки около ручья, ставим лагерь, пьем чай, собираем дрова и идем гулять на озеро Безымянное, что в 1 км от лагеря. Виды вокруг потрясающие. Встречаем закат, ужин у костра.</p>
                                 <p class="highlight-yellow">Переход — 8 км. Прогулка налегке — 3-4 км.  Высота ночевки — 1140 м.</p>
@@ -344,7 +415,7 @@
                 <div id="tday7" class="day-item">
                     <p class="day-item-title">День 7. "7 перевалов", часть 2.</p>
                     <div class="day-item-content">
-                            <img src="images/tours/bak/small/bak_small_9.jpg" alt="photo day 1">
+                            <img src="images/tours/bak/small/bak_small_34.jpg" alt="photo day 1">
                             <div class="show-more-block">
                                 <p>Сегодня мы пройдем оставшиеся 3 перевала и спустимся к Тимоновским горячим источникам. Переход не такой сложный как вчера, виды вокруг шикарные. Увидим Бакенинг во всей красе, хребет Ганальские востряки вдалеке. Возможно увидим медведей, они часто пасутся на здешних ягодных тундрах. Мы последуем их примеру и также наедимся ягод. Иногда можно встретить горных коз. Если вчера самое сложное было подняться на хребет, то сегодня — с него спуститься. Тропы нет, спускаемся через березовый лес и кусты к единственному островку цивилизации на нашем пути — горному приюту святого Тимона. Отсюда 800 метров по хорошей тропе до нашей стоянки, которая совсем рядом с Тимоновскими горячими источниками. Здесь есть маленький домик на 6-8 человек, который может стать нашим если будет свободен. Купаемся, пьем нарзан, ужинаем. Ночлег в домике/палатке.</p>
                                 <p class="highlight-yellow">Переход — 9 км. Высота ночевки — 700 м.</p>                                
@@ -355,7 +426,7 @@
                 <div id="tday8" class="day-item">
                     <p class="day-item-title">День 8. Тимоновские горячие источники.</p>
                     <div class="day-item-content">
-                            <img src="images/tours/bak/small/bak_small_10.jpg" alt="photo day 1">
+                            <img src="images/tours/bak/small/bak_small_33.jpg" alt="photo day 1">
                             <div class="show-more-block">
                                 <p>Сегодня день отдыха: релаксируем, купаемся, стираемся, приводим себя в порядок и мысленно настраиваемся на вторую часть пути, которая также весьма интересна. Обед. По желанию можем сделать радиальный выход налегке к весьма живописному водопаду (2—3 часа).</p>
                                 <p class="highlight-yellow">Прогулка по желанию — 4 км. Высота ночевки — 700 м.</p>
@@ -366,7 +437,7 @@
                 <div id="tday9" class="day-item">
                     <p class="day-item-title">День 9. Озеро Костакан.</p>
                     <div class="day-item-content">
-                            <img src="images/tours/bak/small/bak_small_11.jpg" alt="photo day 1">
+                            <img src="images/tours/bak/small/bak_small_13.jpg" alt="photo day 1">
                             <div class="show-more-block">
                                 <p>Ранний завтрак. Сегодня наша цель — озеро Костакан, переход к нему сложный и займет весь день. Чтобы сократить наш путь, мы пойдем через сопку, а не в обход как ходили ранее предыдущие группы. Да, это сложнее технически, но выигрыш в 2—3 часа и идти на 5 км меньше. Поднимемся по березовому лесу, руслам высохших ручьев и кустам на 300 метров, пройдем по полянкам на вершине и спустимся на 400 метров. Далее немного камчатских джунглей с медвежьими тропами и перед нами река Средняя Авача, которую мы будем бродить (в сентябре уровень воды приемлемый и течение не такое стремительное). После брода делаем большой привал на перекус и отдых. Набираемся сил перед финишным рывком. Впереди еще один маленький брод и 7 км до лагеря по достаточно хорошей тропе с плавным набором высоты. Уставшие, но довольные собой разбиваем лагерь, делаем ужин. Вечер у костра.</p>
                                 <p class="highlight-yellow">Переход — 15 км. Высота ночевки — 770 м.</p>
@@ -377,7 +448,7 @@
                 <div id="tday10" class="day-item">
                     <p class="day-item-title">День 10. Озеро Высокое.</p>
                     <div class="day-item-content">
-                            <img src="images/tours/bak/small/bak_small_12.jpg" alt="photo day 1">
+                            <img src="images/tours/bak/small/bak_small_32.jpg" alt="photo day 1">
                             <div class="show-more-block">
                                 <p>После завтрака идем налегке на прогулку. Сначала поднимемся на лавовый поток, поросший мхом, ягелем, кедровым стлаником и маленькими березками, потом заберемся на древний вулканический конус и с него сделаем отличные фото озера и его окружения. Возвращаемся в лагерь, собираем рюкзаки и идем на озеро Высокое. Медвежьими тропами через лес, кусты, сухое русло ручья, высокотравье и лабиринт стланика поднимаемся к Малым озерам (Егорова и Росомашье) где отдыхаем и делаем перекус. Обходим оба озера, делаем остановки для фото и в скором времени приходим на стоянку. Разбиваем лагерь на берегу под прикрытием лавового потока, который остановился перед озером. Ужин, возможен костер.</p>
                                 <p class="highlight-yellow">Переход — 8.5 км. Высота ночевки — 1050 м.</p>
@@ -388,7 +459,7 @@
                 <div id="tday11" class="day-item">
                     <p class="day-item-title">День 11. Восхождение на вулкан Бакенинг.</p>
                     <div class="day-item-content">
-                            <img src="images/tours/bak/small/bak_small_17.jpg" alt="photo day 1">
+                            <img src="images/tours/bak/small/bak_small_3.jpg" alt="photo day 1">
                             <div class="show-more-block">
                                 <p>Ранний завтрак и радиальное восхождение на вершину вулкана Бакенинг (2276). Сегодня гуляем налегке. Поднимаемся на перевал Рыжий (1500) и с него продолжаем наш путь к вершине. Подъем технически не сложный, но ближе к вершине следует быть осторожным и обязательно иметь треккинговые палки! В хорошую погоду виды с вершины просто потрясающие и просматривается большая часть нашего маршрута! Видны вулканы: Авачинский, Корякский, Арик, Камень, Зимина, Ичинский и озера: Высокое, Росомашье, Егорова, Верхне-Авачинское, Медвежье. Делаем перекус и назад в лагерь. Ужин. За время похода мы стали командой и пришло время подвести итоги нашего путешествия, обменяться мыслями и впечатлениями о походе.</p>
                                 <p class="highlight-yellow">Радиальное восхождение на Бакенинг (2276) — 8 км (4 вверх, 4 вниз). Высота ночевки — 1050 м.</p>
@@ -400,7 +471,7 @@
                 <div id="tday12" class="day-item">
                     <p class="day-item-title">День 12. Замыкаем круг — окончание похода.</p>
                     <div class="day-item-content">
-                            <img src="images/tours/bak/small/bak_small_17.jpg" alt="photo day 1">
+                            <img src="images/tours/bak/small/bak_small_31.jpg" alt="photo day 1">
                             <div class="show-more-block">
                                 <p>Ранний завтрак и сбор лагеря. Сегодня мы замыкаем кольцо вокруг Бакенинга и заканчиваем маршрут. По знакомой дорожке поднимаемся на перевал Рыжий, проходим небольшое плато и спускаемся в долину по которой шли в первый день. Точка старта и финиша совпадают. Уже к обеду мы на месте, после перекуса грузимся в транспорт и едем в город где нас ждет мягкая постель, горячий душ и другие прелести цивилизации.</p>
                                 <p class="highlight-yellow">Переход — 14 км. Переезд — 230 км.</p>
@@ -441,10 +512,10 @@
                     <div id="tour-includes" class="acc-content">
                         <div class="acc-content-desc">
                             <ul>
-                                <li> встреча в аэропорту и проводы в аэропорт</li>
-                                <li> заброска на автобусе | вахтовке (ГАЗ-66) к точке старта и забор с финиша</li>
+                                <li> встреча и проводы в аэропорт</li>
+                                <li> заброска на автобусе | вахтовке (ГАЗ-66/Камаз) к точке старта и забор с финиша</li>
                                 <li> 2 ночи в хостеле</li>
-                                <li> аренда палатки Tramp ROCK 2 (2-3 местные) </li>
+                                <li> аренда общественного снаряжения (палатки, костровое оборудование и т.д.)</li>
                                 <li> работа гидов</li>
                                 <li> трехразовое питание на маршруте</li>
                                 <li> учитываем ваши предпочтения в питании</li>
@@ -463,9 +534,9 @@
                     <div id="tour-excludes" class="acc-content">
                         <div class="acc-content-desc">
                             <ul>
-                                <li> перелет до Петропавловска-Камчатского (от 22950 рублей из Москвы)</li>
-                                <li> страховка</li>
-                                <li> расходы в баре и алкоголь после тура</li>
+                                <li> питание в городе (дни 1 и 13)</li>
+                                <li> перелет до Петропавловска-Камчатского</li>
+                                <li> страховка</li>                                
                                 <li> аренда личного снаряжения (спальник, палки и тд)</li>
                             </ul>			
                         </div>
@@ -478,7 +549,7 @@
             <h4>Будет ли тяжело?</h4>
             <p>В походе все вещи несем на себе и поэтому стоит ответственно подходить к выбору одежды и снаряжения. Лишнего брать не стоит, а если сомневаетесь, то обязательно уточните у гида (в день прилета) необходимость тех или иных вещей.</p>
             <p>Вес собранного рюкзака должен составлять <u>не более <strong>9-11 кг</strong></u> (без учета вещей в которых вы будете постоянно идти: ботинки, штаны, футболка).</p>
-            <p>К личной одежде и снаряжению, которые должны занимать <u><strong>max.</strong> <strong>65-70%</strong> объема рюкзака</u>, перед походом добавятся групповое снаряжение <strong>2.5-3 кг</strong> (палатка, газ) и продукты &mdash; это дополнительно примерно <strong>6-9 кг</strong>. Вес напрямую зависит от количества дней похода и гендерного состава группы.</p>
+            <p>К личной одежде и снаряжению, которые должны занимать <u><strong>max.</strong> <strong>65-70%</strong> объема рюкзака</u>, перед походом добавятся групповое снаряжение <strong>2.5 кг</strong> (палатка, газ) и продукты &mdash; это дополнительно примерно <strong>4-6 кг</strong>. Вес напрямую зависит от количества дней похода и состава группы (% мальчиков).</p>
         </div>
 
 
@@ -809,13 +880,38 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="https://kit.fontawesome.com/335fbf2f60.js" crossorigin="anonymous"></script>
     <script src="js/imask.js"></script>
+    <script src="js/splide.min.js"></script>
 
 	<!-- view JS ////////////-->
     <script src="js/core.js"></script> 
     
-    <!-- Important: Open Default Tab -->
-    <!-- <script>document.getElementById("defaultOpen").click();</script>     -->
 
+
+
+    <script>
+        var splide = new Splide( '.splide' ).mount();
+
+        splide.on( 'moved', function() {
+            openDayInfo(event, 'tday'+splide.index.toString(),'day-item');
+        } );
+
+
+        var ul = document.getElementById('splide__list'); // Parent
+        ul.addEventListener('click', function(e) {
+        if (e.target.tagName === 'LI'){
+            // console.log(e.target.getAttribute("arrind"));
+            var elem = document.getElementById(e.target.id);
+            elem.classList.toggle('is-active');
+            splide.go( e.target.getAttribute("arrind") );
+
+            openDayInfo(event, 'tday'+e.target.getAttribute("arrind"),'day-item');
+        }
+    });  
+    
+    
+    </script>
+    <!-- Important: Open Default Tab -->
+    <script>document.getElementById("tday0").style.display="block";</script>    
 
 </body>
 </html>

@@ -928,7 +928,7 @@ em {
 /* Tabs for day-by-day programm */
 
 .days-list>div:not(:first-child) {
-	/* display: none; */
+	display: none;
 }
 
 
@@ -1344,7 +1344,7 @@ em {
 .thumb-wrap {
 	position: relative;
 	padding-bottom: 75%; /* 56.25% задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
-	height: auto;
+	height: 100%;
 	overflow: hidden;
   }
   .thumb-wrap iframe {
@@ -1891,3 +1891,149 @@ details > summary::-webkit-details-marker {
 
 
 /* NEXT SECTION */
+
+
+
+/* SCROLLABLE MENU*/
+
+.scrollmenu {
+    /* border: 1px solid red; */
+}
+
+
+.splide__slide.is-visible.is-active {
+    border-top: 3px solid red !important;
+    background-color: #fff;
+}
+
+.splide__arrow[disabled] {
+    opacity: .3!important;
+}
+
+.splide__arrow {
+    border-radius: 0!important;
+    opacity: 0.5!important;
+    /* background-color: rgba(255, 255, 255, 0.52)!important; */
+    /* background: linear-gradient((to left, rgba(255, 255, 255, 0.92),  rgba(255, 255, 255, 0), #fff); */
+}
+
+.splide__arrow.splide__arrow--next {
+    right: -2.5em!important;
+}
+
+.splide__arrow.splide__arrow--prev {
+    left: -2.5em!important;
+}
+
+li.splide__slide {
+    padding: 5px 10px!important;
+}
+
+
+li.splide__slide:hover {
+	cursor: pointer;
+    color: blue;
+	font-weight: bold;
+}
+
+/* end of SCROLLABLE MENU*/
+
+
+
+
+/* Dialog Chat */
+
+.message-blue {
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #A8DDFD;
+    width: 200px;
+    text-align: left;
+    font: 400 .9em 'Open Sans', sans-serif;
+    border: 1px solid #97C6E3;
+    border-radius: 10px;
+}
+
+.message-orange {
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 25%;
+	margin-right: 20px;
+    padding: 10px;
+    background-color: #f8e896;
+    /* width: 200px; */
+    text-align: left;
+    font: 400 .9em 'Open Sans', sans-serif;
+    border: 1px solid #dfd087;
+    border-radius: 10px;
+}
+
+@media (min-width: 430px) {
+    .message-blue, .message-orange {
+        width: auto;
+        max-width: 500px;
+    }
+
+	.xtra-pad {
+		padding: 0 8%;
+	}
+}
+
+.message-content {
+    padding: 0;
+    margin: 0;
+}
+
+
+.message-blue:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid #A8DDFD;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    top: 0;
+    left: -15px;
+}
+
+.message-blue:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 17px solid #97C6E3;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    top: -1px;
+    left: -17px;
+}
+
+.message-orange:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid #f8e896;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    bottom: 0;
+    right: -15px;
+}
+
+.message-orange:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 17px solid #dfd087;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    bottom: -1px;
+    right: -17px;
+}
+
+
+/* END OF Dialog Chat */
