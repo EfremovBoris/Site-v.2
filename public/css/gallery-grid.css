@@ -54,7 +54,7 @@
 	grid-gap: 20px;
 }
 .photo-album__item {
-	border: 1px solid red;
+	border: 1px solid #3f4553;
 	height: auto;
 	border-radius: 5px;
 	overflow: hidden;
