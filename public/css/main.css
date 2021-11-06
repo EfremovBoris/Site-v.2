@@ -973,7 +973,7 @@ em {
 		max-width: 100%;
 		overflow-x: scroll;
 		display: flex;
-		flex-direction: row-reverse;
+		/* flex-direction: row-reverse; */
 	}
 
 	.day-item {
