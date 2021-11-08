@@ -4,47 +4,47 @@
 	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://boris-trip.com/</loc>
-		<lastmod>2020-07-18T12:27:52+01:00</lastmod>
+		<lastmod>2021-11-06T12:27:52+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://boris-trip.com/gallery</loc>
-		<lastmod>2020-07-18T12:27:55+01:00</lastmod>
+		<lastmod>2021-11-06T12:27:55+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://boris-trip.com/reviews</loc>
-		<lastmod>2020-07-18T12:27:55+01:00</lastmod>
+		<lastmod>2021-11-06T12:27:55+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://boris-trip.com/about_us</loc>
-		<lastmod>2020-07-18T12:27:56+01:00</lastmod>
+		<lastmod>2021-11-06T12:27:56+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://boris-trip.com/contacts</loc>
-		<lastmod>2020-07-18T12:27:58+01:00</lastmod>
+		<lastmod>2021-11-06T12:27:58+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://boris-trip.com/ksu</loc>
-		<lastmod>2020-07-18T12:27:57+01:00</lastmod>
+		<lastmod>2021-11-06T12:27:57+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://boris-trip.com/bak</loc>
-		<lastmod>2020-07-18T12:27:58+01:00</lastmod>
+		<lastmod>2021-11-06T12:27:58+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://boris-trip.com/ko</loc>
-		<lastmod>2020-07-18T12:27:58+01:00</lastmod>
+		<lastmod>2021-11-06T12:27:58+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://boris-trip.com/photos_nalychevo.html</loc>
-		<lastmod>2020-07-18T12:27:58+01:00</lastmod>
+		<lastmod>2021-11-06T12:27:58+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 </urlset>
