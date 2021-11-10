@@ -62,28 +62,19 @@
   };
   
     // InstagramFeed init /////////////////////////////////////////////////
-    element = document.getElementById("instagram-feed-demo");
+
+    element = document.getElementById("instafeed");
     if (typeof(element) != 'undefined' && element != null){
-        (function($){
-          $(window).on('load', function(){
-              $.instagramFeed({
-                  'username': 'boris.efremov',
-                  'container': "#instagram-feed-demo",
-                  'display_profile': true,
-                  'display_biography': true,
-                  'display_gallery': true,
-                      'get_raw_json': false,
-                  'callback': null,
-                  'styling': true,
-                  'items': 8,
-                  'items_per_row': 4,
-                  'margin': 1 
-              });
-          });
-      })(jQuery);
+      var feed = new Instafeed({
+        // token last for 60 days? may be less so i need to change it...HOW TO AUTOMATE IT?
+        // START working 10 nov 2021
+        accessToken: 'IGQVJXSWhRTnNNXzBVZAVliSVJhNjl0NFZALTXRhV3hwWmp3bTk1WWFhS09wMGg2REN3ZA0FWaVRxSUNBblJEOEVKYnZA4RE9ScUJqeGh1OXpDYlNvSjdHQXhjRE5WNHFEZAHhkVHFLblNTTDd3SjJHUWMyUQZDZD',
+        limit: 8,
+        target: 'instafeed',
+        template: '<a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>'
+      });
+      feed.run();
     };
-
-
 
 
 
