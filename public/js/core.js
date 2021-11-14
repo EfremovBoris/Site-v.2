@@ -71,7 +71,7 @@
         accessToken: 'IGQVJXSWhRTnNNXzBVZAVliSVJhNjl0NFZALTXRhV3hwWmp3bTk1WWFhS09wMGg2REN3ZA0FWaVRxSUNBblJEOEVKYnZA4RE9ScUJqeGh1OXpDYlNvSjdHQXhjRE5WNHFEZAHhkVHFLblNTTDd3SjJHUWMyUQZDZD',
         limit: 8,
         target: 'instafeed',
-        template: '<a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>'
+        template: '<a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a>'
       });
       feed.run();
     };

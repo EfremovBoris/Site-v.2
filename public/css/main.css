@@ -87,10 +87,13 @@ h1,h2,h3,h4,h5,h6{
 
 
 @media (max-width: 767px) {
-	h1,h2,h3,h4,h5,h6{
-		line-height: 1.2;
+	h1,h2,h3,h5,h6{
 		margin: 15px 0;
-	}	
+	}
+
+	h4{
+		margin: 30px 0 15px 0;
+	}
 }
 
 
@@ -210,15 +213,15 @@ body {
 }
 
 .info-block-1 {
-	border: 5px solid #000;
-	padding: 30px;
+	border: none;
+	background-color: lightgray;
+	border-left: 6px solid #000;
+	padding: 30px;	
 }
 
 @media screen and (max-width: 767px) {
 	.info-block-1 {
-		border: none;
-		border-top: 4px solid #000;
-		border-bottom: 4px solid #000;
+		border-left: 4px solid #000;
 		padding: 15px;
 	}	
 }
@@ -1420,7 +1423,7 @@ svg#ig-icon path {
   /* tour Include | Exclude */
 
 
-#tour-includes ul>li:before {
+.tour-includes ul>li:before {
 	content: "\f00c \00a0";
 	font-family: fontawesome;
 	color: green;
@@ -1431,7 +1434,7 @@ svg#ig-icon path {
   }
 
 
-  #tour-excludes ul>li:before {
+  .tour-excludes ul>li:before {
 	content: "\f00d \00a0";
 	font-family: fontawesome;	
 	color: rgb(238, 75, 75);
