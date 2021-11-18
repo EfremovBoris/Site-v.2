@@ -6,6 +6,29 @@
     // if ( $( "#myDiv" ).length ) {"do smth"}
 
 
+    // viewMode of prog description
+    function ChangeViewMode(cb) {
+
+      var scroll_menu = document.getElementsByClassName('scrollmenu');
+      scroll_menu[0].style.display = (scroll_menu[0].style.display == 'none') ? 'inline-block' : 'none';
+      document.getElementById('label_tabview').innerHTML = (scroll_menu[0].style.display == 'none') ? 'Отдельно' : 'Закладки';
+    
+
+      if (cb.checked === true) {
+        var pdays = document.getElementsByClassName("day-item");
+        for (i = 1; i < pdays.length; i++) {
+          pdays[i].style.display = "none";
+        }  
+      } else {
+        var pdays = document.getElementsByClassName("day-item");
+        for (i = 0; i < pdays.length; i++) {
+          pdays[i].style.display = "block";
+        }  
+      }
+    }
+
+
+
     // Tabs select login /////////////////////////////////////////////////
     // may be it's better to parameterize class Tablinks
     function openDayInfo(evt, tabName, childClass) {
