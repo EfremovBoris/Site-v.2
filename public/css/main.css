@@ -2083,9 +2083,9 @@ li.splide__slide:hover {
 input[type="checkbox"]{
 	appearance:none;
 	width:40px;
-	height:16px;
+	height:20px;
 	border:1px solid #aaa;
-	border-radius:2px;
+	border-radius:10px;
 	background:#ebebeb;
 	position:relative;
 	display:inline-block;
@@ -2099,11 +2099,11 @@ input[type="checkbox"]{
 	position:absolute;
 	top:-1px;
 	left:-1px;
-	width:14px;
-	height:14px;
-	background:white;
+	width:20px;
+	height:20px;
+	background:yellow;
 	border:1px solid #aaa;
-	border-radius:2px;
+	border-radius:10px;
 	transition: left 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   }
   input[type="checkbox"]:checked{
@@ -2111,7 +2111,7 @@ input[type="checkbox"]{
 	border-color:#8daee5;
   }
   input[type="checkbox"]:checked:after{
-	left:23px;
+	left:19px;
 	border-color:#8daee5;
   }
   
@@ -2122,7 +2122,7 @@ input[type="checkbox"]{
   
   input[type="checkbox"]:hover:checked:not(:disabled):after,
   input[type="checkbox"]:focus:checked:not(:disabled):after{
-	left:22px;
+	left:19px;
   }
   
   input[type="checkbox"]:disabled{

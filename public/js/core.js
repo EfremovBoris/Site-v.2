@@ -6,28 +6,6 @@
     // if ( $( "#myDiv" ).length ) {"do smth"}
 
 
-    // viewMode of prog description
-    function ChangeViewMode(cb) {
-
-      var scroll_menu = document.getElementsByClassName('scrollmenu');
-      scroll_menu[0].style.display = (scroll_menu[0].style.display == 'none') ? 'inline-block' : 'none';
-      document.getElementById('label_tabview').innerHTML = (scroll_menu[0].style.display == 'none') ? 'Отдельно' : 'Закладки';
-    
-
-      if (cb.checked === true) {
-        var pdays = document.getElementsByClassName("day-item");
-        for (i = 1; i < pdays.length; i++) {
-          pdays[i].style.display = "none";
-        }  
-      } else {
-        var pdays = document.getElementsByClassName("day-item");
-        for (i = 0; i < pdays.length; i++) {
-          pdays[i].style.display = "block";
-        }  
-      }
-    }
-
-
 
     // Tabs select login /////////////////////////////////////////////////
     // may be it's better to parameterize class Tablinks
@@ -44,6 +22,37 @@
       document.getElementById(tabName).style.display = "block";
       evt.currentTarget.className += " active";
     }    
+
+
+
+    // viewMode of prog description
+    function ChangeViewMode(cb) {
+
+      var scroll_menu = document.getElementsByClassName('scrollmenu');
+      scroll_menu[0].style.display = (scroll_menu[0].style.display == 'none') ? 'block' : 'none';
+      document.getElementById('label_tabview').innerHTML = (scroll_menu[0].style.display == 'none') ? 'Отдельно' : 'Закладки';
+    
+
+      if (cb.checked === true) {
+        var pdays = document.getElementsByClassName("day-item");
+        for (i = 1; i < pdays.length; i++) {
+          pdays[i].style.display = "none";
+        }  
+        // restore last active tab
+        openDayInfo(event, 'tday'+splide.index.toString(),'day-item');
+
+      } else {
+        var pdays = document.getElementsByClassName("day-item");
+        for (i = 0; i < pdays.length; i++) {
+          pdays[i].style.display = "block";
+        }  
+      }
+    }
+
+
+
+
+
 
     // Form input validation /////////////////////////////////////////////////
     function check_input(e) {
