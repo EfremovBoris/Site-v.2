@@ -30,7 +30,7 @@
 
       var scroll_menu = document.getElementsByClassName('scrollmenu');
       scroll_menu[0].style.display = (scroll_menu[0].style.display == 'none') ? 'block' : 'none';
-      document.getElementById('label_tabview').innerHTML = (scroll_menu[0].style.display == 'none') ? 'Отдельно' : 'Закладки';
+      document.getElementById('label_tabview').innerHTML = (scroll_menu[0].style.display == 'none') ? 'Список' : 'Вкладки';
     
 
       if (cb.checked === true) {
