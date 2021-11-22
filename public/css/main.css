@@ -81,7 +81,7 @@ h1,h2,h3,h4,h5,h6{
     line-height: 1.2;
     clear: both;
     font-weight: 500;
-    margin: 30px 0;
+    margin: 30px 0 15px 0;
     /* color: #252525; */
 }
 
@@ -94,12 +94,15 @@ h1,h2,h3,h4,h5,h6{
 	h4{
 		margin: 30px 0 15px 0;
 	}
+
+	#bak h2 {
+		margin: 30px 0 15px 0;
+	}
 }
 
 
 h1 {
 	font-size: 2rem;
-	/* @media (max-width: 500px) { font-size: 1rem; }; */
 	font-weight: 800;
 	letter-spacing: .5px;
 }
@@ -137,6 +140,21 @@ h6 {
 	font-size: 1rem;
 	font-weight: 600;
 }
+
+
+/* TEST change H decoration and size only on bak page */
+#bak h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #db7324;	
+}
+
+#bak h3 {
+	font-size: 1.1rem;
+	font-weight: 600;
+	/* color: #db7324;	 */
+}
+
 
 li {
 	list-style: none;
