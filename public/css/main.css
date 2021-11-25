@@ -1,5 +1,4 @@
 /* Import modules */
-/* @import "toggle-switch.css"; */
 @import "gallery.css";
 
 
@@ -1137,7 +1136,7 @@ em {
 
 .tour-brief-part>ul>li::before {
 	content: "\2022";
-	color: rgb(129, 65, 65);
+	/* color: rgb(129, 65, 65); */
 	font-size: 1.2rem;
 	font-weight: bold;
 	display: inline-block;
@@ -1476,24 +1475,22 @@ svg#ig-icon path {
 
 
 .tour-includes ul>li:before {
-	content: "\f00c \00a0";
-	font-family: fontawesome;
+	content: "\2713 \00a0";
 	color: green;
 	font-weight: 600;
-	font-size: 15px;
+	font-size: 20px;
 	display: inline-block;
-	margin-top: .5rem;
+	/* margin-top: .5rem; */
   }
 
 
   .tour-excludes ul>li:before {
-	content: "\f00d \00a0";
-	font-family: fontawesome;	
+	content: "\2717 \00a0";
 	color: rgb(238, 75, 75);
 	font-weight: 600;
-	font-size: 15px;
+	font-size: 20px;
 	display: inline-block;
-	margin-top: .5rem;	
+	/* margin-top: .5rem;	 */
   }
 
 
