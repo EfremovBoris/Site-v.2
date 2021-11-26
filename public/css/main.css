@@ -1,7 +1,5 @@
-/* Import modules */
-@import "gallery.css";
 
-
+/* Describe and set GLOBAL VARIABLES */
 :root {
 	--wrapper-read-block: 900px;
 	--tab-tour-desc-width: 900px;
@@ -168,7 +166,7 @@ li {
 .top-scroll {
 	position: fixed;
 	top: 0;
-	z-index: 10;
+	z-index: 1001;
 	width: 100%;
 	background-color: transparent;
   }
@@ -593,7 +591,7 @@ body {
 		width: 100%;
 		top: 0;
 		left: 0;
-		z-index: 3;
+		z-index: 999;
 	}
 
 	.header:before {
@@ -606,7 +604,7 @@ body {
 		/* background-color: #B03FF7; */
 		background-color: rgb(39, 39, 39);
 		opacity: 0.8;
-		z-index: 3;
+		z-index: 999;
 	}
 
 	.header__body {
@@ -616,13 +614,13 @@ body {
 		height: var(--main-menu-height);
 		align-items: center;
 		padding: 0 20px;
+		z-index: 1000;
 	}
 	.header__logo {
 		flex: 0 0 65px;
 		border-radius: 50%;
 		overflow: hidden;
 		position: relative;
-		z-index: 4;
 	}
 
 	.header__logo img {
@@ -652,7 +650,6 @@ body {
 	.header__list {
 		display: flex;
 		position: relative;
-		z-index: 4;
 		justify-content: center;
 		flex: 2 0;
 	}
@@ -685,7 +682,6 @@ body {
 	}
 
 	.rightside__menu {
-		z-index: 4;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -739,7 +735,6 @@ body {
 		.header__burger {
 			display: block;
 			position: relative;
-			z-index: 4;
 			width: 30px;
 			height: 20px;
 		}
@@ -828,7 +823,7 @@ body {
 	.scroll-top-btn {
 		display: none;
 		position: fixed;
-		z-index: 100000;
+		z-index: 999;
 		right: 30px;
 		bottom: 50px;
 		min-width: 50px;
@@ -857,7 +852,6 @@ body {
 		bottom: 5px;
 		left: 0;
 		width: 100%;
-		z-index: 333
 	}
 	/* END of EFFECTS */
 
@@ -1435,7 +1429,6 @@ em {
     content: "";
     background: linear-gradient(to top,rgba(255,255,255,1) 20%,rgba(255,255,255,0) 100%);
 	margin: 0;
-	/* border: 1px solid red; */
 }
 
 .show-more-block:not(.expanded):before {
@@ -1443,7 +1436,6 @@ em {
 	left: 10px;
 	top: 77%;
 	content: "еще \2192";
-	/*\2023 00BB 2192*/
 	color: rgb(245, 222, 10);
 	font-size: 14px;
 	font-weight: 700;
@@ -1452,6 +1444,7 @@ em {
 	z-index: 1;
 	border-radius: 10px;
 }
+
 
 
 /* Social svg icons */
@@ -1792,7 +1785,7 @@ label.label4fz {
 }
 
 
-/* steps list */
+/* steps list to choose trek*/
 
 
 .cv-steps__content {
@@ -2180,7 +2173,7 @@ input[type="checkbox"]{
 */
 [data-tooltip] {
 	position: relative;
-	z-index: 10;
+	z-index: 1;
   }
   
   /* Positioning and visibility settings of the tooltip */
@@ -2338,3 +2331,39 @@ input[type="checkbox"]{
 
 
   /*      END OF TOOLTIP */
+
+
+/*  Gallary box */
+
+  .gallerybox {
+    padding-bottom: 20px;
+}
+
+.gallerybox__item {
+    padding: 5px 10px;
+    /* border: 1px solid red; */
+}
+
+.gallerybox__item_inside {
+    overflow: hidden;
+    border: 2px solid rgb(255, 255, 255);            
+    border-radius: 10px;
+    cursor: pointer !important;
+}
+
+.gallerybox__item_inside img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+    /* filter: grayscale(40%); */
+}
+
+.gallerybox__item_inside img:hover {
+    transform: scale(1.3);
+    /* filter: grayscale(0%); */
+    /* box-shadow: 1px 1px 10px blue; */
+} 
+
+
+/* END OF GALLARY BOX */

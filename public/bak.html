@@ -15,7 +15,7 @@
 
 	<!--metatextblock-->
     <title>Ожерелье озер Бакенинга - тур поход вокруг вулкана Бакенинг | Камчатка 2022.</title>
-    <meta name="description" content="Путешествие по дикой Камчатке. Пеший 11-дневный тур вокруг вулкана Бакенинг с местным гидом. Нас ждут вулканы, горячие источники и золотая осень! Записывайся в поход ☎ 8(928)450-55-36">
+    <meta name="description" content="Путешествие по дикой Камчатке. ⭐ Пеший 11-дневный тур вокруг вулкана Бакенинг с местным гидом. Нас ждут вулканы, горячие источники и золотая осень! Записывайся в поход ☎ 8(928)450-55-36">
     <meta name="keywords" content="вулкан Бакенинг, Тимоновские, горячие источники, походы по Камчатке, дикая Камчатка ">	
 	
 	<meta property="og:url" content="https://boris-trip.com/bak" />
@@ -25,24 +25,40 @@
 	<meta property="og:image" content="https://boris-trip.com/images/tours/bak/small/bak_small_50.jpg" />
 
 	<link rel="canonical" href="https://boris-trip.com/bak">
+    <!-- DEBUG cache -->
+    <meta http-equiv="Cache-control" content="public">
 	<!--/metatextblock-->
 
+    <!-- DEBUG webp check -->
+    <script src="js/modernizr_webp.js"></script>
 
 
 	<!-- Setup FAVICON -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">    
-    
-	<!-- ext CSS  -->    
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+	<!-- ext CSS  -->
+
+    <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.green.min.css">
-    <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="css/splide.min.css"> -->
+	<!-- view CSS  -->
+
+    <!-- <link rel="stylesheet" href="css/grid.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/my-slick-tour.css"> -->
+
+    <link rel="preload" href="css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/owl.theme.green.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/splide.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> 
+
 
 	<!-- view CSS  -->
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/my-slick-tour.css">
+    <link rel="preload" href="css/grid.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <link rel="preload" href="css/my-slick-tour.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
 </head>
 <body id="bak">
@@ -217,64 +233,136 @@
         <div class="flex-container gallerybox" style="overflow: hidden;">
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" data-caption="Вулкан Бакенинг" class="chocolat-image" href="images/tours/bak/medium/bak_medium_1.jpg"><img data-src="images/tours/bak/small/bak_small_1.jpg" class="lazyload" alt="вулкан Бакенинг" title="вулкан Бакенинг"></a>
+                    <a data-fancybox="gallery" data-caption="Вулкан Бакенинг" class="chocolat-image" href="images/tours/bak/medium/bak_medium_1.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_1.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_1.jpg" type="image/jpeg"> 
+                            <img data-src="images/tours/bak/small/bak_small_1.jpg" class="lazyload" alt="вулкан Бакенинг" title="вулкан Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div>
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" data-caption="Озеро Демидова" class="chocolat-image" href="images/tours/bak/medium/bak_medium_2.jpg"><img data-src="images/tours/bak/small/bak_small_2.jpg" class="lazyload" alt="озеро Дальнее (Демидова). Поход вокруг вулкана Бакенинг" title="озеро Дальнее (Демидова). Поход вокруг вулкана Бакенинг"></a>
+                    <a data-fancybox="gallery" data-caption="Озеро Демидова" class="chocolat-image" href="images/tours/bak/medium/bak_medium_2.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_2.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_2.jpg" type="image/jpeg">                         
+                            <img data-src="images/tours/bak/small/bak_small_2.jpg" class="lazyload" alt="озеро Дальнее (Демидова). Поход вокруг вулкана Бакенинг" title="озеро Дальнее (Демидова). Поход вокруг вулкана Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div>
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_3.jpg"><img data-src="images/tours/bak/small/bak_small_3.jpg" class="lazyload" alt="озеро Высокое с плеча Бакенинга" title="озеро Высокое с плеча Бакенинга"></a>
+                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_3.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_3.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_3.jpg" type="image/jpeg">
+                            <img data-src="images/tours/bak/small/bak_small_3.jpg" class="lazyload" alt="озеро Высокое с плеча Бакенинга" title="озеро Высокое с плеча Бакенинга">
+                        </picture>
+                    </a>
                 </div>
             </div>    
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_4.jpg"><img data-src="images/tours/bak/small/bak_small_4.jpg" class="lazyload" alt="стоянка на озере Высоком. Поход вокруг вулкана Бакенинг" title="стоянка на озере Высоком. Поход вокруг вулкана Бакенинг"></a>
+                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_4.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_4.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_4.jpg" type="image/jpeg">
+                            <img data-src="images/tours/bak/small/bak_small_4.jpg" class="lazyload" alt="стоянка на озере Высоком. Поход вокруг вулкана Бакенинг" title="стоянка на озере Высоком. Поход вокруг вулкана Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div>     
             
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_5.jpg"><img data-src="images/tours/bak/small/bak_small_5.jpg" class="lazyload" alt="озеро Малое (Росомашье). Поход вокруг вулкана Бакенинг" title="озеро Малое (Росомашье). Поход вокруг вулкана Бакенинг"></a>
+                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_5.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_5.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_5.jpg" type="image/jpeg">
+                            <img data-src="images/tours/bak/small/bak_small_5.jpg" class="lazyload" alt="озеро Малое (Росомашье). Поход вокруг вулкана Бакенинг" title="озеро Малое (Росомашье). Поход вокруг вулкана Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div>
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_6.jpg"><img data-src="images/tours/bak/small/bak_small_6.jpg" class="lazyload" alt="озеро Костакан. Поход вокруг вулкана Бакенинг" title="озеро Костакан. Поход вокруг вулкана Бакенинг"></a>
+                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_6.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_6.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_6.jpg" type="image/jpeg">
+                            <img data-src="images/tours/bak/small/bak_small_6.jpg" class="lazyload" alt="озеро Костакан. Поход вокруг вулкана Бакенинг" title="озеро Костакан. Поход вокруг вулкана Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div>
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_7.jpg"><img data-src="images/tours/bak/small/bak_small_7.jpg" class="lazyload" alt="Конная тропа по ягелю. Поход вокруг вулкана Бакенинг" title="Конная тропа по ягелю. Поход вокруг вулкана Бакенинг"></a>
+                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_7.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_7.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_7.jpg" type="image/jpeg">
+                            <img data-src="images/tours/bak/small/bak_small_7.jpg" class="lazyload" alt="Конная тропа по ягелю. Поход вокруг вулкана Бакенинг" title="Конная тропа по ягелю. Поход вокруг вулкана Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div>    
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_8.jpg"><img data-src="images/tours/bak/small/bak_small_8.jpg" class="lazyload" alt="Костер на озере Костакан. Поход вокруг вулкана Бакенинг" title="Костер на озере Костакан. Поход вокруг вулкана Бакенинг"></a>
+                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_8.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_8.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_8.jpg" type="image/jpeg">
+                            <img data-src="images/tours/bak/small/bak_small_8.jpg" class="lazyload" alt="Костер на озере Костакан. Поход вокруг вулкана Бакенинг" title="Костер на озере Костакан. Поход вокруг вулкана Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div> 
     
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_9.jpg"><img data-src="images/tours/bak/small/bak_small_9.jpg" class="lazyload" alt="водопад Безымянный. Поход вокруг вулкана Бакенинг" title="водопад Безымянный. Поход вокруг вулкана Бакенинг"></a>
+                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_9.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_9.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_9.jpg" type="image/jpeg">
+                            <img data-src="images/tours/bak/small/bak_small_9.jpg" class="lazyload" alt="водопад Безымянный. Поход вокруг вулкана Бакенинг" title="водопад Безымянный. Поход вокруг вулкана Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div>
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_10.jpg"><img data-src="images/tours/bak/small/bak_small_10.jpg" class="lazyload" alt="Горная тундра в сентябре. Поход вокруг вулкана Бакенинг" title="Горная тундра в сентябре. Поход вокруг вулкана Бакенинг"></a>
+                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_10.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_10.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_10.jpg" type="image/jpeg">
+                            <img data-src="images/tours/bak/small/bak_small_10.jpg" class="lazyload" alt="Горная тундра в сентябре. Поход вокруг вулкана Бакенинг" title="Горная тундра в сентябре. Поход вокруг вулкана Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div>
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_11.jpg"><img data-src="images/tours/bak/small/bak_small_11.jpg" class="lazyload" alt="берег озера Верхне-Авачинского. Поход вокруг вулкана Бакенинг" title="берег озера Верхне-Авачинского. Поход вокруг вулкана Бакенинг"></a>
+                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_11.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_11.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_11.jpg" type="image/jpeg">
+                            <img data-src="images/tours/bak/small/bak_small_11.jpg" class="lazyload" alt="берег озера Верхне-Авачинского. Поход вокруг вулкана Бакенинг" title="берег озера Верхне-Авачинского. Поход вокруг вулкана Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div>    
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
                 <div class="gallerybox__item_inside">
-                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_12.jpg"><img data-src="images/tours/bak/small/bak_small_12.jpg" class="lazyload" alt="озеро Верхне-Авачинское. Поход вокруг вулкана Бакенинг" title="озеро Верхне-Авачинское. Поход вокруг вулкана Бакенинг"></a>
+                    <a data-fancybox="gallery" class="chocolat-image" href="images/tours/bak/medium/bak_medium_12.jpg">
+                        <picture>
+                            <source srcset="images/tours/bak/small/bak_small_12.webp" type="image/webp">
+                            <source srcset="images/tours/bak/small/bak_small_12.jpg" type="image/jpeg">
+                            <img data-src="images/tours/bak/small/bak_small_12.jpg" class="lazyload" alt="озеро Верхне-Авачинское. Поход вокруг вулкана Бакенинг" title="озеро Верхне-Авачинское. Поход вокруг вулкана Бакенинг">
+                        </picture>
+                    </a>
                 </div>
             </div> 
             
@@ -917,8 +1005,6 @@
     <script src="js/imask.js"></script>
     <script src="js/splide.min.js"></script>
 
-    <!-- DEBUG webp check -->
-    <script src="js/modernizr_webp.js"></script>
 
 	<!-- view JS ////////////-->
     <script src="js/core.js"></script> 
