@@ -516,18 +516,16 @@ body {
 
 
 .info-box-form {
-	/* position: absolute; */
-	margin-left: auto;
-	margin-right: auto;
-	transform: translateY(50%);
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	
 
 	padding: 20px 30px;
 	color: #fff !important;
 	width: 40%;
 	background-color: rgba(130, 130, 130, 0.4);
-	/* left: 50%;
-	bottom: 10%;
-	transform: translatex(-50%); */
 }
 
 @media screen and (max-width: 767px) {
