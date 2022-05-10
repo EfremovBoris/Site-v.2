@@ -100,7 +100,7 @@
       var feed = new Instafeed({
         // token last for 60 days? may be less so i need to change it...HOW TO AUTOMATE IT?
         // START working 10 nov 2021
-        accessToken: 'IGQVJXSWhRTnNNXzBVZAVliSVJhNjl0NFZALTXRhV3hwWmp3bTk1WWFhS09wMGg2REN3ZA0FWaVRxSUNBblJEOEVKYnZA4RE9ScUJqeGh1OXpDYlNvSjdHQXhjRE5WNHFEZAHhkVHFLblNTTDd3SjJHUWMyUQZDZD',
+        accessToken: 'IGQVJXamhPT2hPS19NblBJbGJhTWQ5UTlUV2tNSDNIQTJCazRYNTc4YmpJU0o2ZA2RJc0NvVUhiSjk3Q1NjZAjZAHUU9ERVBWVm9MclhLa0ZAUeC1Jc05YRjVNMUVKQmdFbnJGeGpkZAGhUX0wwZAWtDMFMtWAZDZD',
         limit: 8,
         target: 'instafeed',
         template: '<a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a>'
