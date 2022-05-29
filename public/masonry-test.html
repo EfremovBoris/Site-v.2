@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-5MB6W8F');</script>
-		<!-- End Google Tag Manager -->
-
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
 
 		<!--metatextblock-->		
-		<title>Отзывы</title>
+		<title>Отзывы_MASONRY</title>
 
 
 		<link rel="canonical" href="https://boris-trip.com/reviews">
@@ -36,24 +28,8 @@
 		<link rel="stylesheet" href="css/grid.css" />
 		<link rel="stylesheet" href="css/main.css" />
 
-		<!-- Put this script tag to the <head> of your page -->
-		<script src="https://vk.com/js/api/openapi.js?168"></script>
-
-		<script>
-			VK.init({ apiId: 7464645, onlyWidgets: true });
-		</script>
-		<script>
-			VK.Widgets.Comments("vk_comments", { limit: 5, attach: "*" });
-		</script>
-
 	</head>
 	<body>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MB6W8F"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-
-
 		<div id="main-menu">
 			<!-- LOAD MENU HERE -->
 			<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>
@@ -76,46 +52,15 @@
 						</ul>						
 					</p>
 					<br>
-					<!-- <p class="highlight-yellow">&#8595;&#8595;&#8595;Выберите нужную <b>закладку</b> (VK, Google) щелкнув по ней!&nbsp;&#8595;&#8595;&#8595;</p> -->
 				</div>
-					<div id="respVK"
-					class="vk-wrapper resp-channel"
-					style="max-width: 800px; margin: 0 auto; padding: 15px 5px;">
-					<div id="vk_comments"></div>
 			</div>
 
 
-				<!-- <div class="text-wrapper">
-					<div class="tab">
-						<button class="tablinks" onclick="openDayInfo(event, 'respVK', 'resp-channel')" id="defaultOpen">VK</button>
-						<button class="tablinks" onclick="openDayInfo(event, 'respGF', 'resp-channel')">форма Google</button>
-					</div>  
-				
-					<div class="feedback-channels" style="background-color: #fff;">
-						<div id="respVK"
-							class="vk-wrapper resp-channel"
-							style="max-width: 800px; margin: 0 auto; padding: 15px 5px;"
-						>
-							<div id="vk_comments"></div>
-						</div>
 
-						<div id="respGF" class="thumb-wrap2 resp-channel">
-							<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAxiXZ_iQ49GXG00FzqNwjKZvGlQyzDsV_PMGrwmbJQk3eKQ/viewform?embedded=true">Loading…</iframe>
-						</div>
-					</div>
-				</div> -->
-
-
-				<!-- <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
-				<div class="text-wrapper">
-					<div>
-						<iframe src="https://forms.yandex.ru/u/627b8c03f1ffd9b971fb570b/?iframe=1" frameborder="0" name="ya-form-627b8c03f1ffd9b971fb570b" width="100%"></iframe>
-					</div>
-				</div> -->
-
-
-				<div class="reviews">
-					<div class="review-item">
+			<div class="wrapper">
+				<div class="masonry">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/andrey_bak20.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Андрей</div>
@@ -148,9 +93,11 @@
 							</div>
 							<!-- <img src="images\vk.svg" width="24px" height="24px" alt="">							 -->
 						</div>
+						</div>
 					</div>
 				
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/ulya_bak20.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Ульяна</div>
@@ -172,9 +119,11 @@
 							</div>
 							<a href="https://www.instagram.com/ulyana.yoga/" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 					
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/kate_ksu19.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Екатерина Новикова</div>
@@ -188,11 +137,13 @@
 							</div>
 							<a href="https://www.instagram.com/kate_inlovewithworld/" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>    
 				
 
 
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/karpendm_bak19.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Дмитрий Карпенюк</div>
@@ -206,10 +157,12 @@
 							</div>
 							<a href="https://www.instagram.com/karpendmitry/" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 
 
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/helenmak_bak21.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Елена Макаревич</div>
@@ -236,10 +189,12 @@
 							</div>
 							<a href="https://www.instagram.com/elen_makarevich/" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 
 
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/annxndr_bak21.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Александр и Анна Наревская</div>
@@ -256,11 +211,13 @@
 							</div>
 							<a href="" target="_blank"><img src="images\vk.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 
 
 
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/mark_bak21.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Марк Бахтин</div>
@@ -274,11 +231,13 @@
 							</div>
 							<a href="https://vk.com/id4392437" target="_blank"><img src="images\vk.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 					
 					
 
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/katrin_ko21.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Екатерина Захарова</div>
@@ -297,11 +256,13 @@
 							</div>
 							<a href="https://www.instagram.com/p/CUsVZ7CIoq1/" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 
 
 
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/masher_ko21.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Мария Гаврина</div>
@@ -314,11 +275,13 @@
 							</div>
 							<a href="https://www.instagram.com/p/CVIi8BDM2sc/" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 
 
 
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/olyavla_bak21.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Ольга Власова</div>
@@ -331,10 +294,12 @@
 							</div>
 							<a href="https://www.instagram.com/0lya_vllasova/" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 					
 					
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/alioleg_bak21.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Олег Алешинский</div>
@@ -352,10 +317,12 @@
 							</div>
 							<a href="https://vk.com/id1019409" target="_blank"><img src="images\vk.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 
 
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/roman_bak21.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Роман Пономарев</div>
@@ -368,11 +335,13 @@
 							</div>
 							<a href="https://www.instagram.com/roman._ponomarev/" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 
 
 
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/nasty_ko21.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Анастасия Чукбар</div>
@@ -387,9 +356,11 @@
 							</div>
 							<a href="https://www.instagram.com/mikylisna/" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 
-					<div class="review-item">
+					<div class="masonry-brick">
+						<div class="masonry-content">
 						<img src="images/feedback/small/max_nepal.jpg" alt="photo">
 						<div class="review-item_body">
 							<div class="review-item_body_fio">Максим Вишняков</div>
@@ -399,26 +370,105 @@
 							</div>
 							<a href="https://www.instagram.com/maxzooley/" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
 						</div>
+						</div>
 					</div>
 
-					<!--
-						<div class="review-item">
-							<img src="images\feedback\mark2_bakening_21.jpg" alt="photo">
-							<div class="review-item_body">
-								<div class="review-item_body_fio">Екатерина Новикова</div>
-								<div class="review-item_body_info">Бакенинг, сентябрь 2021</div>
-								<div class="review-item_body_text">
-									
-								</div>
-								<a href="" target="_blank"><img src="images\insta.svg" width="24px" height="24px" alt=""></a>
-							</div>
-						</div>
-					-->
-				
 
 				
-				</div>				
+				</div>	
+			</div>
+				
 
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+				<script>
+					/**
+					 * Set appropriate spanning to any masonry item
+					 *
+					 * Get different properties we already set for the masonry, calculate 
+					 * height or spanning for any cell of the masonry grid based on its 
+					 * content-wrapper's height, the (row) gap of the grid, and the size 
+					 * of the implicit row tracks.
+					 *
+					 * @param item Object A brick/tile/cell inside the masonry
+					 */
+					function resizeMasonryItem(item){
+					  /* Get the grid object, its row-gap, and the size of its implicit rows */
+					  var grid = document.getElementsByClassName('masonry')[0],
+						  rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
+						  rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+					
+					  /*
+					   * Spanning for any brick = S
+					   * Grid's row-gap = G
+					   * Size of grid's implicitly create row-track = R
+					   * Height of item content = H
+					   * Net height of the item = H1 = H + G
+					   * Net height of the implicit row-track = T = G + R
+					   * S = H1 / T
+					   */
+					  var rowSpan = Math.ceil((item.querySelector('.masonry-content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+
+					  /* Set the spanning as calculated above (S) */
+					  item.style.gridRowEnd = 'span '+rowSpan;
+					  
+
+					}
+					
+					/**
+					 * Apply spanning to all the masonry items
+					 *
+					 * Loop through all the items and apply the spanning to them using 
+					 * `resizeMasonryItem()` function.
+					 *
+					 * @uses resizeMasonryItem
+					 */
+					function resizeAllMasonryItems(){
+					  // Get all item class objects in one list
+					  var allItems = document.getElementsByClassName('masonry-brick');
+					
+					  /*
+					   * Loop through the above list and execute the spanning function to
+					   * each list-item (i.e. each masonry item)
+					   */
+					  for(var i=0;i>allItems.length;i++){
+						resizeMasonryItem(allItems[i]);
+					  }
+					}
+					
+					/**
+					 * Resize the items when all the images inside the masonry grid 
+					 * finish loading. This will ensure that all the content inside our
+					 * masonry items is visible.
+					 *
+					 * @uses ImagesLoaded
+					 * @uses resizeMasonryItem
+					 */
+					function waitForImages() {
+					  var allItems = document.getElementsByClassName('masonry-brick');
+					  for(var i=0;i<allItems.length;i++){
+						imagesLoaded( allItems[i], function(instance) {
+						  var item = instance.elements[0];
+						  resizeMasonryItem(item);
+						} );
+					  }
+					}
+					
+					/* Resize all the grid items on the load and resize events */
+					var masonryEvents = ['load', 'resize'];
+					masonryEvents.forEach( function(event) {
+					  window.addEventListener(event, resizeAllMasonryItems);
+					} );
+					
+					/* Do a resize once more when all the images finish loading */
+					waitForImages();
+					</script>   
+
+
+
+				<div class="wrapper">
+					<img src="/images/myico.png" width="80" height="80" alt="">
+				</div>
 
 
 				<div class="text-wrapper">

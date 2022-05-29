@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
+
+		<!--metatextblock-->		
+		<title>Заявка участника похода</title>
+
+
+		<link rel="canonical" href="https://boris-trip.com/ostavit-zayavku">
+
+		<!-- /metatextblock -->
+
+
+		<!-- Setup FAVICON -->
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link
+			rel="shortcut icon"
+			href="images/favicon.ico"
+			type="image/x-icon"
+		/>
+
+		<!-- ext CSS  -->
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+
+		<!-- view CSS  -->
+		<link rel="stylesheet" href="css/grid.css" />
+		<link rel="stylesheet" href="css/main.css" />
+
+	</head>
+	<body>
+		<div id="main-menu">
+			<!-- LOAD MENU HERE -->
+			<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>
+		</div>
+
+		<div class="main">
+
+			<div class="xxx">
+                <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."form_request.html");  ?>
+			</div>
+				
+
+		</div>
+
+		<!-- FOOTER -->
+		<div id="footer" class="footer">
+			<!-- load footer here -->
+			<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."footer.html");  ?>
+		</div>
+		<!-- END of FOOTER -->
+
+		<!-- ext JS ////////////-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/imask.js"></script>
+		<script src="js/jquery.fancybox.min.js"></script>
+
+		<!-- view JS ////////////-->
+		<script src="js/core.js"></script>
+	</body>
+</html>

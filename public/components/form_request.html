@@ -1,7 +1,8 @@
     <!-- Форма обр. связи -->
     <div id="hiscreen-form" class="hiscreen-form">
         <div class="info-box-form">
-            <p style="text-align: center; padding: 10px 0; font-size: 1.2rem;">Заполните короткую форму. <br>Мы свяжемся с вами!</p>
+            <h1 style="text-align: center; text-transform: uppercase">ЗАЯВКА НА УЧАСТИЕ В ПОХОДЕ</h1>
+            <p style="text-align: center; padding: 10px 10px 20px; font-size: 1.2rem;">Оставьте заявку, чтобы узнать все детали похода.</p>
             <form id="reqst_form">
                 <div>
                     <input onkeyup="check_input(this)" type="text" id="form_fio" name="form_fio"
@@ -9,13 +10,13 @@
                 </div>
                 <div>
                     <input onkeyup="check_input(this)" type="text" inputmode="email" id="form_email" name="form_email"
-                    pattern="^[^ ]+@[^ ]+\.[a-z]{2,}" title="Укажите почту" placeholder="lovekamski@mail.ru" required>
+                    pattern="^[^ ]+@[^ ]+\.[a-z]{2,}" title="Укажите почту" placeholder="yourbox@mail.ru" required>
                 </div>
                 <div>
-                    <textarea name="form_comments" id="form_comments" cols="80" rows="2" placeholder="Сколько вас человек, вопросы, пожелания, интересующая программа..." form="reqst_form"></textarea>
+                    <textarea name="form_comments" id="form_comments" cols="80" rows="3" placeholder="Какой поход вас интересует? Сколько вас человек? Ваши вопросы и комментарии, если есть." form="reqst_form"></textarea>
                 </div>
                 <div>
-                    <input id="form_phone" name="form_phone" type="text" inputmode="tel" value="" placeholder="+7 (911) 786-00-67" required>
+                    <input id="form_phone" name="form_phone" type="text" inputmode="tel" value="" placeholder="+7 (928) 450-55-36" required>
                     <div class="unmasked-value desc" style="display: none;">unmasked: <span id="phone-unmasked"></span><span id="phone-complete" class="example__complete"></span></div>
                 </div>
                 <input type="hidden" id="src-page" name="src-page" value="">
@@ -29,6 +30,7 @@
                 <input type="submit" id="iwonnago" value="Хочу в поход!" disabled>
                 
                 <div id="wdh_result_form"></div>
+                <p style="text-align: center; padding: 10px 0; font-size: 1.2rem;">До встречи на Камчатке!</p>
             </form>
 
         </div>
