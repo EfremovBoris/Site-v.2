@@ -68,6 +68,10 @@ a.a-hcolor {
 	color: #db7324;
 }
 
+a.a-black {
+	color: black;
+}
+
 html {
 	height: 100%;
 	font-size: 18px;
@@ -97,7 +101,7 @@ h1,h2,h3,h4,h5,h6{
 		margin: 30px 0 15px 0;
 	}
 
-	#bak h2 {
+	#bak h2, article>h2 {
 		margin: 30px 0 15px 0;
 	}
 }
@@ -145,7 +149,7 @@ h6 {
 
 
 /* TEST change H decoration and size only on bak page */
-#bak h2 {
+#bak h2, article>h2 {
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: #db7324;	
@@ -248,6 +252,11 @@ body {
 	border-left: 6px solid #000;
 	padding: 30px;	
 }
+
+.info-block-1 p {
+	text-align: left;
+}
+
 
 @media screen and (max-width: 767px) {
 	.info-block-1 {
@@ -1343,7 +1352,12 @@ em {
 	cursor: pointer;
 	font-size: 18px;
 	font-weight: 500;
-	padding: 25px 65px 25px 10px;
+	padding: 20px 65px 20px 10px;
+}
+
+.acc-header-title p {
+	font-weight: bold;
+	overflow-wrap: break-word;
 }
 
 .acc-header-btn {
@@ -2613,5 +2627,21 @@ input[type="checkbox"]{
   /* NEW -  */
 
 
+  .blog-article>p {
+	  font-size: 17px;
+	  font-family: Roboto;
+	  text-align: left;
+}
+
+
+/* TEST */
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	padding-left: 20px;
+}
 
 
