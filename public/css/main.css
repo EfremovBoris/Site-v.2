@@ -2628,7 +2628,13 @@ input[type="checkbox"]{
 
 .blog-article {
 	font-size: 17px;
-	font-family: Roboto;
+	/* font-family: 'Roboto', sans-serif; */
+	font-family: 'Ubuntu', sans-serif;
+	/* font-style: italic;; */
+
+	/* font-family: 'Anonymous Pro', monospace; */
+	/* font-family: 'Caveat', cursive; */
+	/* font-family: 'Neucha', cursive; */
 }
 
 .blog-article>p {
