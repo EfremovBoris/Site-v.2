@@ -2626,11 +2626,19 @@ input[type="checkbox"]{
 
   /* NEW -  */
 
+.blog-article {
+	font-size: 17px;
+	font-family: Roboto;
+}
 
-  .blog-article>p {
-	  font-size: 17px;
-	  font-family: Roboto;
+.blog-article>p {
 	  text-align: left;
+}
+
+.blog-article>ul>li {
+	list-style: disc;
+	line-height: 1.6;
+	margin-left: 40px;
 }
 
 
