@@ -149,7 +149,7 @@ h6 {
 
 
 /* TEST change H decoration and size only on bak page */
-#bak h2, article>h2 {
+#bak h2, #ko h2, article>h2 {
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: #db7324;	
