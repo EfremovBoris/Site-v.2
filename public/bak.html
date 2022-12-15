@@ -30,7 +30,7 @@
 
 	<link rel="canonical" href="https://boris-trip.com/bak">
     <!-- DEBUG cache -->
-    <meta http-equiv="Cache-control" content="public">
+    <!-- <meta http-equiv="Cache-control" content="public"> -->
 	<!--/metatextblock-->
 
 
@@ -92,18 +92,14 @@
 
 
     <!-- Put this script tag to the <head> of your page -->
-        <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
-
-        <!-- Put this div tag to the place, where the Community messages block will be -->
-        <div id="vk_community_messages"></div>
-        <script type="text/javascript">
-          VK.Widgets.CommunityMessages("vk_community_messages", 213246471, {tooltipButtonText: "Есть вопрос?", widgetPosition: "left"});
-        </script>
-
+        <script src="https://vk.com/js/api/openapi.js?168"></script>
+    <!-- Rest of VK script paste in bottom -->
 
 
 </head>
+
 <body id="bak">
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MB6W8F"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -113,8 +109,6 @@
         <!-- LOAD MENU HERE -->
         <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>
     </div>
-
-
 
     <!-- ФОТО-заглушка -->			
     <div class="hiscreen">
@@ -139,7 +133,7 @@
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
                 <div>
                     <span style="font-size: 1.1rem;"><strong>14 дней</strong></span>
-                    <p>01.09 - 14.09.2023</p>
+                    <p>03.09 - 16.09.2023</p>
                 </div>
             </div>
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
@@ -232,7 +226,7 @@
                 <ul>
                     <li>Гидов: <strong>1-2</strong></li>
                     <li>Группа: <strong>8-16</strong> человек</li>
-                    <li>Дней: <strong>11</strong></li>
+                    <li>Дней: <strong>12</strong></li>
                     <li>Километраж: <strong>110</strong> км
                         <ul>
                             <li> - под рюкзаком: <strong>8 дней / 80 км</strong></li>
@@ -405,7 +399,7 @@
 
         <div class="extra-wrapper">
             <div class="info-block-1">
-                <p>Больше фотографий в <a href="photos_bakening.html" class="darker">галерее&nbsp;&#8594;</a></p>
+                <p>Больше фотографий в <a href="photos_bakening" class="darker">галерее&nbsp;&#8594;</a></p>
             </div>
         </div>
     </div>
@@ -427,7 +421,7 @@
                         <div class="acc-header-title">
                             <p>Что включено?</p>
                         </div>
-                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" ></div>
+                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
                     </div>
                     <div class="acc-content tour-includes">
                         <div class="acc-content-desc">
@@ -449,7 +443,7 @@
                         <div class="acc-header-title">
                             <p>Что НЕ включено?</p>
                         </div>
-                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" ></div>
+                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
                     </div>
                     <div class="acc-content tour-excludes">
                         <div class="acc-content-desc">
@@ -703,7 +697,7 @@
                         <div class="acc-header-title">
                             <p>Одежда</p>
                         </div>
-                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" ></div>
+                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
                     </div>
                     <div class="acc-content tour-includes">
                         <div class="acc-content-desc">
@@ -734,7 +728,7 @@
                         <div class="acc-header-title">
                             <p>Снаряжение</p>
                         </div>
-                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" ></div>
+                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
                     </div>
                     <div class="acc-content tour-includes">
                         <div class="acc-content-desc">
@@ -759,7 +753,7 @@
                         <div class="acc-header-title">
                             <p>Прочее</p>
                         </div>
-                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" ></div>
+                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
                     </div>
                     <div class="acc-content tour-includes">
                         <div class="acc-content-desc">
@@ -1144,6 +1138,12 @@
     <!-- Important: Open Default Tab -->
     <script>document.getElementById("tday0").style.display="block";</script>    
 
+
+    <!-- Put this div tag to the place, where the Community messages block will be -->
+    <div id="vk_community_messages"></div>
+    <script>
+        VK.Widgets.CommunityMessages("vk_community_messages", 213246471, {tooltipButtonText: "Есть вопрос?", widgetPosition: "left"});
+    </script>
 
 
 
