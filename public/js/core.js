@@ -292,10 +292,10 @@
             slidesToScroll: 1,
             speed: 500,
             easing:'_ease_',
-            infinite:false,
-            // autoplay:true,
-            autoplayspeed: 4000,
-            pauseOnHover:true
+            infinite:true,
+            autoplay:true,
+            autoplayspeed: 3000,
+            pauseOnHover:false
             //initialSlide: 2,
             //centerMode: true,
             //variableWidth: true

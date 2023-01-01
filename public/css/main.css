@@ -2727,7 +2727,9 @@ dd {
 	border-radius: 6px;
 	background-color: #ECEFF1;
 	color: #263238;
-	transition: background-color 0.15s;
+	/* transition: background-color 0.15s; */
+	transition: max-height 0.5s ease;
+	overflow: hidden;
   }
   details.faq_it > :last-child {
 	margin-bottom: 1rem;
@@ -2746,12 +2748,24 @@ dd {
 	transition: opacity 0.2s;
 	z-index: -1;
   }
+
+  details.faq_it:not([open]) {
+	max-height: 5rem;
+  }
+
  details.faq_it[open] {
 	background-color: #FFF;
+	max-height: 30rem;
   }
   details.faq_it[open]::before {
 	opacity: 0.6;
   }
+
+  details.faq_it[open] summary {
+	color: hsl(202, 100%, 38%);
+	font-weight: bold;
+  }
+
   details.faq_it summary {
 	padding: 0.5rem 1.1em 0.5rem 0;
 	display: block;
@@ -2843,3 +2857,10 @@ li strong {
 									supported by Chrome, Edge, Opera and Firefox */
   }
 
+
+
+  /* COOL gradient for bg */
+
+  #aboutus {
+	/* background: linear-gradient(170deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(41, 48, 61, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949; */
+  }
