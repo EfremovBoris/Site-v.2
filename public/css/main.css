@@ -2723,10 +2723,9 @@ dd {
 	width: 90%;
 	max-width: var(--wrapper-read-block);
 	position: relative;
-	/* border: 1px solid #78909C; */
 	border-radius: 6px;
-	background-color: #ECEFF1;
-	color: #263238;
+	/* background-color: #ECEFF1; */
+	/* color: #263238; */
 	/* transition: background-color 0.15s; */
 	transition: max-height 0.5s ease;
 	overflow: hidden;
@@ -2754,8 +2753,9 @@ dd {
   }
 
  details.faq_it[open] {
-	background-color: #FFF;
-	max-height: 30rem;
+	/* background-color: #FFF; */
+	/* disable max-height to avoid overflow */
+	/* max-height: 30rem;  */
   }
   details.faq_it[open]::before {
 	opacity: 0.6;
