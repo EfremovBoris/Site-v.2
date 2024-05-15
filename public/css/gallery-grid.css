@@ -43,6 +43,11 @@
 	filter: grayscale(0%);
 }
 
+.photo-album-list__item.album_disabled {
+	filter: grayscale(100%);
+	cursor: auto;
+}
+
 
 /* Photo album */
 
@@ -67,6 +72,12 @@
 	height: 100%;;
 	object-fit: cover;
 	object-position: 50% 50%;
+}
+
+.photo-album__item:hover img {
+	transform: scale(1.2);
+	cursor: zoom-in;
+	/* filter: grayscale(0%); */
 }
 
 

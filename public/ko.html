@@ -265,77 +265,83 @@
 
         <div class="extra-wrapper">
             <div class="info-block-1">
-                <p>Больше фотографий в <a href="photos_nalychevo" class="darker">галерее&nbsp;&#8594;</a></p>
+                <div class="btn-container">
+                    <a href="photos_nalychevo">
+                    <button class="view_gallery">
+                        <span class="text">Все ФОТО </span>
+                        <div class="icon-container">
+                            <div class="icon icon--right">
+                                <svg>
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+                </div>
+                
+                <svg style="display: none;">
+                    <symbol id="arrow-right" viewBox="0 0 20 10">
+                        <path d="M14.84 0l-1.08 1.06 3.3 3.2H0v1.49h17.05l-3.3 3.2L14.84 10 20 5l-5.16-5z"></path>
+                    </symbol>
+                </svg> 
+            </div>
             </div>
         </div>
     </div>
-
 
 
 
     <div class="wrapper inverse full-bleed" style="margin-top: 30px;">
-        <div class="extra-wrapper">
+        <div class="extrea-wrapper">
 
-            <!-- ВКЛЮЧЕНО / НЕ ВКЛЮЧЕНО -->
-            <div style="display: flex; align-items: baseline;">
-                <h2>СТОИМОСТЬ</h2>
-                <span style="font-size: 2rem; font-weight: 400; color: #db7324;">&nbsp; 55.000 &#8381;</span>
-            </div>
-
-            <div class="text-wrapper">
-                <div class="accordion blackstar">
-                    <div class="acc-wrapper">
-                        <div class="acc-header">
-                            <div class="acc-header-title">
-                                <p>Что включено?</p>
-                            </div>
-                            <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
-                        </div>
-                        <div class="acc-content tour-includes">
-                            <div class="acc-content-desc">
-                                <ul>
-                                    <li> встреча и проводы в аэропорт</li>
-                                    <li> заброска на автобусе | вахтовке (ГАЗ-66/Камаз) к точке старта и забор с финиша</li>
-                                    <li> 2 ночи в хостеле</li>
-                                    <li> аренда общественного снаряжения (палатки, костровое оборудование и т.д.)</li>
-                                    <li> работа гидов</li>
-                                    <li> трехразовое питание на маршруте</li>
-                                    <li> учитываем ваши предпочтения в питании</li>
-                                    <li> разрешение на посещение природного парка "Налычево"</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="acc-wrapper">
-                        <div class="acc-header">
-                            <div class="acc-header-title">
-                                <p>Что НЕ включено?</p>
-                            </div>
-                            <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
-                        </div>
-                        <div class="acc-content tour-excludes">
-                            <div class="acc-content-desc">
-                                <ul>
-                                    <li> питание в городе (дни 1 и 14)</li>
-                                    <li> перелет до Петропавловска-Камчатского</li>
-                                    <li> страховка</li>                                
-                                    <li> аренда личного снаряжения (спальник, палки и тд)</li>
-                                </ul>			
-                            </div>
-                        </div>
-                    </div>	
-                </div>
+        <!-- ВКЛЮЧЕНО / НЕ ВКЛЮЧЕНО -->
+        <div style="display: flex; align-items: baseline;">
+            <h2>СТОИМОСТЬ</h2>
+            <span style="font-size: 2rem; font-weight: 400; color: #db7324;">&nbsp; 55.000 &#8381;</span>
         </div>
-    </div>
+
+        <div class="text-wrapper">
+            <div class="accordion_blackstar">
+
+              <details class="faq_it noselect tour-includes" open>
+                <summary>Что включено?</summary>
+                    <ul>
+                        <li> встреча и проводы в аэропорт</li>
+                        <li> заброска на автобусе | вахтовке (ГАЗ-66/Камаз) к точке старта и забор с финиша</li>
+                        <li> 2 ночи в хостеле</li>
+                        <li> аренда общественного снаряжения (палатки, тент, костровое оборудование и т.д.)</li>
+                        <li> работа гидов</li>
+                        <li> трехразовое питание на маршруте</li>
+                        <li> учитываем ваши предпочтения в питании</li>
+                        <li> разрешение на посещение природного парка "Налычево"</li>
+                        <li> Регистрация группы в МЧС</li>
+                        <li> Спутниковый трекер/коммуникатор Gamin InReach mini</li>
+                    </ul>
+              </details>                
+
+                <details class="faq_it noselect tour-excludes">
+                    <summary>Что НЕ включено?</summary>
+                    <ul>
+                        <li> перелет до Петропавловска-Камчатского</li>
+                        <li> питание в городе</li>
+                        <li> страховка</li>                                
+                        <li> аренда личного снаряжения (спальник, палки и тд)</li>
+                    </ul>			
+                  </details> 
+
+            </div>
+        </div>
+
+        </div>
+
 
         <div class="action-form">
             <a href="#hiscreen-form">
                 <div class="call-2-action-btn">Хочу в поход!</div>
             </a>
         </div>
-
-
-    </div>      
+    </div>
 
 
 
@@ -363,34 +369,29 @@
             }'>
                 <div class="splide__track">
                     <ul id="splide__list" class="splide__list">
-                        <li id="day0" class="splide__slide" data-arrind=0>Карта маршрута</li>
-                        <li id="day1" class="splide__slide" data-arrind=1>День 1</li>
-                        <li id="day2" class="splide__slide" data-arrind=2>День 2</li>
-                        <li id="day3" class="splide__slide" data-arrind=3>День 3</li>
-                        <li id="day4" class="splide__slide" data-arrind=4>День 4</li>
-                        <li id="day5" class="splide__slide" data-arrind=5>День 5</li>
-                        <li id="day6" class="splide__slide" data-arrind=6>День 6</li>
-                        <li id="day7" class="splide__slide" data-arrind=7>День 7</li>
-                        <li id="day8" class="splide__slide" data-arrind=8>День 8</li>
-                        <li id="day9" class="splide__slide" data-arrind=9>День 9</li>
-                        <li id="day10" class="splide__slide" data-arrind=10>День 10</li>
-                        <li id="day11" class="splide__slide" data-arrind=11>День 11</li>
-                        <li id="day12" class="splide__slide" data-arrind=12>День 12</li>
-                        <li id="day13" class="splide__slide" data-arrind=13>День 13</li>
-                        <li id="day14" class="splide__slide" data-arrind=14>День 14</li>
+                        <li id="day0" class="splide__slide" data-arrind=0>День 1</li>
+                        <li id="day1" class="splide__slide" data-arrind=1>День 2</li>
+                        <li id="day2" class="splide__slide" data-arrind=2>День 3</li>
+                        <li id="day3" class="splide__slide" data-arrind=3>День 4</li>
+                        <li id="day4" class="splide__slide" data-arrind=4>День 5</li>
+                        <li id="day5" class="splide__slide" data-arrind=5>День 6</li>
+                        <li id="day6" class="splide__slide" data-arrind=6>День 7</li>
+                        <li id="day7" class="splide__slide" data-arrind=7>День 8</li>
+                        <li id="day8" class="splide__slide" data-arrind=8>День 9</li>
+                        <li id="day9" class="splide__slide" data-arrind=9>День 10</li>
+                        <li id="day10" class="splide__slide" data-arrind=10>День 11</li>
+                        <li id="day11" class="splide__slide" data-arrind=11>День 12</li>
+                        <li id="day12" class="splide__slide" data-arrind=12>День 13</li>
+                        <li id="day13" class="splide__slide" data-arrind=13>День 14</li>
+                        <li id="day14" class="splide__slide" data-arrind=14>Карта маршрута</li>
                     </ul>
                 </div>
             </div>
         </div>
 
 
-        <div id="tday0" class="day-item">
-            <div class="thumb-wrap">                    
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1nDG8lgY7Bg_PeauC16zpsSF7D6M1TdW8&z=10"></iframe>
-            </div>             
-        </div>
 
-        <div id="tday1" class="day-item">
+        <div id="tday0" class="day-item">
             <p class="day-item-title">День 1. Прилет, экскурсия по городу, поездка на берег Тихого океана.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_1.jpg" alt="photo day 1">
@@ -402,7 +403,7 @@
 
 
 
-        <div id="tday2" class="day-item">
+        <div id="tday1" class="day-item">
             <p class="day-item-title">День 2. Подножие Авачинского вулкана, прогулка на гору Верблюд.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_30.jpg" alt="photo day 1">
@@ -415,7 +416,7 @@
 
 
 
-        <div id="tday3" class="day-item">
+        <div id="tday2" class="day-item">
             <p class="day-item-title">День 3. Восхождение на Авачинский вулкан.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_31.jpg" alt="photo day 1">
@@ -429,7 +430,7 @@
 
 
 
-        <div id="tday4" class="day-item">
+        <div id="tday3" class="day-item">
             <p class="day-item-title">День 4. Авачинский перевал - Лагерь 1 (верховья р. Правая Седловинская).</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_2.jpg" alt="photo day 1">
@@ -440,7 +441,7 @@
             </div>
         </div>
 
-        <div id="tday5" class="day-item">
+        <div id="tday4" class="day-item">
             <p class="day-item-title">День 5. Лагерь 1 - Лагерь 2 (р. Шумная)</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_3.jpg" alt="photo day 1">
@@ -451,7 +452,7 @@
             </div>
         </div>							
 
-        <div id="tday6" class="day-item">
+        <div id="tday5" class="day-item">
             <p class="day-item-title">День 6. Центральный кордон "Налычево"</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_4.jpg" alt="photo day 1">
@@ -462,7 +463,7 @@
             </div>
         </div>	
         
-        <div id="tday7" class="day-item">
+        <div id="tday6" class="day-item">
             <p class="day-item-title">День 7. День отдыха на центральном кордоне.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_5.jpg" alt="photo day 1">
@@ -472,7 +473,7 @@
             </div>
         </div>	
         
-        <div id="tday8" class="day-item">
+        <div id="tday7" class="day-item">
             <p class="day-item-title">День 8. Таловские горячие источники.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_6.jpg" alt="photo day 1">
@@ -483,7 +484,7 @@
             </div>
         </div>   
                         
-        <div id="tday9" class="day-item">
+        <div id="tday8" class="day-item">
             <p class="day-item-title">День 9. Радиальный выход на вулкан Дзензур.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_7.jpg" alt="photo day 1">
@@ -494,7 +495,7 @@
             </div>
         </div>
         
-        <div id="tday10" class="day-item">
+        <div id="tday9" class="day-item">
             <p class="day-item-title">День 10. ЯК-28. Возвращение на центральный кордон.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_8.jpg" alt="photo day 1">
@@ -505,7 +506,7 @@
             </div>
         </div>				
         
-        <div id="tday11" class="day-item">
+        <div id="tday10" class="day-item">
             <p class="day-item-title">День 11. Резервный день.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_9.jpg" alt="photo day 1">
@@ -515,7 +516,7 @@
             </div>
         </div>
 
-        <div id="tday12" class="day-item">
+        <div id="tday11" class="day-item">
             <p class="day-item-title">День 12. Обратный путь. Семеновский кордон.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_10.jpg" alt="photo day 1">
@@ -526,7 +527,7 @@
             </div>
         </div>
 
-        <div id="tday13" class="day-item">
+        <div id="tday12" class="day-item">
             <p class="day-item-title">День 13. Финиш в пос. Пиначево. Зеленовские озерки.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_11.jpg" alt="photo day 1">
@@ -537,7 +538,7 @@
             </div>
         </div>
 
-        <div id="tday14" class="day-item">
+        <div id="tday13" class="day-item">
             <p class="day-item-title">День 14. Рыбный рынок, магазин сувениров, трансфер в аэропорт.</p>
             <div class="day-item-content">
                     <img src="images/tours/ko/small/ko_small_12.jpg" alt="photo day 1">
@@ -547,112 +548,15 @@
             </div>
         </div>
 
+
+        <div id="tday14" class="day-item">
+            <div class="thumb-wrap">                    
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1nDG8lgY7Bg_PeauC16zpsSF7D6M1TdW8&z=10"></iframe>
+            </div>             
+        </div>        
+
     </div>
-  
-
-
-        <div class="wrapper">
-            
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <h2>В РЮКЗАКЕ</h2>
-                <span data-tooltip="Скачать полный список снаряжения одним файлом"><a href="https://docs.google.com/document/d/1HtuSPbfGdiDCLr78fy0gK9RVzhxCC1OPicjgYZtshQI/edit?usp=sharing" target="_blank" class="darker">скачать список</a>
-                    &#9196;
-                </span>
-            </div>            
-            
-            <div class="text-wrapper">
-                <div class="accordion">
-                    <div class="acc-wrapper">
-                        <div class="acc-header">
-                            <div class="acc-header-title">
-                                <p>Одежда</p>
-                            </div>
-                            <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
-                        </div>
-                        <div class="acc-content tour-includes">
-                            <div class="acc-content-desc">
-                                <ul class="basic-listt">
-                                    <li>Комплект (верх + низ) термобелья</li>
-                                    <li>Комплект флиса (кофта + штаны)</li>
-                                    <li>Комплект мембранной одежды (куртка с капюшоном + штаны-самосбросы)</li>
-                                    <li>Пуховый свитер/куртка на primaloft</li>
-                                    <li>Дождевик/пончо</li>
-                                    <li>Штаны ходовые/трекинговые</li>
-                                    <li>Шорты</li>
-                                    <li>Купальник/плавки</li>
-                                    <li>Футболки с коротким (1-2) и длинным рукавом (1)</li>
-                                    <li>Шапка, кепка/панама, баффы (1-3 шт)</li>
-                                    <li>Перчатки (флис, рабочие х/б)</li>
-                                    <li>Носки шерстяные (для сна)</li>
-                                    <li>Носки трекинговые (2 пары), нижнее белье</li>
-                                    <li>Ботинки трекинговые (разношенные!)</li>
-                                    <li>Сандалии, тапки резиновые (crocs) или кроссовки</li>
-                                    <li>Легкое платье девушкам для красивых фотографий :)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> 
-
-                    <div class="acc-wrapper">
-                        <div class="acc-header">
-                            <div class="acc-header-title">
-                                <p>Снаряжение</p>
-                            </div>
-                            <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
-                        </div>
-                        <div class="acc-content tour-includes">
-                            <div class="acc-content-desc">
-                                <ul class="basic-listt">
-                                    <li>Рюкзак (70-100 л) + накидка от дождя</li>
-                                    <li>Спальник (температура комфорта 0-5° С)</li>
-                                    <li>Каремат (коврик туристический, пенка) + чехол</li>
-                                    <li>Пенопопа (сидушка, хоба, пендель)</li>
-                                    <li>КЛМН (Кружка, Ложка, Миска, Нож)</li>
-                                    <li>Очки солнцезащитные</li>
-                                    <li>Фонарик налобный + запасные батарейки</li>
-                                    <li>Термос (1 на троих)</li>
-                                    <li>Трекинговые палки</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>    
-                    
-
-                    <div class="acc-wrapper">
-                        <div class="acc-header">
-                            <div class="acc-header-title">
-                                <p>Прочее</p>
-                            </div>
-                            <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
-                        </div>
-                        <div class="acc-content tour-includes">
-                            <div class="acc-content-desc">
-                                <ul class="basic-listt">
-                                    <li>Помада гигиеническая для губ</li>
-                                    <li>Солнцезащитный крем SPF 50+</li>
-                                    <li>Предметы гигиены - мыло, зубная щетка/паста, туалетная бумага</li>
-                                    <li>Аптечка индивидуальная</li>
-                                    <li>Поливитамины (начать пить за пару недель до тура)</li>
-                                    <li>Мини ремнабор (нитки с иголками)</li>
-                                    <li>Полотенце (микрофибра)</li>
-                                    <li>Гамаши (фонарики)</li>
-                                    <li>Накомарник</li>
-                                    <li>PowerBank</li>
-                                    <li>Фотоаппарат</li>
-                                    <li>Гермомешок для спальника и вещей</li>
-                                    <li>Полиэтиленовый вкладыш (большой прочный пакет, куда укладываются вещи для защиты от влаги)</li>
-                                    <li>Пластиковая бутылка для воды или фляга</li>
-                                    <li>Документы и деньги в гермомешке</li>
-                                    <li>Зажигалка / огниво</li>                           
-                                </ul>
-                            </div>
-                        </div>
-                    </div>                  
-                </div>           
-            </div>
-        </div>
  
-
 
 
     <div class="wrapper">
@@ -754,71 +658,8 @@
     </div> -->
 
 
-    <div class="wrapper">
-        <div class="extra-wrapper">
-            <h2>ОТВЕТЫ НА ВОПРОСЫ</h2>
-
-            <div class="faqZ">
-
-
-                <details class="faq_it noselect">
-                    <summary>Будет ли тяжело?</summary>
-                    <p>В походе все вещи несем на себе и поэтому стоит ответственно подходить к выбору одежды и снаряжения. Лишнего брать не стоит, а если сомневаетесь, то обязательно уточните у гида (в день прилета) необходимость тех или иных вещей.</p>
-                    <p>Вес собранного рюкзака должен составлять <u>не более <strong>9-11 кг</strong></u> (без учета вещей в которых вы будете постоянно идти: ботинки, штаны, футболка).</p>
-                    <p>К личной одежде и снаряжению, которые должны занимать <u><strong>max.</strong> <strong>65-70%</strong> объема рюкзака</u>, перед походом добавятся групповое снаряжение <strong>2-2.5 кг</strong> (палатка, газ) и продукты &mdash; это дополнительно примерно <strong>4-6 кг</strong>. Вес напрямую зависит от количества дней похода и состава группы (% мужчин).</p>                
-                  </details>                          
-    
-                <details class="faq_it noselect">
-                    <summary>Авиабилеты?</summary>
-                    <p>Камчатку с Москвой разделяют 9 часовых поясов и потребуется некоторое время для адаптации. Лучше прилететь на Камчатку за 1-2 дня до тура. Вылет обратно в последний день тура или можно остаться и продолжить исследовать Камчатку. Поиском и покупкой билетов займитесь за 5-9 месяцев до вылета. Минимальная цена билета в оба конца из Москвы: 22500р. Недорогие билеты периодически появляются в продаже, важно не пропустить этот момент и успеть купить "счастливый" билет.</p>
-                  </details>
-    
-                  <details class="faq_it noselect">
-                    <summary>Может ли измениться программа путешествия?</summary>
-                    <p>Возможны изменения в программе тура из-за погоды и соображений безопасности. Окончательное решение принимает главный гид после предварительного согласования с участниками похода.</p>
-                  </details>
-    
-    
-                  <details class="faq_it noselect">
-                    <summary> Когда лучше приезжать?</summary>
-                    <p>Летний туристический сезон длится &nbsp;на Камчатке с начала июля по конец сентября. &quot;Лучшее время&quot; для посещения зависит от вида туризма (автотур, пеший поход, альпинизм, рыбалка), района путешествия и &nbsp;наличия опыта подобных мероприятий.</p>
-                    <p>В <strong>июле </strong>еще можно местами встретить снег на &quot;севере&quot; Камчатки (район Толбачика), а уж на юге (район Мутновского и Горелого вулканов) снега еще много. Контрасты поражают: зеленые поляны, вулканы в снегу, талые снежные озера с голубой водой. Вторая половина июля это период цветения альпийский лугов. Обилие цветов поражает воображение и дарит яркие кадры. Начинается сезон комаров и нерест рыбы. Длинный световой день.</p>
-                    <p>В <strong>августе </strong>пик сезона комаров, рыба активно идет на нерест. &nbsp;Спеет ягода, появляются грибы. Это период максимального количества туристов и оптимальное время для визита в район вулкана Толбачик. Для июля-августа характерны прогулки по Камчатским &quot;джунглям&quot; в долинах рек и на низменности — высота отдельных видов растительности достигает 2-4 метров.</p>
-                    <p>В <strong>сентябре </strong>еще тепло и временами жарко днем; по вечерам и рано утром прохладно, возможны заморозки. Золотая осень вступает в свои права. Еще есть ягода и грибы. Световой день заметно короче.</p>
-                  </details>
-    
-                  
-                  <details class="faq_it noselect">
-                    <summary>Что с погодой?</summary>
-                    <p>Климат на полуострове — умеренный, в центральной части — континентальный с холодной зимой и тёплым летом, на побережьях — морской со сравнительно мягкой зимой и прохладным летом. На Камчатке выделяют более 10 климатических зон. Температура может варьироваться от +10 градусов в Петропавловске-Камчатском до +30 в центральной части Камчатки (Мильково) и на "севере" (Козыревск).</p>
-                    <p>Так что нужно быть готовым к любым капризам природы: ветер, дождь, холод, жара. Средняя летняя температура 10-15 градусов. "Сезона дождей" на Камчатке нет. Погода — это лотерея, но "нет плохой погоды, есть плохое снаряжение".</p>
-                  </details>              
-    
-                  
-                  <details class="faq_it noselect">
-                    <summary>Питание на маршруте?</summary>
-                    <p>Участники готовят сами (по 2-3 человека) в порядке дежурства. Гид всегда поможет словом и делом. Завтрак: гречка, овсянка, булгур, кукурузная, пшено, рис + сухие сливки / сгущенка, джем, орехи, масло гхи, мед; чай, натуральный кофе.  Обед: хлеб / сухари / хлебцы, сыр / колбаса / паштет / сало, орехи, сухофрукты, шоколад, конфеты, чай. На дневках варим суп, борщ или уху.  Варианты ужина: макароны / гречка / рис / булгур / чечевица /  карпюр + тушенка / сушеное мясо или фарш; чай, кофе, печенье / пряники / сушки.  Используем специи, соусы и "местные" продукты — ведь так полезнее и аппетитнее.</p>
-                  </details>
-                  
-                  <details class="faq_it noselect">
-                    <summary>Будет ли мобильная связь и электричество?</summary>
-                    <p>Мобильная связь отсутствует на протяжение всего тура. Возможность подзарядить гаджеты (телефон, фотоаппарат,...) есть на Тимоновских источниках. Так что рекомендуем взять PowerBank.</p>
-                  </details>
-    
-                  <details class="faq_it noselect">
-                    <summary>Медведи на маршруте?</summary>
-                    <p>Встречи с медведями возможны. При соблюдении правил поведения, которые вам расскажет гид, ничего страшного не произойдет.</p>
-                  </details> 
-                  
-                  <!-- <details class="faq_it">
-                    <summary>?</summary>
-                    <p>...</p>
-                  </details> -->
-
-                
-            </div>
-        </div>
-    </div>
+    <!-- FAQ Section -->
+    <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."faq-basic.html");  ?>
 
 
 

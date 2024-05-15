@@ -38,14 +38,14 @@
 		<link rel="stylesheet" href="css/main.css" />
 
 		<!-- Put this script tag to the <head> of your page -->
-		<script src="https://vk.com/js/api/openapi.js?168"></script>
+		<!-- <script src="https://vk.com/js/api/openapi.js?168"></script> -->
 
-		<script>
+		<!-- <script>
 			VK.init({ apiId: 7464645, onlyWidgets: true });
 		</script>
 		<script>
 			VK.Widgets.Comments("vk_comments", { limit: 5, attach: "*" });
-		</script>
+		</script> -->
 
 	</head>
 	<body>
@@ -63,57 +63,46 @@
 		<div class="main">
 			<div class="wrapper">
 				<div class="text-wrapper">
-					<h4>ОТЗЫВЫ О ПОХОДАХ</h4>
+					<h2>ОТЗЫВЫ О ПОХОДАХ</h2>
+					<p class="highlight-yellow" style="padding: 0px 10px 0px;">
+						Были с нами в походе?<br>
+						Оставьте отзыв, поделитесь впечатлениями с будущими путешественниками.
+						</p><br>	
 					<p>
-						<iframe src="https://yandex.ru/sprav/widget/rating-badge/207235107600" width="150" height="50"  ></iframe>
-					</p>
-					<p>
-						Оставить отзыв можно через:						
+						<!-- Оставить отзыв можно через:						
 						<ul class="basic-list">
-							<li><a class="darker" href="https://yandex.ru/profile/207235107600?intent=reviews" target="_blank" >Яндекс</a></li>
+							<li style="line-height: 50px !important;"><a class="darker" href="https://yandex.ru/profile/207235107600?intent=reviews" target="_blank" >Яндекс</a></li>
 							<li><a class="darker" href="https://vk.com/topic-213246471_49143436" target="_blank">ВКонтакте</a></li>
-							<li><a class="darker" href="https://wa.me/79284505536" target="_blank">WhatsApp</a>, <a class="darker" href="mailto:lovekamski@mail.ru" target="_blank">E-mail</a> (прислать текст отзыва в сообщении)</li>
-							<!-- <li><a class="darker" href="https://forms.yandex.ru/u/627b8c03f1ffd9b971fb570b/" target="_blank" >Яндекс.Формы</a></li> -->
-						</ul>						
+							<li><a class="darker" href="https://wa.me/79284505536" target="_blank">WhatsApp (прислать текст отзыва в сообщении)</a></li>
+						</ul>						 -->
 					</p>
 					<br>
-					<!-- <p class="highlight-yellow">&#8595;&#8595;&#8595;Выберите нужную <b>закладку</b> (VK, Google) щелкнув по ней!&nbsp;&#8595;&#8595;&#8595;</p> -->
 				</div>
 					<div id="respVK"
 					class="vk-wrapper resp-channel"
 					style="max-width: 800px; margin: 0 auto; padding: 15px 5px;">
-					<div id="vk_comments"></div>
-			</div>
+					<!-- <div id="vk_comments"></div> -->
+					<div style="max-width:700px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/207235107600?comments"></iframe><a href="https://yandex.ru/maps/org/gid_i_instruktor_boris_yefremov/207235107600/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Гид и инструктор Борис Ефремов на карте Кемеровской области (Кузбасса) — Яндекс Карты</a></div>
+					</div>
 
-
-				<!-- <div class="text-wrapper">
-					<div class="tab">
-						<button class="tablinks" onclick="openDayInfo(event, 'respVK', 'resp-channel')" id="defaultOpen">VK</button>
-						<button class="tablinks" onclick="openDayInfo(event, 'respGF', 'resp-channel')">форма Google</button>
-					</div>  
+					<div class="text-wrapper">						
+						<h3>ПЕСНИ ТУРИСТОВ О НАС:</h3>
+						<div style="display: table; max-width: 90%;">
+							<span style="display: table-cell; vertical-align: middle;">Ах, сука гид</span>
+							<audio style="display: table-cell; vertical-align: middle; padding-left: 10px; max-width: 100%;" src="./audio/ах сука гид_с audiodenoise.wav" controls controlsList="nodownload noplaybackrate"></audio>
+						</div>
+						<br>
+						<div style="display: table;">
+							<span style="display: table-cell; vertical-align: middle;">Наш гид не сука</span>
+							<audio style="display: table-cell; vertical-align: middle; padding-left: 10px; max-width: 100%;" src="./audio/Наш гид не сука.m4a" controls controlsList="nodownload noplaybackrate"></audio>
+						</div>
+						<br>
+						<div style="display: table;">
+							<span style="display: table-cell; vertical-align: middle;">КСЮ 2023</span>
+							<audio style="display: table-cell; vertical-align: middle; padding-left: 10px; max-width: 100%;" src="./audio/Камчатка КСЮ-2023.m4a" controls controlsList="nodownload noplaybackrate"></audio>
+						</div>						
+					</div>
 				
-					<div class="feedback-channels" style="background-color: #fff;">
-						<div id="respVK"
-							class="vk-wrapper resp-channel"
-							style="max-width: 800px; margin: 0 auto; padding: 15px 5px;"
-						>
-							<div id="vk_comments"></div>
-						</div>
-
-						<div id="respGF" class="thumb-wrap2 resp-channel">
-							<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAxiXZ_iQ49GXG00FzqNwjKZvGlQyzDsV_PMGrwmbJQk3eKQ/viewform?embedded=true">Loading…</iframe>
-						</div>
-					</div>
-				</div> -->
-
-
-				<!-- <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
-				<div class="text-wrapper">
-					<div>
-						<iframe src="https://forms.yandex.ru/u/627b8c03f1ffd9b971fb570b/?iframe=1"   name="ya-form-627b8c03f1ffd9b971fb570b" width="100%"></iframe>
-					</div>
-				</div> -->
-
 
 				<div class="reviews">
 					<div class="review-item">
@@ -423,7 +412,7 @@
 
 
 				<div class="text-wrapper">
-					<h4>P.S.:</h4>
+					<h2>P.S.:</h2>
 					<!-- <p>
 						Мир туристов тесен и возможно вы ходили со мной в походы
 						(Камчатка, Непал,...).
