@@ -2,9 +2,6 @@
     // $("#main-menu").load("components/menu.html");
     // $("#footer").load("components/footer.html");
 
-    // check selector existance
-    // if ( $( "#myDiv" ).length ) {"do smth"}
-
 
 
     // Tabs select login /////////////////////////////////////////////////
@@ -52,8 +49,6 @@
 
 
 
-
-
     // Form input validation /////////////////////////////////////////////////
     function check_input(e) {
       let input_src = document.getElementById(e.id)
@@ -95,18 +90,18 @@
   
     // InstagramFeed init /////////////////////////////////////////////////
 
-    element = document.getElementById("instafeed");
-    if (typeof(element) != 'undefined' && element != null){
-      var feed = new Instafeed({
-        // token last for 60 days? may be less so i need to change it...HOW TO AUTOMATE IT?
-        // START working 10 nov 2021
-        accessToken: 'IGQVJXamhPT2hPS19NblBJbGJhTWQ5UTlUV2tNSDNIQTJCazRYNTc4YmpJU0o2ZA2RJc0NvVUhiSjk3Q1NjZAjZAHUU9ERVBWVm9MclhLa0ZAUeC1Jc05YRjVNMUVKQmdFbnJGeGpkZAGhUX0wwZAWtDMFMtWAZDZD',
-        limit: 8,
-        target: 'instafeed',
-        template: '<a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a>'
-      });
-      feed.run();
-    };
+    // element = document.getElementById("instafeed");
+    // if (typeof(element) != 'undefined' && element != null){
+    //   var feed = new Instafeed({
+    //     // token last for 60 days? may be less so i need to change it...HOW TO AUTOMATE IT?
+    //     // START working 10 nov 2021
+    //     accessToken: 'IGQVJXamhPT2hPS19NblBJbGJhTWQ5UTlUV2tNSDNIQTJCazRYNTc4YmpJU0o2ZA2RJc0NvVUhiSjk3Q1NjZAjZAHUU9ERVBWVm9MclhLa0ZAUeC1Jc05YRjVNMUVKQmdFbnJGeGpkZAGhUX0wwZAWtDMFMtWAZDZD',
+    //     limit: 8,
+    //     target: 'instafeed',
+    //     template: '<a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a>'
+    //   });
+    //   feed.run();
+    // };
 
 
 
@@ -127,7 +122,6 @@
 
         // init BURGER menu /////////////////////////////////////////////////
         $('.header__burger').click(function (event) {
-            // alert('hello');
             $('.header__burger, .header__menu').toggleClass('active');
             $('body').toggleClass('lock');
             $('.header__button').toggleClass('disabled');
@@ -272,35 +266,32 @@
                 //centerMode: true,
                 //variableWidth: true
                 //draggable:false
-            });
-            
-      }; //end if exist
+            });            
+        }; //end if exist
 
 
 
-
-
-      if ( $( ".slider-tour" ).length ) {
-        $('.slider-tour').slick({
-            //accessibility:true,
-            // variableWidth:true,
-            // lazyLoad: 'ondemand',
-            arrows: true,
-            // dots: true,
-            // adaptiveHeight: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed: 500,
-            easing:'_ease_',
-            infinite:true,
-            autoplay:true,
-            autoplayspeed: 3000,
-            pauseOnHover:false
-            //initialSlide: 2,
-            //centerMode: true,
-            //variableWidth: true
-            //draggable:false
-        });
+        if ( $( ".slider-tour" ).length ) {
+          $('.slider-tour').slick({
+              //accessibility:true,
+              // variableWidth:true,
+              // lazyLoad: 'ondemand',
+              arrows: true,
+              // dots: true,
+              // adaptiveHeight: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              speed: 500,
+              easing:'_ease_',
+              infinite:true,
+              autoplay:true,
+              autoplayspeed: 3000,
+              pauseOnHover:false
+              //initialSlide: 2,
+              //centerMode: true,
+              //variableWidth: true
+              //draggable:false
+          });
 
 
   }; //end if exist
@@ -316,7 +307,7 @@
                   loop:true,
                   // margin:10,
                   nav:true,
-                dots:true,
+                // dots:true,
                 autoHeight:true
                 // navContainer:'#gallery',
                   // responsive:{
@@ -331,6 +322,20 @@
                   //     }
                   // }
               });
+
+
+              // refresh carousel trigger  MOD 27-05-24
+              var details = document.querySelectorAll("details")
+              details.forEach(details => {
+                  details.addEventListener("toggle", function() {
+                          var owl = $('.owl-carousel');
+                          owl.owlCarousel();
+                          owl.trigger('refresh.owl.carousel');
+                      })
+                  });
+
+
+              
         }; // end IF
     });
 
@@ -368,12 +373,3 @@
 
       });
   });
-
-// 	Chocolat(document.querySelectorAll('.chocolat-image'), {
-// 		loop: false,
-// 		imageSize: 'scale-down',
-// 		linkImages: true,
-// 		closeOnBackgroundClick: true,
-// 		setTitle : function () { return 'set title' },
-// 		fullScreen: false
-// })

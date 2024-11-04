@@ -1505,6 +1505,14 @@ em {
 	height: 100%;
 	overflow: hidden;
   }
+
+  @media screen and (max-width: 600px) {
+	.thumb-wrap.map {
+		  min-height: 85vh !important;
+	  }
+	}
+
+
   .thumb-wrap iframe {
 	position: absolute;
 	top: 0;
@@ -1514,6 +1522,7 @@ em {
 	border-width: 0;
 	outline-width: 0;
   }
+
 
 
 
@@ -2096,9 +2105,10 @@ li.splide__slide {
 
 li.splide__slide:hover {
 	cursor: pointer;
-    /* color: #db7324; */
-	border: 1px dashed #0079c1;
+	/* border: 1px dashed #0079c1; */
+	border-top: 2px solid blue;
 }
+
 
 /* end of SCROLLABLE MENU*/
 
@@ -2209,7 +2219,6 @@ li.splide__slide:hover {
 #instafeed {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	/* grid-template-rows: repeat(3, 1fr); */
 	grid-column-gap: 0.5rem;
 	grid-row-gap: 0.5rem;
 	max-width: 64rem;
@@ -2722,6 +2731,8 @@ dd {
 
 
  details.faq_it {
+	max-height: 0;
+	overflow: hidden;
 	margin: 1rem auto;
 	padding: 0 1rem;
 	width: 90%;
@@ -2732,7 +2743,6 @@ dd {
 	/* color: #263238; */
 	/* transition: background-color 0.15s; */
 	transition: max-height 0.5s ease;
-	overflow: hidden;
   }
   details.faq_it > :last-child {
 	margin-bottom: 1rem;
@@ -2759,7 +2769,7 @@ dd {
  details.faq_it[open] {
 	/* background-color: #FFF; */
 	/* disable max-height to avoid overflow */
-	/* max-height: 30rem;  */
+	max-height: 1000px; 
   }
   details.faq_it[open]::before {
 	opacity: 0.6;
@@ -2969,3 +2979,57 @@ li strong {
 	transform: translateX(-70%);
   }
   
+
+
+  /* Parallax 4 blog notes */
+
+  .parallax {
+	background-image: url('../images/blog/articles/bear_alert.webp');
+	/* , url('../images/blog/articles/bear_alert.png'); */
+	background-attachment: fixed;
+	background-size: cover;
+	height: calc(100vh - var(--main-menu-height));;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.parallax::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: var(--main-menu-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--main-menu-height));
+    background: rgb(55 54 50 / 70%);
+}
+
+.parallax h1 {
+    z-index: 1;
+    color: rgb(255, 165, 0);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: calc(24px + (80 - 24) * ((100vw - 320px) / 1200));
+	padding: 0px 20px;
+}
+
+
+/* Slider overlay */
+.ksu-promo {
+	position: relative;
+  }
+  
+  .slider-tour {
+	position: relative;
+	z-index: 1;
+  }
+  
+  .overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+  }

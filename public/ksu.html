@@ -13,9 +13,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--metatextblock-->
-    <title>Поход вокруг вулкана Толбачик. Камчатка 2024.</title>
+    <title>Поход вокруг вулкана Толбачик. Камчатка 2025.</title>
     <meta name="description" content="Пеший поход по Камчатке среди вулканов Ключевской группы, восхождение на Плоский Толбачик.">
     <meta name="keywords" content="походы по Камчатке, Толбачик">
+
+
+	<meta property="og:url" content="https://boris-trip.com/ksu">
+	<meta property="og:title" content="Поход вокруг вулкана Толбачик. Камчатская Аннапурна.">
+	<meta property="og:description" content="Парк Ключевской. 6-дневный треккинг с местным гидом. Нас ждут вулканы, много вулканов. 2 восхождения. Записывайся в поход ☎ 8(928)450-55-36">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://boris-trip.com/images/tours/ksu/small/ksu_small_6.jpg">    
 
 	<link rel="canonical" href="https://boris-trip.com/ksu">
 	<!--/metatextblock-->
@@ -35,6 +42,7 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/my-slick-tour.css">
+    <link rel="stylesheet" href="css/lupa.css">
     
 </head>
 <body id="ksu">
@@ -49,49 +57,28 @@
     </div>
 
 
-    <!-- ФОТО-заглушка -->			
-    <!-- <div class="hiscreen">
-        <div class="welcometext">
-            <h1>Поход Вокруг Толбачика</h1><br>
-            Лед и пламя вулканов Камчатки
-        </div>
-    </div> -->
-    <!-- КОНЕЦ ФОТО-ЗАГЛУШКИ -->
     <div class="main">
         <!-- Slick slider -->
         <!-- <div class="wrapper"> -->
             <div class="ksu-promo">
+                <div class="welcometext overlay">
+                    <h1 class="tour-header">Поход вокруг Толбачика</h1>
+                    <div class="tour-header-btn" style="margin-top: 30px;">
+                        <a href="#hiscreen-form" class="get-feedback-btn">Оставить заявку</a>
+                    </div>
+                </div>
                 <div class="slider-tour">
                     <div class="slider__item">
-                        <img src="images/tours/ksu/cover/ksu_cover_01.jpg" alt="">
-                        <div>
-                            <p>Камчатка <br>с Севера на Юг</p>
-                            <div class="tour-header-btn" style="margin-top: 30px;">
-                                <a href="#hiscreen-form" class="get-feedback-btn">Оставить заявку</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="slider__item">
-                        <img data-src="images/tours/ksu/cover/ksu_cover_02.jpg" class="lazyload" alt="">
-                        <div>
-                            <p>Рассветы и закаты</p>
-                        </div>
+                        <img src="images/tours/ksu/cover/ksu_cover_02.jpg" alt="">
                     </div>
                     <div class="slider__item">
                         <img data-src="images/tours/ksu/cover/ksu_cover_03.jpg" class="lazyload" alt="">
-                        <div>
-                            <p>в краю вулканов-исполинов</p>
-                        </div>
                     </div>
                     <div class="slider__item">
                         <img data-src="images/tours/ksu/cover/ksu_cover_05.jpg" class="lazyload" alt="">
-                        <div>
-                            <p>Присоединяйтесь!!!</p>
-                            <div class="tour-header-btn" style="margin-top: 30px;">
-                                <a href="#hiscreen-form" class="get-feedback-btn">Оставить заявку</a>
-                            </div>                            
-                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <img data-src="images/tours/ksu/cover/ksu_cover_01.jpg" class="lazyload" alt="">
                     </div>
                 </div>
             </div>
@@ -107,19 +94,19 @@
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
                 <div>
                     <span style="font-size: 1.1rem;"><strong>14 дней</strong></span>
-                    <p>03.08 — 16.08.2024</p>
+                    <p>11.07 — 24.07.2025</p>
                 </div>
             </div>
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
                 <div>
                     <span style="font-size: 1.1rem;"><strong>Стоимость</strong></span>
-                    <p>90.000 &#8381;</p>
+                    <p>95.000 &#8381;</p>
                 </div>
             </div>
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
                 <div>
                     <span style="font-size: 1.1rem;"><strong>Мест в группе</strong></span>
-                    <p style="color: red">Свободно 8 мест из 20</p>
+                    <p style="color: red">Идёт набор</p>
                 </div>
             </div> 
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
@@ -212,8 +199,9 @@
 
         <div class="flex-container gallerybox" style="overflow: hidden;">
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
-                <div class="gallerybox__item_inside">
+                <div class="gallerybox__item_inside image-container" id="lupa">
                     <a data-fancybox="gallery" data-caption="My caption 1" class="chocolat-image" href="images/tours/ksu/medium/ksu_medium_1.jpg"><img src="images/tours/ksu/small/ksu_small_1.jpg" alt=""></a>
+                    <div class="magnifying-glass"></div>
                 </div>
             </div>
             <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
@@ -311,7 +299,7 @@
         <!-- ВКЛЮЧЕНО / НЕ ВКЛЮЧЕНО -->
         <div style="display: flex; align-items: baseline;">
             <h2>СТОИМОСТЬ</h2>
-            <span style="font-size: 2rem; font-weight: 400; color: #db7324;">&nbsp; 90.000 &#8381;</span>
+            <span style="font-size: 2rem; font-weight: 400; color: #db7324;">&nbsp; 95.000 &#8381;</span>
         </div>
 
         <div class="text-wrapper">
@@ -398,7 +386,6 @@
                         <li id="day11" class="splide__slide" data-arrind=11>День 12</li>
                         <li id="day12" class="splide__slide" data-arrind=12>День 13</li>
                         <li id="day13" class="splide__slide" data-arrind=13>День 14</li>
-                        <li id="day14" class="splide__slide" data-arrind=14>Карта маршрута</li>
                     </ul>
                 </div>
             </div>
@@ -566,117 +553,17 @@
             </div>
         </div>
 
-        <div id="tday14" class="day-item">
-            <!-- Google maps embed -->
-            <div class="thumb-wrap">                    
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JZduRuQFfiCdsVvQQlPJaAaKEBGwOrup&z=10"></iframe>
-            </div>             
-        </div>        
-
     </div>
 
 
-        <!-- <div class="wrapper">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <h2>В РЮКЗАКЕ</h2>
-                <span data-tooltip="Скачать полный список снаряжения одним файлом"><a href="https://docs.google.com/document/d/1HtuSPbfGdiDCLr78fy0gK9RVzhxCC1OPicjgYZtshQI/edit?usp=sharing" target="_blank" class="darker">скачать список</a>
-                    &#9196;
-                </span>
-            </div>  
-
-
-            <div class="accordion">
-                <div class="acc-wrapper">
-                    <div class="acc-header">
-                        <div class="acc-header-title">
-                            <p>Одежда</p>
-                        </div>
-                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
-                    </div>
-                    <div class="acc-content tour-includes">
-                        <div class="acc-content-desc">
-                            <ul class="basic-listt">
-                                <li>Комплект (верх + низ) термобелья</li>
-                                <li>Комплект флиса (кофта + штаны)</li>
-                                <li>Комплект мембранной одежды (куртка с капюшоном + штаны-самосбросы)</li>
-                                <li>Пуховый свитер/куртка на primaloft</li>
-                                <li>Дождевик/пончо</li>
-                                <li>Штаны ходовые/трекинговые</li>
-                                <li>Шорты</li>
-                                <li>Купальник/плавки</li>
-                                <li>Футболки с коротким (1-2) и длинным рукавом (1)</li>
-                                <li>Шапка, кепка/панама, баффы (1-3 шт)</li>
-                                <li>Перчатки (флис, рабочие х/б)</li>
-                                <li>Носки шерстяные (для сна)</li>
-                                <li>Носки трекинговые (2 пары), нижнее белье</li>
-                                <li>Ботинки трекинговые (разношенные!)</li>
-                                <li>Сандалии, тапки резиновые (crocs) или кроссовки</li>
-                                <li>Легкое платье девушкам для красивых фотографий :)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="acc-wrapper">
-                    <div class="acc-header">
-                        <div class="acc-header-title">
-                            <p>Снаряжение</p>
-                        </div>
-                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
-                    </div>
-                    <div class="acc-content tour-includes">
-                        <div class="acc-content-desc">
-                            <ul class="basic-listt">
-                                <li>Рюкзак (70-100 л) + накидка от дождя</li>
-                                <li>Спальник (температура комфорта 0-5° С)</li>
-                                <li>Каремат (коврик туристический, пенка) + чехол</li>
-                                <li>Пенопопа (сидушка, хоба, пендель)</li>
-                                <li>КЛМН (Кружка, Ложка, Миска, Нож)</li>
-                                <li>Очки солнцезащитные</li>
-                                <li>Фонарик налобный + запасные батарейки</li>
-                                <li>Термос (1 на троих)</li>
-                                <li>Трекинговые палки</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>    
-                
-
-                <div class="acc-wrapper">
-                    <div class="acc-header">
-                        <div class="acc-header-title">
-                            <p>Прочее</p>
-                        </div>
-                        <div class="acc-header-btn"><img class="acc-btn" src="images/add2.svg" alt=""></div>
-                    </div>
-                    <div class="acc-content tour-includes">
-                        <div class="acc-content-desc">
-                            <ul class="basic-listt">
-                                <li>Помада гигиеническая для губ</li>
-                                <li>Солнцезащитный крем SPF 50+</li>
-                                <li>Предметы гигиены - мыло, зубная щетка/паста, туалетная бумага</li>
-                                <li>Аптечка индивидуальная</li>
-                                <li>Поливитамины (начать пить за пару недель до тура)</li>
-                                <li>Мини ремнабор (нитки с иголками)</li>
-                                <li>Полотенце (микрофибра)</li>
-                                <li>Гамаши (фонарики)</li>
-                                <li>Накомарник</li>
-                                <li>PowerBank</li>
-                                <li>Фотоаппарат</li>
-                                <li>Гермомешок для спальника и вещей</li>
-                                <li>Полиэтиленовый вкладыш (большой прочный пакет, куда укладываются вещи для защиты от влаги)</li>
-                                <li>Пластиковая бутылка для воды или фляга</li>
-                                <li>Документы и деньги в гермомешке</li>
-                                <li>Зажигалка / огниво</li>                           
-                            </ul>
-                        </div>
-                    </div>
-                </div>                  
-            </div>           
-            
-        </div> -->
-
-
+    <div class="wrapper">
+        <div class="extra-wrapper">
+            <h2>КАРТА ПОХОДА</h2>
+            <div class="thumb-wrap map">
+                <iframe loading="lazy" src="https://www.google.com/maps/d/u/0/embed?mid=1JZduRuQFfiCdsVvQQlPJaAaKEBGwOrup&z=10"></iframe>
+            </div>        
+        </div>   
+    </div>    
 
 
     <div class="wrapper">
