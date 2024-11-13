@@ -68,7 +68,7 @@
 }
 
 .flex-xl-4 {
-    padding: 0 15px;
+    padding: 10px 15px;
     width: 33.33333%
 }
 
@@ -128,7 +128,7 @@
         width: 41.66667%
     }
     .flex-lg-4 {
-        padding: 0 15px;
+        padding: 10px 15px;
         width: 33.33333%
     }
     .flex-lg-3 {
@@ -177,7 +177,7 @@
         width: 58.33333%
     }
     .flex-md-6 {
-        padding: 0 15px;
+        padding: 10px 15px;
         width: 50%
     }
     .flex-md-5 {
@@ -235,7 +235,7 @@
         width: 58.33333%
     }
     .flex-sm-6 {
-        padding: 0 10px;
+        padding: 10px 10px;
         width: 50%
     }
     .flex-sm-5 {
@@ -273,7 +273,7 @@
         display: none!important
     }
     .flex-xs-12 {
-        padding: 0 10px;
+        padding: 10px 10px;
         width: 100%
     }
     .flex-xs-11 {
