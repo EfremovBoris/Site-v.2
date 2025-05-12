@@ -12,10 +12,11 @@
 
 	<!-- DEBUG -->
 	<script src="js/webp_check.js"></script>
+    
 
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no;user-scalable=0;">
+    <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0">
 
 	<!--metatextblock-->
     <title>Поход вокруг вулкана Бакенинг. Дикая Камчатка 2025.</title>
@@ -146,7 +147,7 @@
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
                 <div>
                     <span style="font-size: 1.1rem;"><strong>Мест в группе</strong></span>
-                    <p style="color: red">Идёт набор</p>
+                    <p style="color: red">Осталось 9 мест</p>
                 </div>
             </div> 
             <div class="tour-brief-part flex-xl-3 flex-lg-3 flex-md-6 flex-sm-12 flex-xs-12">
@@ -158,8 +159,8 @@
                             <span class="difficulty-square fill"></span>
                             <span class="difficulty-square fill"></span>
                             <span class="difficulty-square fill"></span>
-                            <span class="difficulty-square fill"></span>
-                        </span> Высокая, (5/5)
+                            <span class="difficulty-square "></span>
+                        </span> Высокая, (4/5)
                     </p>
                 </div>
             </div>                               
@@ -460,7 +461,7 @@
               <details class="faq_it noselect tour-includes" open>
                 <summary>Что включено?</summary>
                     <ul>
-                        <li> встреча и проводы в аэропорт</li>
+                        <li> трансферы от/до аэропорта;</li>
                         <li> заброска на автобусе | вахтовке (ГАЗ-66/Камаз) к точке старта и забор с финиша</li>
                         <li> 2 ночи в хостеле</li>
                         <li> аренда общественного снаряжения (палатки, тент, костровое оборудование и т.д.)</li>
@@ -469,7 +470,7 @@
                         <li> учитываем ваши предпочтения в питании</li>
                         <li> разрешение на посещение территории заказника "Тимоновский"</li>
                         <li> Регистрация группы в МЧС</li>
-                        <li> Спутниковый трекер/коммуникатор Gamin InReach mini</li>
+                        <li> Спутниковый телефон Iridium | коммуникатор Garmin InReach mini</li>
                     </ul>
               </details>                
 
@@ -739,7 +740,12 @@
     <div class="wrapper">
         <div class="extra-wrapper">
             <h2>ОТЗЫВЫ О ТУРЕ</h2>
-            <iframe loading="lazy" src="https://yandex.ru/sprav/widget/rating-badge/207235107600" width="150" height="50" ></iframe>
+            <div class="yandex_rate_container">
+				<iframe loading="lazy" src="https://yandex.ru/sprav/widget/rating-badge/207235107600" width="150" height="50" ></iframe>
+				<div class="yandex_rate_text">
+				  Больше отзывов смотрите на <a class="darker" href="https://yandex.ru/maps/org/gid_i_instruktor_boris_yefremov/207235107600/reviews" target="_blank">Яндекс</a>.
+				</div>
+			</div>
         </div>   
     </div>
 
@@ -946,16 +952,22 @@
     <!-- FAQ Section -->
     <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."faq-basic.html");  ?>
 
-    
+
     <!-- YOUTUBE VIDEO -->
     <div class="wrapper">
         <br class="extra-wrapper">
-            <h2>ВИДЕО О ПОХОДЕ</h2>    
+            <h2>ВИДЕО О ПОХОДЕ</h2>
             <div class="thumb-wrap">
-                <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/DUk_WKxy6G8"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <iframe id="video_tour_1" loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/r7TvLFhZMdo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <iframe id="video_tour_1" loading="lazy" width="560" height="315" src="https://vk.com/video_ext.php?oid=-213246471&id=456239071"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div><br>                
+            <div class="thumb-wrap">
+                <!-- <iframe id="video_tour_2" loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/DUk_WKxy6G8"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <iframe id="video_tour_2" loading="lazy" width="560" height="315" src="https://vk.com/video_ext.php?oid=-213246471&id=456239029"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div><br>
             <div class="thumb-wrap">
-                <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/snuj4XBA_V8"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <iframe id="video_tour_3" loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/snuj4XBA_V8"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <iframe id="video_tour_3" loading="lazy" width="560" height="315" src="https://vk.com/video_ext.php?oid=-213246471&id=456239040"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>            
     </div>
     <br>

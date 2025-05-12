@@ -88,21 +88,6 @@
         });
   };
   
-    // InstagramFeed init /////////////////////////////////////////////////
-
-    // element = document.getElementById("instafeed");
-    // if (typeof(element) != 'undefined' && element != null){
-    //   var feed = new Instafeed({
-    //     // token last for 60 days? may be less so i need to change it...HOW TO AUTOMATE IT?
-    //     // START working 10 nov 2021
-    //     accessToken: 'IGQVJXamhPT2hPS19NblBJbGJhTWQ5UTlUV2tNSDNIQTJCazRYNTc4YmpJU0o2ZA2RJc0NvVUhiSjk3Q1NjZAjZAHUU9ERVBWVm9MclhLa0ZAUeC1Jc05YRjVNMUVKQmdFbnJGeGpkZAGhUX0wwZAWtDMFMtWAZDZD',
-    //     limit: 8,
-    //     target: 'instafeed',
-    //     template: '<a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a>'
-    //   });
-    //   feed.run();
-    // };
-
 
 
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                  // Функция проверки доступности YouTube через загрузку изображения-иконки (ping)
+                  function checkYouTubeAvailability() {
+                var img = new Image();
+                var timeout = setTimeout(function() {
+                    // Если за 3 секунды картинка не загрузилась — считаем недоступным
+                    localStorage.setItem('youtubeAvailable', 'false');
+                    cleanup();
+                }, 3000);
+
+                function cleanup() {
+                    img.onload = null;
+                    img.onerror = null;
+                    clearTimeout(timeout);
+                }
+
+                img.onload = function() {
+                    localStorage.setItem('youtubeAvailable', 'true');
+                    cleanup();
+                };
+
+                img.onerror = function() {
+                    localStorage.setItem('youtubeAvailable', 'false');
+                    cleanup();
+                };
+
+                // Картинка из YouTube, вероятно, будет доступна если YouTube доступен
+                img.src = "https://www.youtube.com/favicon.ico?" + Date.now(); // Добавляем параметр для обхода кэша
+            }
+
+            checkYouTubeAvailability();
+    </script>
+</body>
+</html>
