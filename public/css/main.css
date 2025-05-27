@@ -341,12 +341,7 @@ body {
 	align-items: center;
 }
 
-/* FIX Iphone bg img stretch TEST */
-@media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-	.hiscreen {
-		background-attachment: scroll;
-	}
-}
+
 
 
 #ko .hiscreen {
@@ -3007,8 +3002,7 @@ li strong {
   /* Parallax 4 blog notes */
 
   .parallax {
-	background-image: url('../images/blog/articles/bear_alert.webp');
-	/* , url('../images/blog/articles/bear_alert.png'); */
+	/* background-image: url('../images/blog/articles/bear_alert.webp'); */
 	background-attachment: fixed;
 	background-size: cover;
 	height: calc(100vh - var(--main-menu-height));;
@@ -3077,3 +3071,12 @@ li strong {
     max-width: 300px;
     text-align: center;
   }
+
+
+
+  /* FIX Iphone bg img stretch TEST */
+@media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	.hiscreen, .parallax {
+		background-attachment: scroll;
+	}
+}
