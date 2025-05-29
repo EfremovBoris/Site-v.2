@@ -1647,6 +1647,11 @@ svg#ig-icon path {
 	padding: 40px 45px;
 }
 
+.feedback__author {
+	text-align: right;
+	font-weight: bold;
+}
+
 
 @media screen and (max-width: 767px) {
 	.feedback {
@@ -2491,7 +2496,7 @@ input[type="checkbox"]{
 .gallerybox__item_inside {
     overflow: hidden;
     border: 2px solid rgb(255, 255, 255);            
-    border-radius: 10px;
+	border-radius: 25px 0 25px 0;
 }
 
 .gallerybox__item_inside img {
