@@ -1,42 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Попап при покидании сайта</title>
+    <style>
+        #timer {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        #exitPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 1000;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+    <script>
+        let timeSpent = 0; // Счетчик времени
+        const timeLimit = 30; // Время в секундах
+        let timerInterval;
+
+        // Функция для обновления таймера на странице
+        function updateTimer() {
+            timeSpent++;
+            document.getElementById('timer').innerText = `Вы провели на сайте: ${timeSpent} секунд`;
+        }
+
+        // Запускаем таймер
+        timerInterval = setInterval(updateTimer, 1000);
+
+        // Обработчик события для покидания страницы
+        window.onbeforeunload = function (event) {
+            if (timeSpent < timeLimit) {
+                event.preventDefault(); // Предотвращаем стандартное поведение
+                showExitPopup(); // Показываем попап
+                return ''; // Возвращаем пустую строку для некоторых браузеров
+            }
+        };
+
+        function showExitPopup() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('exitPopup').style.display = 'block';
+        }
+
+        function confirmExit() {
+            // Убираем попап и закрываем страницу
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('exitPopup').style.display = 'none';
+            window.location.href = 'https://boris-trip.com/opytnyj-gid-kamchatka'; // Перенаправление на другой URL
+        }
+
+        function cancelExit() {
+            // Убираем попап и продолжаем оставаться на странице
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('exitPopup').style.display = 'none';
+        }
+    </script>
 </head>
 <body>
-    <script>
-                  // Функция проверки доступности YouTube через загрузку изображения-иконки (ping)
-                  function checkYouTubeAvailability() {
-                var img = new Image();
-                var timeout = setTimeout(function() {
-                    // Если за 3 секунды картинка не загрузилась — считаем недоступным
-                    localStorage.setItem('youtubeAvailable', 'false');
-                    cleanup();
-                }, 3000);
+    <h1>Добро пожаловать на наш сайт!</h1>
+    <p>Проведите время на сайте и узнайте больше.</p>
+    <div id="timer">Вы провели на сайте: 0 секунд</div>
 
-                function cleanup() {
-                    img.onload = null;
-                    img.onerror = null;
-                    clearTimeout(timeout);
-                }
-
-                img.onload = function() {
-                    localStorage.setItem('youtubeAvailable', 'true');
-                    cleanup();
-                };
-
-                img.onerror = function() {
-                    localStorage.setItem('youtubeAvailable', 'false');
-                    cleanup();
-                };
-
-                // Картинка из YouTube, вероятно, будет доступна если YouTube доступен
-                img.src = "https://www.youtube.com/favicon.ico?" + Date.now(); // Добавляем параметр для обхода кэша
-            }
-
-            checkYouTubeAvailability();
-    </script>
+    <div id="overlay"></div>
+    <div id="exitPopup">
+        <p>Вы действительно хотите покинуть сайт?</p>
+        <button onclick="confirmExit()">Уйти</button>
+        <button onclick="cancelExit()">Остаться</button>
+    </div>
 </body>
 </html>
