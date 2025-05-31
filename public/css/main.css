@@ -1863,6 +1863,7 @@ label.label4fz {
     width: 100%;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	background-color: #1c1a1c;
 	color: #fff !important;
 	font-family: 'PT Sans', sans-serif;
@@ -3084,4 +3085,8 @@ li strong {
 	.hiscreen, .parallax {
 		background-attachment: scroll;
 	}
+}
+
+strong{
+	font-weight: bold;
 }
