@@ -17,7 +17,7 @@ Disallow: /ostavit-zayavku.html
 
 
 Disallow: /test.php
-
+Disallow: /test.html
 
 #Disallow: /tilda/popup*
 
