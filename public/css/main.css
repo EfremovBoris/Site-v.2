@@ -980,6 +980,7 @@ em {
 	height: 100%;
 	/* box-shadow: rgba(0, 0, 0, 0.5) 0 0 30px; */
 	padding-bottom: 5px;
+	position: relative;
 }
 
 
@@ -2768,7 +2769,7 @@ dd {
 	/* background-color: #ECEFF1; */
 	/* color: #263238; */
 	/* transition: background-color 0.15s; */
-	transition: max-height 0.5s ease;
+	transition: max-height 0.3s ease;
   }
   details.faq_it > :last-child {
 	margin-bottom: 1rem;
@@ -2793,10 +2794,11 @@ dd {
   }
 
  details.faq_it[open] {
-	/* background-color: #FFF; */
+	background-color: #efefef;
 	/* disable max-height to avoid overflow */
 	max-height: 1000px; 
   }
+
   details.faq_it[open]::before {
 	opacity: 0.6;
   }
@@ -2809,6 +2811,11 @@ dd {
   .accordion_blackstar details.faq_it[open] summary {
 	color: hsl(191, 100%, 38%);
 	font-weight: bold;
+  }  
+
+
+    .accordion_blackstar details.faq_it[open] {
+		background-color: transparent;
   }  
 
   details.faq_it summary {
@@ -3094,3 +3101,177 @@ li strong {
 strong{
 	font-weight: bold;
 }
+
+
+/* tour labels OPEN, CLOSE, PARTNER */
+
+
+    .labels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px 16px 0 16px;
+	  position:absolute;
+    }
+    .label {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+    .label.green {
+      background-color: #27ae60;
+      color: #fff;
+    }
+    .label.white {
+      background-color: #fff;
+      color: #222;
+    }
+	.label.red {
+      background-color: #EB5757;
+      color: #fff;
+    }
+
+
+	/* БЛОК ДАТЫ ТУРОВ */
+
+
+  .table-travel-dates {
+    width: 100%;
+  }
+
+  .table-travel-dates-header {
+    display: flex;
+    color: #999;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+  .header-cell {
+    padding: 12px 10px;
+  }
+  .header-date {
+    flex: 2 1 30%;
+  }
+  .header-duration {
+    flex: 1 1 15%;
+  }
+  .header-distance {
+    flex: 1 1 20%;
+  }
+  .header-price {
+    flex: 1 0 120px;
+    text-align: right;
+  }
+
+  /* Строка данных (ПК и мобильный адаптив) */
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .row:last-child {
+    border-bottom: none;
+  }
+
+  /* Левая часть (даты + надолго + сколько топать) располагается в столбик */
+  .row-info {
+    display: flex;
+    flex: 5 1 auto;
+    gap: 16px;
+  }
+  .date, .duration, .distance {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .date {
+    flex: 2 1 30%;
+    color: #555;
+    font-size: 14px;
+	font-weight: 700;	
+  }
+  .duration {
+    flex: 1 1 15%;
+    font-size: 14px;
+    color: #222;
+  }
+  .distance {
+    flex: 1 1 20%;
+    font-size: 14px;
+    color: #222;
+  }
+  .duration span, .distance span {
+    /* font-weight: 700; */
+  }
+
+  /* Цена */
+  .price {
+    flex: 0 0 120px;
+    text-align: right;
+  }
+  .price button {
+    background-color: #db7324;
+    border: none;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 6px;
+    /* cursor: pointer; */
+    font-size: 14px;
+    min-width: 120px;
+  }
+
+  /* Мобильная версия */
+  @media (max-width: 600px) {
+    /* Скрываем заголовок */
+    .table-travel-dates-header {
+      display: none;
+    }
+    /* Каждая строка — флекс, с кнопкой справа и текстом слева вертикально */
+    .row {
+      flex-wrap: nowrap;
+      background: #f5f5f5;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      align-items: center;
+    }
+    /* Левая часть теперь один столбец — вертикальный стек всех данных */
+    .row-info {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-right: 12px;
+      color: #222;
+      font-size: 14px;
+    }
+    .date {
+      color: #555;	  
+      font-size: 15px;
+    }
+    .duration, .distance {
+      font-size: 14px;
+    }
+    /* Скрываем их индивидуальные flex-basis и размеры в мобилке */
+    .date, .duration, .distance {
+      flex: none;
+      display: block;
+    }
+    /* Кнопка — фиксированной ширины, справа, по центру по вертикали */
+    .price {
+      flex: 0 0 120px;
+      text-align: right;
+    }
+    .price button {
+      min-width: 120px;
+      padding: 8px 18px;
+      font-size: 14px;
+    }
+  }

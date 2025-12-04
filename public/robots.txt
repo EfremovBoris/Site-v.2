@@ -5,6 +5,7 @@ User-Agent: *
 
 
 Disallow: /components/
+Disallow: /archive/
 Disallow: /image_src/
 
 
@@ -17,6 +18,7 @@ Disallow: /ostavit-zayavku.html
 
 
 Disallow: /test.php
+Disallow: /views.php
 Disallow: /test.html
 
 #Disallow: /tilda/popup*

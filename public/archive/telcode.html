@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма ввода телефона</title>
+    <!-- Подключение CSS и JS библиотеки -->
+<!--     <link rel="stylesheet" href="../css/intlTelInput.css">
+    <script src="../js/intlTelInput.min.js"></script> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/css/intlTelInput.css">
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/intlTelInput.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .iti { width: 100%; } /* Стилизация поля */
+    </style>
+</head>
+<body>
+    <h1>Форма ввода номера телефона</h1>
+    <form id="phoneForm">
+        <label for="phone">Номер телефона:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <button type="submit">Отправить</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        // Инициализация intl-tel-input
+	  const input = document.querySelector("#phone");
+	  const iti = window.intlTelInput(input, {
+	  
+		initialCountry: 'auto',
+		geoIpLookup: function(callback) {
+			fetch('https://ipapi.co/json/')
+				.then(res => res.json())
+				.then(data => callback(data.country_code))
+				.catch(() => callback('us'));
+		},
+		strictMode: true,
+		//loadUtils: () => import("../js/utils.js")
+		loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/utils.js")
+	  });
+
+
+        // Обработка отправки формы
+        document.getElementById('phoneForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const result = document.getElementById('result');
+            
+            if (iti.isValidNumber()) {
+                // Номер валиден: получаем международный формат
+                const number = iti.getNumber();
+                result.textContent = `Валидный номер: ${number}`;
+                // Здесь можно отправить данные на сервер
+            } else {
+                result.textContent = 'Неверный номер телефона. Проверьте формат.';
+            }
+        });
+    </script>
+</body>
+</html>

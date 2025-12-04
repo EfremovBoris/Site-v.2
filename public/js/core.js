@@ -94,6 +94,26 @@
 
     $(document).ready(function(){
 
+        // FAQ accordion open|close
+            const accordionGroups = document.querySelectorAll('.faqZ');
+            
+            accordionGroups.forEach(group => {
+                const detailsInGroup = group.querySelectorAll('.faq_it');
+                
+                detailsInGroup.forEach(detail => {
+                    detail.addEventListener('toggle', function() {
+                        if (this.open) {
+                            detailsInGroup.forEach(otherDetail => {
+                                if (otherDetail !== this) {
+                                    otherDetail.open = false;
+                                }
+                            });
+                        }
+                    });
+                });
+            });
+
+
 
         // Pregress bar init /////////////////////////////////////////////////
         window.onscroll = function() {myFunction()};
@@ -357,4 +377,4 @@
           }
 
       });
-  });
+    });

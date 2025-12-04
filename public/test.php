@@ -1,11 +1,22 @@
-<?
+<?php
+$servername = "localhost"; // e.g., 192.168.1.100 or mysql.yourdomain.com
+$username = "u1060934_user_stat";
+$password = "Qazwsxedc86";
+$dbname = "u1060934_default";
 
-// php $IPATH = $_SERVER["DOCUMENT_ROOT"]; 
-// echo $IPATH;
+// Создание соединения
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-$IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/"."menu.html";
+// Проверка соединения
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully: ". $username;
 
-echo $IPATH;
+// Выполнение запросов...
+// $sql = "SELECT * FROM your_table";
+// $result = $conn->query($sql);
 
-// echo basename($_SERVER['SCRIPT_FILENAME']);
+// Закрытие соединения
+$conn->close();
 ?>
