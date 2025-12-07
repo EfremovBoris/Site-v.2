@@ -676,7 +676,7 @@ body {
 		width: 100%;
 		top: 0;
 		left: 0;
-		z-index: 999;
+		z-index: 1000;
 	}
 
 	.header:before {
@@ -686,7 +686,6 @@ body {
 		top: 0;
 		width: 100%;
 		height: 100%;
-		/* background-color: #B03FF7; */
 		background-color: rgb(39, 39, 39);
 		opacity: 0.8;
 		z-index: 999;
@@ -751,8 +750,8 @@ body {
 		color: #FFDA35;
 		text-transform: uppercase;
 		text-decoration: none;
-		/* font-size:18px; */
 		font-size: calc(16px + 4 * ((100vw - 320px) / 1140));
+		white-space: nowrap;
 	}
 
 	.header__link:hover {
@@ -764,6 +763,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex: 2 0;
+		position: relative;
 	}
 
 	.rightside__menu {
@@ -802,13 +802,64 @@ body {
 		padding: 0 10px;
 		margin-left: 5px;
 		cursor: pointer;
+	}
+
+
+/* ===== СТРЕЛКА У ПУНКТОВ С ПОДМЕНЮ ===== */
+.has-submenu > .header__link::after {
+    content: " ▼";
+    font-size: 10px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.has-submenu:hover > .header__link::after {
+    transform: rotate(180deg);
+}
+
+/* ===== ПОДМЕНЮ (ДЕСКТОП) ===== */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    min-width: 200px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.has-submenu:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu li {
+    margin: 0;
+    padding: 0;
+}
+
+.submenu .header__link {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.submenu .header__link:hover {
+    background: rgba(255, 218, 53, 0.15);
 }
 
 
+
 	@media screen and (max-width: 767px) {
-		.lock {
-			overflow: hidden; 
-		}
 		.header__logo {
 			display: inline-flex;
 			flex: 0 0 45px;
@@ -875,21 +926,103 @@ body {
 			background-color: rgb(110, 110, 110);
 			padding-top: 60px;	
 			display: block;
-			text-align: center;
-		}
-		.header__menu.active {
-			top: 0;
-			transition: all 0.3s ease 0s;	
 		}
 
+
 		.header__list {
-			display: block;
-			padding-top: 20px;
+			position: fixed;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100vh;
+			background: rgba(0, 0, 0, 0.98);
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			padding: 80px 30px 30px;
+			transition: left 0.3s ease;
+			z-index: 1000;
+			overflow-y: auto;
+		}
+
+		.header__list.active {
+			left: 0;
 		}
 		
 		.header__list li {
-			margin-left: 0;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			border-bottom: 1px solid rgba(255, 218, 53, 0.2);
 		}
+
+		.header__list > li > .header__link {
+			display: block;
+			padding: 15px 0;
+			font-size: 18px;
+		}		
+
+
+		/* Стрелка вправо на мобильных */
+		.has-submenu > .header__link::after {
+			content: " ›";
+			font-size: 18px;
+			/* float: right; */
+		}
+
+		.has-submenu.active > .header__link::after {
+			content: " ‹";
+		}
+
+		/* Подменю на мобильных — аккордеон */
+		.submenu {
+			position: static;
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+			background: transparent;
+			box-shadow: none;
+			padding: 0;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease;
+		}
+
+		.has-submenu.active > .submenu {
+			max-height: 500px;
+		}
+
+		.submenu .header__link {
+			padding: 12px 20px;
+			font-size: 16px;
+			color: #ccc;
+		}
+
+		.submenu .header__link:hover {
+			color: #FFDA35;
+		}
+
+
+		/* Затемнение фона */
+		.menu-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.6);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+			z-index: 999;
+		}
+
+		.menu-overlay.active {
+			opacity: 1;
+			visibility: visible;
+		}		
+
+
 
 		.rightside__menu {
 			display: block;
@@ -925,30 +1058,6 @@ body {
 		min-height: 50px;
 		border-radius: 50%;
 	}	
-
-	/* menu EFFECTS */
-
-	.header__menu ul>li>a:hover:after {
-		transform: scaleX(1);
-		transform-origin: left
-	}
-	
-	.header__menu ul>li>a:after {
-		content: "";
-		display: block;
-		height: 3px;
-		border-radius: 10px;
-		transform: scaleX(0);
-		transition: .4s transform;
-		transform-origin: 100% 0;
-		background: #FFDA35;
-		opacity: .9;
-		position: absolute;
-		bottom: 5px;
-		left: 0;
-		width: 100%;
-	}
-	/* END of EFFECTS */
 
 
 

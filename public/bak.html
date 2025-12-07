@@ -73,7 +73,8 @@
 	<!-- ext CSS  -->
 
     <link rel="stylesheet" href="css/lupa.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/css/intlTelInput.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/intlTelInput.min.js"></script>
     <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.green.min.css">
@@ -1002,16 +1003,13 @@
     <!-- <script async src="js/slick.min.js"></script> -->
     <script async src="js/lazysizes.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/imask.js"></script>
+    <!-- <script src="js/imask.js"></script> -->
     <script src="js/splide.min.js"></script>
 
 
 	<!-- view JS ////////////-->
-    <script src="js/core.js"></script> 
-    
 
-
-
+    <!-- upd 07-12 будут ли скрипты ниже работать? ПРОВЕРИТЬ -->
     <script>
         var splide = new Splide( '.splide' ).mount();
 
@@ -1036,30 +1034,8 @@
     <!-- Important: Open Default Tab -->
     <script>document.getElementById("tday0").style.display="block";</script>    
 
-    <!-- <script>
-	  const input = document.querySelector("#form_phone");
-	  const iti = window.intlTelInput(input, {
-	  
-		initialCountry: 'auto',
-		geoIpLookup: function(callback) {
-			fetch('https://ipapi.co/json/')
-				.then(res => res.json())
-				.then(data => callback(data.country_code))
-				.catch(() => callback('us'));
-		},
-		strictMode: true,
-		//loadUtils: () => import("../js/utils.js")
-		loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/utils.js")
-	  });        
-    </script> -->
-
-
-    <!-- Put this div tag to the place, where the Community messages block will be -->
-    <!-- <div id="vk_community_messages"></div>
-    <script>
-        VK.Widgets.CommunityMessages("vk_community_messages", 213246471, {tooltipButtonText: "Есть вопрос?", widgetPosition: "left"});
-    </script> -->
-
+    
+    <script src="js/core.js"></script> 
 
 
 </body>

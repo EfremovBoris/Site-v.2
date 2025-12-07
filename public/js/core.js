@@ -6,6 +6,9 @@
 
     // Tabs select login /////////////////////////////////////////////////
     // may be it's better to parameterize class Tablinks
+
+
+    console.log('=== Core executing...');
     function openDayInfo(evt, tabName, childClass) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName(childClass);
@@ -76,23 +79,30 @@
   }
 
   // Mask for cellphone /////////////////////////////////////////////////
-  var element = document.getElementById("form_phone");
-  if (typeof(element) != 'undefined' && element != null){
-      var phoneMask = IMask(document.getElementById('form_phone'), {
-        mask: '+{7} (000) 000-00-00'
-        }).on('accept', function() {
-        document.getElementById('phone-complete').style.display = '';
-        document.getElementById('phone-unmasked').innerHTML = phoneMask.unmaskedValue;
-        }).on('complete', function() {
-        document.getElementById('phone-complete').style.display = 'inline-block';
-        });
-  };
+  // var element = document.getElementById("form_phone");
+  // if (typeof(element) != 'undefined' && element != null){
+  //     var phoneMask = IMask(document.getElementById('form_phone'), {
+  //       mask: '+{7} (000) 000-00-00'
+  //       }).on('accept', function() {
+  //       document.getElementById('phone-complete').style.display = '';
+  //       document.getElementById('phone-unmasked').innerHTML = phoneMask.unmaskedValue;
+  //       }).on('complete', function() {
+  //       document.getElementById('phone-complete').style.display = 'inline-block';
+  //       });
+  // };
   
 
 
+    // GLOBAL VARs
+    let iti; //var tel-input
+    let errorMsg;
+    
 
 
+    // Document Ready
     $(document).ready(function(){
+
+        console.log('=== Document ready...===');
 
         // FAQ accordion open|close
             const accordionGroups = document.querySelectorAll('.faqZ');
@@ -123,14 +133,6 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("myBar").style.width = scrolled + "%";
         }				
-
-
-        // init BURGER menu /////////////////////////////////////////////////
-        $('.header__burger').click(function (event) {
-            $('.header__burger, .header__menu').toggleClass('active');
-            $('body').toggleClass('lock');
-            $('.header__button').toggleClass('disabled');
-        });
 
         //  GO to TOP button activation  /////////////////////////////////////////////////
         $(document).scroll(function() {
@@ -204,6 +206,100 @@
       $('.show-more-block').click(function(e) {  
         $(this).toggleClass('expanded');
       });
+
+      console.log('Menu building');
+      // new MENU start
+      const burger = document.querySelector('.header__burger');
+      const menu = document.querySelector('.header__list');
+      const header_btn = document.querySelector('.header__button');
+
+      // Создаём оверлей
+      const overlay = document.createElement('div');
+      overlay.className = 'menu-overlay';
+      document.body.appendChild(overlay);
+
+      // Открытие/закрытие мобильного меню
+      burger.addEventListener('click', function() {
+          this.classList.toggle('active');
+          menu.classList.toggle('active');
+          overlay.classList.toggle('active');
+          header_btn.classList.toggle('disabled');
+          document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+      });
+
+      // Закрытие по клику на оверлей
+      overlay.addEventListener('click', function() {
+          burger.classList.remove('active');
+          menu.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.style.overflow = '';
+      });
+
+      // Аккордеон для подменю на мобильных
+      const submenus = document.querySelectorAll('.has-submenu');
+
+      submenus.forEach(item => {
+          const link = item.querySelector(':scope > .header__link');
+          
+          link.addEventListener('click', function(e) {
+              // Только на мобильных
+              if (window.innerWidth <= 992) {
+                  e.preventDefault();
+                  
+                  // Закрываем другие подменю
+                  submenus.forEach(other => {
+                      if (other !== item) {
+                          other.classList.remove('active');
+                      }
+                  });
+                  
+                  item.classList.toggle('active');
+              }
+          });
+      });
+
+      // Сброс состояния при ресайзе
+      window.addEventListener('resize', function() {
+          if (window.innerWidth > 992) {
+              burger.classList.remove('active');
+              menu.classList.remove('active');
+              overlay.classList.remove('active');
+              document.body.style.overflow = '';
+              submenus.forEach(item => item.classList.remove('active'));
+          }
+      });      
+      // new MENU finish
+
+
+      console.log('=== Tel-Inp building');
+      // new Tel-input start
+      const input = document.querySelector("#form_phone");
+      if (input) {
+        console.log("✅ Элемент #form_phone найден:", input);
+      } else {
+    console.warn("⚠️ Элемент #form_phone не найден!");
+    }
+
+
+      try {
+        iti = window.intlTelInput(input, {
+                  initialCountry: 'auto',
+                    geoIpLookup: function(callback) {
+                    fetch('https://ipapi.co/json/')
+                    .then(res => res.json())
+                    .then(data => callback(data.country_code))
+                    .catch(() => callback('us'));
+                  },
+                  strictMode: true,
+                  // loadUtils: () => import("/js/utils.js")
+                  loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/utils.js")
+      });
+      
+      } catch (error) {
+          console.error('Ошибка инициализации intlTelInput:', error);
+      }
+      // new Tel-input finish
+
 
 
         
@@ -297,9 +393,7 @@
               //variableWidth: true
               //draggable:false
           });
-
-
-  }; //end if exist
+        }; //end if exist
 
 
 
@@ -356,13 +450,56 @@
     function clearBox(elementID)
     {
         let itemx = document.getElementById(elementID);
+        // console.log(itemx.innerHTML);
+        console.log("=== Clear Function ===");
         itemx.innerHTML = "";
         itemx.classList.remove("success");
         itemx.classList.remove("error");
     }
 
+
+    window.iti = iti; // useful for testing
+    errorMsg = document.querySelector("#error-msg");
+
+    //fix width of intl-tel-input NOT WORK
+    // const targetElement = document.querySelector('.iti');
+    // if (targetElement) {
+    //     targetElement.style.display = 'block';
+    // }    
+
+    const showError = (msg) => {
+      errorMsg.innerHTML = msg;
+      errorMsg.hidden = false;
+    };     
+
     $("#reqst_form").submit(function(e){
       e.preventDefault();
+
+      // new check intl-tel
+      if (typeof iti !== 'undefined' && iti !== null) {
+          if (iti.isValidNumber()) {
+              const fullNumber = iti.getNumber();
+              document.getElementById('form_phone').value = fullNumber;
+              errorMsg.hidden = true;
+              console.log(`Валидный номер: ${fullNumber}`);
+          } else {
+              const errorCode = iti.getValidationError();
+              if (errorCode === intlTelInput.utils.validationError.TOO_SHORT) {
+                  showError("⚠️Номер слишком короткий");
+              } else {
+                  showError("⚠️Неверный номер телефона. Проверьте формат.");
+              }
+              console.log('Неверный номер телефона. Проверьте формат.');
+              return false;
+          }
+          } else {
+              console.error('Ошибка: объект iti не был инициализирован');
+      }
+      
+      
+      // return false; // debug exit
+
+
       // set hidden value
       $("input[id=src-page]").val(window.location.href);
       $.ajax({
