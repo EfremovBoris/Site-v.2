@@ -94,13 +94,13 @@
 .slider .slick-arrow.slick-prev{
     left: 10px;
     padding-left: 20px;
-    background: url('../images/left-arrow.svg') center no-repeat;
+    background: url('/images/left-arrow.svg') center no-repeat;
 }
 
 .slider .slick-arrow.slick-next{
     right: 10px;
     padding-right: 20px;
-    background: url('../images/right-arrow.svg') center no-repeat;
+    background: url('/images/right-arrow.svg') center no-repeat;
 }
 
 .slider .slick-arrow.slick-disabled {

@@ -333,7 +333,7 @@ body {
 	position: relative;
 	height: 80vh;
 
-	background-image: url(../images/tours/ko/cover/ko_cover_04.jpg);
+	background-image: url(/images/tours/ko/cover/ko_cover_04.jpg);
 	background-position: 55% 1%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -349,7 +349,7 @@ body {
 
 
 #ko .hiscreen {
-	background-image: url(../images/tours/ko/cover/ko_cover_02.jpg);
+	background-image: url(/images/tours/ko/cover/ko_cover_02.jpg);
 	display: block;
 	background-position: 50% 60%;
 }
@@ -379,7 +379,7 @@ body {
 
 
 /* #bak .hiscreen {
-	background-image: url(../images/tours/bak/cover/bak_cover_02.jpg);
+	background-image: url(/images/tours/bak/cover/bak_cover_02.jpg);
 	display: block;
 	background-position: 40% 60%;
 } */
@@ -390,10 +390,10 @@ body {
 }
 
 .no-webp #bak .hiscreen {
-	background-image: url(../images/tours/bak/cover/bak_cover_02.jpg);
+	background-image: url(/images/tours/bak/cover/bak_cover_02.jpg);
 }
 .webp #bak .hiscreen {
-	background-image: url(../images/tours/bak/cover/bak_cover_02.webp);
+	background-image: url(/images/tours/bak/cover/bak_cover_02.webp);
 }
 
 
@@ -460,10 +460,10 @@ body {
 	}
 
 	.no-webp #bak .hiscreen {
-		background-image: url(../images/tours/bak/cover/bak_cover_02_small.jpg);
+		background-image: url(/images/tours/bak/cover/bak_cover_02_small.jpg);
 	}
 	.webp #bak .hiscreen {
-		background-image: url(../images/tours/bak/cover/bak_cover_02_small.jpg);
+		background-image: url(/images/tours/bak/cover/bak_cover_02_small.jpg);
 	}	
 
 }
@@ -494,7 +494,7 @@ body {
 
 .hiscreen2 {
 	height: 100vh;
-	background-image: url(../images/tours/ko/cover/ko_cover_05.jpg);
+	background-image: url(/images/tours/ko/cover/ko_cover_05.jpg);
 	background-position: 50% 10%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -515,7 +515,7 @@ body {
 .hiscreen3 {
 	position: relative;
 	height: 100vh;
-	background-image: url(../images/me_tolbachik.jpg);
+	background-image: url(/images/me_tolbachik.jpg);
 	background-position: 55% 30%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -528,7 +528,7 @@ body {
 	position: relative;
 	height: 100vh;
 	
-	background-image: url(../images/tours/ksu/cover/tolbachik_cover_08.jpg);
+	background-image: url(/images/tours/ksu/cover/tolbachik_cover_08.jpg);
 	background-position: 50% 90%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -540,7 +540,7 @@ body {
 
 
 #ko .hiscreen-form {
-	background-image: url(../images/tours/ksu/cover/tolbachik_cover_07.jpg);
+	background-image: url(/images/tours/ksu/cover/tolbachik_cover_07.jpg);
 	background-position: 50% 80%;	
 }
 
@@ -551,17 +551,17 @@ body {
 
 
 .no-webp #bak .hiscreen-form {
-	background-image: url(../images/tours/bak/cover/bak_cover_01.jpg);
+	background-image: url(/images/tours/bak/cover/bak_cover_01.jpg);
 }
 
 .webp #bak .hiscreen-form {
-	background-image: url(../images/tours/bak/cover/bak_cover_01.webp);
+	background-image: url(/images/tours/bak/cover/bak_cover_01.webp);
 }
 
 
 .hiscreen404 {
 	height: 100vh;
-	background-image: url(../images/tours/ko/cover/ko_cover_05.jpg);
+	background-image: url(/images/tours/ko/cover/ko_cover_05.jpg);
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -3019,7 +3019,7 @@ li strong {
   /* Parallax 4 blog notes */
 
   .parallax {
-	/* background-image: url('../images/blog/articles/bear_alert.webp'); */
+	/* background-image: url('/images/blog/articles/bear_alert.webp'); */
 	background-attachment: fixed;
 	background-size: cover;
 	height: calc(100vh - var(--main-menu-height));;

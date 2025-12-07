@@ -53,40 +53,17 @@
 	<meta property="og:image" content="https://boris-trip.com/images/tours/bak/small/bak_small_50.jpg">
 
 	<link rel="canonical" href="https://boris-trip.com/bak">
-    <!-- DEBUG cache -->
-    <!-- <meta http-equiv="Cache-control" content="public"> -->
 	<!--/metatextblock-->
-
-
-
-    <!-- <link rel="preload" href="HZ"> -->
-    <link rel="preconnect" href="https://avatars.mds.yandex.net">
-    <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="preconnect" href="https://www.gstatic.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://maps.googleapis.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    
-
-    <!-- DNS prefetch not have effect -->
-    <!-- <meta http-equiv="x-dns-prefetch-control" content="on">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    <link rel="dns-prefetch" href="https://avatars.mds.yandex.net">
-    <link rel="dns-prefetch" href="https://www.gstatic.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">     -->
-
 
 
 
     <!-- FONTs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- DEBUG webp check -->
-    <!-- <script async src="js/modernizr_webp.js"></script> -->
+    <link rel="preconnect" href="https://www.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 
 
 	<!-- Setup FAVICON -->
@@ -116,11 +93,10 @@
     <link rel="preload" href="css/grid.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <!-- <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
 
+    <!-- Предзагрузка изображения для LCP -->
+    <link rel="preload" as="image" href="/images/tours/bak/cover/bak_cover_02_small.jpg" fetchpriority="high" media="(max-width: 768px)" type="image/jpeg">
+    <link rel="preload" as="image" href="/images/tours/bak/cover/bak_cover_02.webp" fetchpriority="high"  media="(min-width: 769px)" type="image/webp">
 
-    <!-- Put this script tag to the <head> of your page -->
-       <!-- <script src="https://vk.com/js/api/openapi.js?168"></script> -->
-    <!-- Rest of VK script paste in bottom -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/intlTelInput.min.js"></script> -->
 
 </head>
 

@@ -92,7 +92,7 @@
 
 .slider-tour .slick-arrow.slick-prev{
     left: 2%;
-    background: url(../images/left-arrow.svg) 45% 50% no-repeat;
+    background: url(/images/left-arrow.svg) 45% 50% no-repeat;
     background-size: 50%;
     height: 40px;
     border-radius: 50%;
@@ -102,7 +102,7 @@
 
 .slider-tour .slick-arrow.slick-next{
     right: 2%;
-    background: url(../images/right-arrow.svg) 55% 50% no-repeat;
+    background: url(/images/right-arrow.svg) 55% 50% no-repeat;
     background-size: 50%;
     height: 40px;
     border-radius: 50%;

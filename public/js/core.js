@@ -329,7 +329,14 @@
               });
 
 
+              // После инициализации добавляем доступные имена для кнопок-точек
+              $('.owl-dot').each(function(index) {
+                  // Нумерация для пользователя обычно начинается с 1
+                  $(this).attr('aria-label', 'Перейти к отзыву ' + (index + 1));
+              });
+
               // refresh carousel trigger  MOD 27-05-24
+              // может стоит указывать чтобы детайлс искались только в карусели???
               var details = document.querySelectorAll("details")
               details.forEach(details => {
                   details.addEventListener("toggle", function() {

@@ -27,7 +27,7 @@
     transform: translate(-50%, -50%);
     width: 50px; /* adjust the width and height to your magnifying glass image size */
     height: 50px;
-    background-image: url('../images/lupa.png'); /* replace with your magnifying glass image URL */
+    background-image: url('/images/lupa.png'); /* replace with your magnifying glass image URL */
     background-size: contain;
     background-position: center;
     z-index: 1;

@@ -35,14 +35,14 @@
 .owl-carousel .owl-nav button.owl-next {
 	right: -45px;
 	font-size: 0;
-	background-image: url("../images/next-btn.svg");
+	background-image: url("/images/next-btn.svg");
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 .owl-carousel .owl-nav button.owl-prev {
 	left: -45px;
 	font-size: 0;
-	background-image: url("../images/prev-btn.svg");
+	background-image: url("/images/prev-btn.svg");
 	background-position: center center;
     background-repeat: no-repeat;	
 }
