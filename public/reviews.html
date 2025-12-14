@@ -29,30 +29,14 @@
 		<!-- /metatextblock -->
 
 
-		<!-- Setup FAVICON -->
-		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-		<link
-			rel="shortcut icon"
-			href="images/favicon.ico"
-			type="image/x-icon"
-		/>
+		<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."meta-load.html");  ?>
+
 
 		<!-- ext CSS  -->
 		<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
 
 		<!-- view CSS  -->
-		<link rel="stylesheet" href="css/grid.css" />
 		<link rel="stylesheet" href="css/main.css" />
-
-		<!-- Put this script tag to the <head> of your page -->
-		<!-- <script src="https://vk.com/js/api/openapi.js?168"></script> -->
-
-		<!-- <script>
-			VK.init({ apiId: 7464645, onlyWidgets: true });
-		</script>
-		<script>
-			VK.Widgets.Comments("vk_comments", { limit: 5, attach: "*" });
-		</script> -->
 
 	</head>
 	<body>
@@ -85,11 +69,8 @@
 					</p>
 					<br>
 				</div>
-					<div id="respVK"
-					class="vk-wrapper resp-channel"
-					style="max-width: 800px; margin: 0 auto; padding: 15px 5px;">
-					<!-- <div id="vk_comments"></div> -->
-					<div style="max-width:700px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/207235107600?comments"></iframe><a href="https://yandex.ru/maps/org/gid_i_instruktor_boris_yefremov/207235107600/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Гид и инструктор Борис Ефремов на карте Кемеровской области (Кузбасса) — Яндекс Карты</a></div>
+					<div id="respYa" style="max-width: 800px; margin: 0 auto; padding: 15px 5px;">
+						<div style="max-width:700px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/207235107600?comments"></iframe><a href="https://yandex.ru/maps/org/gid_i_instruktor_boris_yefremov/207235107600/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Гид и инструктор Борис Ефремов на карте Кемеровской области (Кузбасса) — Яндекс Карты</a></div>
 					</div>
 
 					<div class="text-wrapper">						
@@ -452,10 +433,6 @@
 
 				<div class="text-wrapper">
 					<h2>P.S.:</h2>
-					<!-- <p>
-						Мир туристов тесен и возможно вы ходили со мной в походы
-						(Камчатка, Непал,...).
-					</p> -->
 					<p class="highlight-yellow">Каждый отзыв важен, так как помогает предоставлять более
 						качественный сервис в будущем и дает более четкое представление о маршруте, его особенностях для новых туристов.</p><br>	
 				</div>

@@ -16,6 +16,10 @@ Disallow: /masonry-test.html
 Disallow: /ostavit-zayavku.html
 
 
+Disallow: /tury-i-pohody-po-gruzii.html
+
+
+
 
 Disallow: /test.php
 Disallow: /views.php

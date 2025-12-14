@@ -30,20 +30,18 @@
 	<!--/metatextblock-->
 
 
+	<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."meta-load.html");  ?>
 
-
-	<!-- Setup FAVICON -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">    
     
 	<!-- ext CSS  -->    
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.green.min.css">
     <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/intlTelInput.min.js"></script>    
 
 	<!-- view CSS  -->
-    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- <link rel="stylesheet" href="css/my-slick-tour.css"> -->
     <link rel="stylesheet" href="css/lupa.css">
@@ -151,8 +149,8 @@
 
         <!-- Подробнее детали -->
 
-        <div class="tour-brief flex-container">
-            <div class="tour-brief-part flex-xl-4 flex-lg-4 flex-md-6 flex-sm-12 flex-xs-12">
+        <div class="tour-brief">
+            <div class="tour-brief-part">
                 <div><h3>В ПРОГРАММЕ</h3></div>
                 <ul>
                     <li>Тихий океан с черным вулканическим песком</li>
@@ -165,7 +163,7 @@
                     <li>разнообразный рельеф: березовые леса, поля вулканического шлака, перевалы и вершины</li>
                 </ul>
             </div>
-            <div class="tour-brief-part flex-xl-4 flex-lg-4 flex-md-6 flex-sm-12 flex-xs-12">
+            <div class="tour-brief-part">
 				<div><h3>ПОХОД В ЦИФРАХ</h3></div>
                 <ul>
                     <li>Гидов: <strong>1-2</strong></li>
@@ -185,7 +183,7 @@
                     <li>Высоты ночевок (метров): <strong>400-900</strong></li>
                 </ul>
             </div>
-            <div class="tour-brief-part flex-xl-4 flex-lg-4 flex-md-6 flex-sm-12 flex-xs-12">
+            <div class="tour-brief-part">
                 <div class=""><h3>ОСОБЕННОСТИ</h3></div>
                 <ul>
                     <li>Основная масса продуктов ПО ВОЗМОЖНОСТИ будет доставлена на центральный кордон</li>
@@ -204,66 +202,66 @@
         </div>
         
 
-        <div class="flex-container gallerybox" style="overflow: hidden;">
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+        <div class="gallerybox" style="overflow: hidden;">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside image-container" id="lupa">
                     <a data-fancybox="gallery" data-caption="My caption 1" class="chocolat-image" href="images/tours/ko/medium/ko_medium_1.jpg"><img src="images/tours/ko/small/ko_small_1.jpg" alt=""></a>
                     <div class="magnifying-glass"></div>
                 </div>
             </div>
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" data-caption="My caption 2" class="chocolat-image" href="images/tours/ko/medium/ko_medium_2.jpg"><img src="images/tours/ko/small/ko_small_2.jpg" alt=""></a>
                 </div>
             </div>
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ko/medium/ko_medium_3.jpg"><img src="images/tours/ko/small/ko_small_3.jpg" alt=""></a>
                 </div>
             </div>    
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ko/medium/ko_medium_4.jpg"><img src="images/tours/ko/small/ko_small_4.jpg" alt=""></a>
                 </div>
             </div>     
             
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ko/medium/ko_medium_5.jpg"><img src="images/tours/ko/small/ko_small_5.jpg" alt=""></a>
                 </div>
             </div>
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ko/medium/ko_medium_6.jpg"><img src="images/tours/ko/small/ko_small_6.jpg" alt=""></a>
                 </div>
             </div>
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ko/medium/ko_medium_7.jpg"><img src="images/tours/ko/small/ko_small_7.jpg" alt=""></a>
                 </div>
             </div>    
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ko/medium/ko_medium_8.jpg"><img src="images/tours/ko/small/ko_small_8.jpg" alt=""></a>
                 </div>
             </div> 
     
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ko/medium/ko_medium_9.jpg"><img src="images/tours/ko/small/ko_small_9.jpg" alt=""></a>
                 </div>
             </div>
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ko/medium/ko_medium_10.jpg"><img src="images/tours/ko/small/ko_small_10.jpg" alt=""></a>
                 </div>
             </div>
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ko/medium/ko_medium_11.jpg"><img src="images/tours/ko/small/ko_small_11.jpg" alt=""></a>
                 </div>
             </div>    
-            <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox__item">
                 <div class="gallerybox__item_inside">
                     <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_1.jpg"><img src="images/tours/ko/small/ko_small_12.jpg" alt=""></a>
                 </div>
@@ -732,7 +730,6 @@
     <!-- <script src="js/slick.min.js"></script> -->
     <script src="js/lazysizes.min.js" async></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/imask.js"></script>
     <script src="js/splide.min.js"></script>
 
 	<!-- view JS ////////////-->

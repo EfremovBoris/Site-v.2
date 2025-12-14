@@ -11,7 +11,7 @@
 
 	<meta charset="utf-8">
 	<!-- ВРЕМЕННО!!! ЗАПРЕТ ИНДЕКСАЦИИ СТРАНИЦЫ !!! УБРАТЬ ПОЗЖЕ -->
-	<!-- <meta name="robots" content="none"> -->
+	<meta name="robots" content="none">
 	<!-- ВРЕМЕННО -->
 	<!-- Телефоны без ссылок -->
 	<meta name="format-detection" content="telephone=no">
@@ -20,8 +20,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
 	<!--metatextblock-->
-	<title>Пешие походы по Камчатке 2026 | местный гид Борис Ефремов</title>	
-	<meta name="description" content="Пешие походы, новые туристические маршруты с местным гидом. Камчатка - одного раза недостаточно!">
+	<title>Туры и походы по Грузии 2026 | гид Борис Ефремов</title>	
+	<meta name="description" content="Пешие походы и комбинированные туры. Грузия - одного раза недостаточно!">
 
 	<meta property="og:url" content="https://boris-trip.com">
 	<meta property="og:title" content="Пешие походы по Камчатке, новые туристические маршруты с местным гидом.">
@@ -31,24 +31,57 @@
 	<meta property="og:image" content="https://boris-trip.com/images/tours/tolbachik_main_small1.jpg">
 	<meta property="og:image:type" content="image/jpeg">
 
-	<meta name="facebook-domain-verification" content="c7kwbdz57ye66d04fdiop9grqlgs4c">
-	<meta property="fb:app_id" content="726283924830914">
 
-	<meta name="yandex-verification" content="4d874f7b80ca0689">
-	<meta name="google-site-verification" content="INj8OZL6Yie5hhlWUzajZd53QuRqhHfuy7-y4FPli_I">
 
-	<link rel="canonical" href="https://boris-trip.com/index">
+	<style>
+		.wrapper {
+			min-width: 320px;
+			max-width: 1278px;
+			padding: 0 30px;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		@media (max-width: 1280px) {
+			.wrapper {
+				max-width: 1200px;
+			}
+		}
+
+		@media (max-width: 991px) {
+			.wrapper {
+				max-width: 900px;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.wrapper {
+				max-width: 730px;
+				padding: 0 20px;
+			}
+		}		
+	</style>
+
+
+	<!-- <link rel="canonical" href="https://boris-trip.com/index"> -->
 	<!--/metatextblock-->
 
 	<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."meta-load.html");  ?>
 
 
-	<!-- Cache ? Public | Private | no-cache | no-store -->
-	<!-- <meta http-equiv="Cache-control" content="Public"> -->
-	
+
+	<!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prosto+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+
 	<!-- ext CSS  -->
 
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+
 
 	<!-- view CSS  -->
 
@@ -58,119 +91,29 @@
 	<link rel="preload" href="css/owl.theme.green.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	
 </head>
-<body id="start-page">
+<body id="georgia">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MB6W8F"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
 
-
 	<!-- TEST hidden yandex rating -->
-	<iframe class="visually-hidden" src="https://yandex.ru/sprav/widget/rating-badge/207235107600" width="150" height="50"  ></iframe>
+	<!-- <iframe class="visually-hidden" src="https://yandex.ru/sprav/widget/rating-badge/207235107600" width="150" height="50"  ></iframe> -->
 	<!-- end of TEST -->
 
 
 	<div class="root">
-		<!-- МЕНЮ -->
-
-		<!-- later CUT XXX  -->
-		<div id="main-menuXXX">   
-
-
-			<!-- Progress bar ///////////////////-->
-			<div class="top-scroll">
-				<div class="progress-container">
-					<div class="progress-bar" id="myBar"></div>
-				</div>
-			</div>	
-			<!-- END Progress bar -->
-
+	
+		<div id="main-menu">
 			<!-- LOAD MENU HERE -->
-			<header class="header">
-				<div class="header__body">
-
-					<nav class="header__menu">
-						<!-- <a href="/index" class="header__logo"> -->
-							<!-- без циклических ссылок -->
-							<img src="images/me_logo.jpg" alt="" class="header__logo">
-						<!-- </a> -->
-
-						<ul class="header__list">
-							<li>
-								<a href="/blog/articles" class="header__link">FAQ</a>
-							</li>
-							<li class="has-submenu">
-								<a href="#" class="header__link">ТУРЫ 2026</a>
-								<ul class="submenu">
-									<li><a href="/index#schedule" class="header__link">Камчатка 2026</a></li>
-									<li><a href="/archive/pictures-box" class="header__link">Грузия 2026</a></li>
-								</ul>								
-							</li>
-							<li class="has-submenu">
-								<a href="#" class="header__link">ФОТО</a>
-								<ul class="submenu">
-									<li><a href="/foto-otchety-o-pohodah" class="header__link">Все</a></li>
-									<li><a href="/photos_bakening" class="header__link">Бакенинг</a></li>
-									<li><a href="/photos_tolbachik" class="header__link">Толбачик</a></li>
-									<li><a href="/photos_nalychevo" class="header__link">Налычево</a></li>
-								</ul>								
-							</li>
-							<li>
-								<a href="/reviews" class="header__link">ОТЗЫВЫ</a>
-							</li>
-							<li>	
-								<a href="/opytnyj-gid-kamchatka" class="header__link">ОБО МНЕ</a>
-							</li>
-							<li>
-								<a href="/video-s-pohodov" class="header__link">ВИДЕО</a>
-							</li>																			
-						</ul>
-						<div class="rightside__menu">
-							<div class="right_social_links">
-								<div class="right_social_links_item">
-									<a href="https://www.instagram.com/boris.efremov/" target="_blank">
-										<svg version="1.1" id="ig-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30">
-											<path d="M15,11.014 C12.801,11.014 11.015,12.797 11.015,15 C11.015,17.202 12.802,18.987 15,18.987 C17.199,18.987 18.987,17.202 18.987,15 C18.987,12.797 17.199,11.014 15,11.014 L15,11.014 Z M15,17.606 C13.556,17.606 12.393,16.439 12.393,15 C12.393,13.561 13.556,12.394 15,12.394 C16.429,12.394 17.607,13.561 17.607,15 C17.607,16.439 16.444,17.606 15,17.606 L15,17.606 Z"></path>
-											<path d="M19.385,9.556 C18.872,9.556 18.465,9.964 18.465,10.477 C18.465,10.989 18.872,11.396 19.385,11.396 C19.898,11.396 20.306,10.989 20.306,10.477 C20.306,9.964 19.897,9.556 19.385,9.556 L19.385,9.556 Z"></path>
-											<path d="M15.002,0.15 C6.798,0.15 0.149,6.797 0.149,15 C0.149,23.201 6.798,29.85 15.002,29.85 C23.201,29.85 29.852,23.202 29.852,15 C29.852,6.797 23.201,0.15 15.002,0.15 L15.002,0.15 Z M22.666,18.265 C22.666,20.688 20.687,22.666 18.25,22.666 L11.75,22.666 C9.312,22.666 7.333,20.687 7.333,18.28 L7.333,11.734 C7.333,9.312 9.311,7.334 11.75,7.334 L18.25,7.334 C20.688,7.334 22.666,9.312 22.666,11.734 L22.666,18.265 L22.666,18.265 Z"></path>
-										</svg>
-									</a>
-								</div>
-							
-								<div class="right_social_links_item">
-									<a href="https://vk.com/lovekamski" target="_blank">
-										<svg version="1.1" id="vk-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-											<path d="M47.761,24c0,13.121-10.639,23.76-23.76,23.76C10.878,47.76,0.239,37.121,0.239,24c0-13.123,10.639-23.76,23.762-23.76 C37.122,0.24,47.761,10.877,47.761,24 M35.259,28.999c-2.621-2.433-2.271-2.041,0.89-6.25c1.923-2.562,2.696-4.126,2.45-4.796 c-0.227-0.639-1.64-0.469-1.64-0.469l-4.71,0.029c0,0-0.351-0.048-0.609,0.106c-0.249,0.151-0.414,0.505-0.414,0.505 s-0.742,1.982-1.734,3.669c-2.094,3.559-2.935,3.747-3.277,3.524c-0.796-0.516-0.597-2.068-0.597-3.171 c0-3.449,0.522-4.887-1.02-5.259c-0.511-0.124-0.887-0.205-2.195-0.219c-1.678-0.016-3.101,0.007-3.904,0.398 c-0.536,0.263-0.949,0.847-0.697,0.88c0.31,0.041,1.016,0.192,1.388,0.699c0.484,0.656,0.464,2.131,0.464,2.131 s0.282,4.056-0.646,4.561c-0.632,0.347-1.503-0.36-3.37-3.588c-0.958-1.652-1.68-3.481-1.68-3.481s-0.14-0.344-0.392-0.527 c-0.299-0.222-0.722-0.298-0.722-0.298l-4.469,0.018c0,0-0.674-0.003-0.919,0.289c-0.219,0.259-0.018,0.752-0.018,0.752 s3.499,8.104,7.463,12.23c3.638,3.784,7.764,3.36,7.764,3.36h1.867c0,0,0.566,0.113,0.854-0.189 c0.265-0.288,0.256-0.646,0.256-0.646s-0.034-2.512,1.129-2.883c1.15-0.36,2.624,2.429,4.188,3.497 c1.182,0.812,2.079,0.633,2.079,0.633l4.181-0.056c0,0,2.186-0.136,1.149-1.858C38.281,32.451,37.763,31.321,35.259,28.999"></path>
-										</svg>
-									</a>
-								</div>
-								<div class="right_social_links_item">
-									<a href="https://www.facebook.com/boris.efremov.73/" target="_blank">
-										<svg version="1.1" id="fb-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-											<path d="M47.761,24c0,13.121-10.638,23.76-23.758,23.76C10.877,47.76,0.239,37.121,0.239,24c0-13.124,10.638-23.76,23.764-23.76 C37.123,0.24,47.761,10.876,47.761,24 M20.033,38.85H26.2V24.01h4.163l0.539-5.242H26.2v-3.083c0-1.156,0.769-1.427,1.308-1.427 h3.318V9.168L26.258,9.15c-5.072,0-6.225,3.796-6.225,6.224v3.394H17.1v5.242h2.933V38.85z"></path>
-										</svg>
-									</a>
-								</div>
-							</div>
-							<!-- <a data-fancybox data-type="ajax" data-src="https://boris-trip.com/components/get-consult"  class="get-feedback-btn">Консультация</a> -->
-						</div>
-
-					</nav>
-					
-					<div class="header__button" style="margin-right: 30px"><a href="/ostavit-zayavku" class="btn-skewed"><span>Записаться в поход</span></a></div>
-					<div class="header__burger">
-						<span></span>
-					</div>						
-				</div>
-			</header>
-		</div>
-		<!-- КОНЕЦ МЕНЮ -->
+			<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."menu.html");  ?>
+		</div>		
 
 		<!-- ФОТО-заглушка -->			
 		<div class="hiscreen">
 			<div class="welcometext">
-				<p style="font-family: 'Prosto One'; font-size: 2rem;">Туры и походы по Камчатке с местным гидом</p>
+				<p style="font-family: 'Prosto One'; font-size: 2rem;">Туры и походы по Грузии с увлеченным гидом</p>
 				<!-- <br> -->
 				<p style="font-size: 1.2rem"> от проверенной классики до&nbsp;эксклюзива!</p>
 			</div>
@@ -186,7 +129,7 @@
 		<div id="schedule">
 			<div class="wrapper">
 				<div class="block-title">
-					<h1>Пешие походы по Камчатке на 2026 год</h1>
+					<h1>Пешие походы по Грузии на 2026 год</h1>
 				</div>
 
 				<div class="tourItemGroup">	
@@ -194,15 +137,14 @@
 						<div class="tourWrapper">
 							<div class="labels">
 								<div class="label green">ИДЁТ НАБОР</div>
-								<div class="label white">ПАРТНЕРСКИЙ ТУР</div>
 							</div>							
 							<a href="vokrug-tolbachika" class="tourCover">
 								<img src="images/tours/tolbachik_main_small1.jpg" alt="tour1" class="img-fluid">
 								<div class="tour-content-text">
-									<strong>Поход вокруг Толбачика</strong><br>
-									<em>11 — 24 июл 2026</em><br>
-									<em>18 — 31 июл 2026</em>
-									<p>По мнению туристов это самый лучший пеший маршрут на Камчатке. За годы его существования в нашей компании это подтвердили уже сотни прошедших по нему путешественников.</p>
+									<strong>Тур по Сванетии налегке</strong><br>
+									<em>1 — 10 июл 2026</em><br>
+									<em>15 — 25 июл 2026</em>
+									<p>Самый сок Сванетии без палаток и рюкзаков.</p>
 								</div>
 							</a>	
 							<div style="text-align: center;">
@@ -219,15 +161,14 @@
 						<div class="tourWrapper">
 							<div class="labels">
 								<div class="label green">ИДЁТ НАБОР</div>
-								<div class="label white">ПАРТНЕРСКИЙ ТУР</div>
 							</div>
 							<a href="bak" class="tourCover">
 								<img src="images/tours/bak_main_small1.jpg" alt="tour1" class="img-fluid">
 								<div class="tour-content-text">
-									<strong>Ожерелье озер Бакенинга.</strong><br>
-									<em>29 авг — 11 сен 2026</em><br>
-									<em>31 авг — 11 сен 2026</em>
-									<p>Возможно наша небольшая группа будет единственной на этом прекрасном маршруте, ранее популярном, а сейчас незаслуженно забытом.</p>
+									<strong>озера Тобаварчхили</strong><br>
+									<em>5 авг — 15 сен 2026</em><br>
+									<em>20 авг — 1 сен 2026</em>
+									<p>Мы пройдем расширенную версию этого красивейшего маршрута Грузии</p>
 								</div>
 							</a>
 							<div style="text-align: center;">
@@ -241,62 +182,11 @@
 
 					</div>
 
-					<div class="tourItem">
-						<div class="tourWrapper">
-							<div class="labels">
-								<div class="label green">ИДЁТ НАБОР</div>
-								<div class="label white">ПАРТНЕРСКИЙ ТУР</div>
-							</div>
-							<a href="ko" class="tourCover">
-								<img src="images/tours/ko_main_small1.jpg" alt="tour1" class="img-fluid">
-								<div class="tour-content-text">
-									<strong>Парк Налычево. Краски осени.</strong><br>
-									<em>15 — 28 авг 2026</em><br>
-									<em>30 авг — 12 сен 2026</em><br>
-									<em>6 — 17 сен 2026</em>
-									<p>Поход с рюкзаком в парк Налычево в сентябре - огненные краски осени и согревающие горячие источники.</p>
-								</div>
-							</a>
-							<div style="text-align: center;">
-								<div class="tour-content-btn">
-									<a href="ko" class="get-tourinfo-btn">
-										Подробности
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- <div class="tourItem">	
-						<div class="tourWrapper">
-							<a href="#" class="tourCover">
-								<img src="images/tours/acap_main_small1.jpg" alt="tour1" class="img-fluid">
-								<div class="tour-content-text">
-									<strong>Непал, Гималаи. Трек вокруг массива Аннапурны</strong><br>
-									<em>По запросу</em>
-									<p>Пожалуй, это лучший вариант познать истинный трекинг. Комфортный темп и ночевки в гостевых лоджах с питанием позволят нести минимум в рюкзаке. Всего 7-10 кг и пачка купюр.</p>
-								</div>
-							</a>							
-						</div>
-					</div>
-
-					<div class="tourItem">
-						<div class="tourWrapper">
-							<a href="#" class="tourCover">
-								<img src="images/tours/kazbek_geo_main_small1.jpg" alt="tour1" class="img-fluid">
-								<div class="tour-content-text">
-									<strong>Восхождение на Казбек со стороны России.</strong><br>
-									<em>По запросу</em>
-									<p>Уникальная возможность увидеть Казбек с 2х сторон: восхождение с севера + южное гостеприимство Тбилиси где мы отметим окончание тура.</p>
-								</div>
-							</a>							
-						</div>
-					</div> -->
 					
 				</div>
 
 				<div class="text-wrapper">
-					<h2>ЗАЧЕМ ИДТИ В ПОХОД?</h2>
+					<h2>ЗАЧЕМ ИДТИ В ПОХОД по ГРУЗИИ?</h2>
 					<div class="about-me more-text">
 						<p>Пешие походы дают возможность посетить труднодоступные уголки дикой Камчатки, в полной мере насладиться природой, глубоко соединиться с ней и прочувствовать. Ежесекундно наблюдая изменения, можно остановиться и сделать фото, снять видео. Только пройдя пешком километры по Камчаткой земле действительно начинаешь ценить горячие источники, тепло костра, помощь команды. Поход срывает маски, здесь ты Настоящий!</p>
 						<details>
@@ -315,17 +205,14 @@
 	<div class="wrapper">
 		<h2>ПРИЧИНЫ ПОЙТИ СО МНОЙ</h2>
 		<div class="advantage-list">
-			<div class="advantage-list_item"><div style="display: flex; align-items:center"><img src="/images/guide.svg" alt="гид"><span><b>Опытный местный гид</b></span></div><br>10+ лет работаю на Камчатке: автотуры и пешие походы. Каждый год исследую новые уголки Камчатки.</div>
+			<div class="advantage-list_item"><div style="display: flex; align-items:center"><img src="/images/guide.svg" alt="гид"><span><b>Опытный гид</b></span></div><br>10+ лет работаю на Камчатке: автотуры и пешие походы. Каждый год исследую новые уголки Камчатки.</div>
 			<div class="advantage-list_item"><div style="display: flex; align-items:center"><img src="/images/soup.svg" alt="тарелка супа"><span><b>Вкусная еда</b></span></div><br>Разнообразное облегченное питание, в оптимальном объёме.</div>
-			<div class="advantage-list_item"><div style="display: flex; align-items:center"><img src="/images/couple.svg" alt="малая группа"><span><b>Группы до 14 человек</b></span></div><br>Более быстрое и комфортное прохождение маршрута, меньший вес продуктов.</div>
+			<div class="advantage-list_item"><div style="display: flex; align-items:center"><img src="/images/couple.svg" alt="малая группа"><span><b>Микрогруппы 7 человек</b></span></div><br>Более быстрое и комфортное прохождение маршрута, меньший вес продуктов.</div>
 			<div class="advantage-list_item"><div style="display: flex; align-items:center"><img src="/images/route.svg" alt="маршрут"><span><b>Продуманные до мелочей программы</b></span></div><br>Маршруты пройдены неоднократно, "шишки набиты", выводы сделаны. Гид знает оптимальный путь, что позволит вам не тратить силы зря!</div>
 			<div class="advantage-list_item"><div style="display: flex; align-items:center"><img src="/images/feelgood.svg" alt="безопасность"><span><b>Безопасность прежде всего</b></span></div><br>Богатый походный опыт позволяет заранее оценивать степень риска и принимать правильные решения. Регистрация в МЧС. Наличие спутниковой связи.</div>
 			<div class="advantage-list_item"><div style="display: flex; align-items:center"><img src="/images/photography.svg" alt="фотосъемка"><span><b>Фотосъёмка</b></span></div><br>Гид-фотограф, с которым вы не пропустите красивые моменты. Ловите красивые закаты и рассветы вместе!</div>
 		</div>
 	</div>
-
-
-
 
 
 
@@ -581,30 +468,8 @@
                         <p>Ему бесконечная благодарность за этот интересный, разнообразный, очень полезный и познавательный трип! Так что советую гида Борю очень очень :)</p>
                     </div>
                 </div>				
-
-				<!-- <div class="feedback">
-                    <div class="feedback__photo">
-                        <a href="#" target="_blank"><img data-src="images/feedback/sasha_ann_bakening_21.jpg" class="lazyload" alt="Саша_Аня_Бакенинг_2021"></a>
-                    </div>
-                    <div class="feedback__text">
-                        <div class="more-text">
-
-                                <details>
-                                    <summary></summary>
-
-                                </details>
-                        </div>
-                    </div>
-                </div>  -->
-
-
-
 		</div>
 	</div>
-
-
-
-
 
 
 
@@ -620,7 +485,7 @@
 					<!-- отвечаем на все ваши вопросы по выбранному туру или помогаем выбрать тур или разрабатываем индивидуальную программу для вас -->
 				</li>
 				<li class="cv-num-list__item">Покупаете <a href="https://www.aviasales.ru/?params=MOWPKC1" target="_blank">билеты</a> на самолет, собираете вещи по <a href="/blog/trekking/snaryazhenie-dlya-peshego-pokhoda.html" target="_blank">списку</a></li>
-				<li class="cv-num-list__item">Вносите предоплату 15 000 рублей для бронирования места в хостеле и закупки продуктов</li>
+				<li class="cv-num-list__item">Вносите предоплату 30% для бронирования места в хостеле и закупки продуктов</li>
 				<li class="cv-num-list__item">Заполняете анкету чтобы мы учли все детали. <br>В ожидании похода можно посмотреть видео из наших походов по Камчатке и не только на <a href="https://www.youtube.com/@guide.boris_efremov" target="_blank">YouTube</a> или <a href="https://vkvideo.ru/@boris_trip" target="_blank">ВкВидео</a>.</li>
 				</ul>
 			</div>		
@@ -631,14 +496,13 @@
 		<!-- ФОТО-заглушка -->
 		<div class="hiscreen2">
 			<div class="info-box2">
-				<h3>О чем данный сайт?</h3>
-				<p>Во-первых, здесь представлена информация о турах, в которых я участвую как гид <a href="http://kamchatka-tc.ru" target="_blank" class="darkeR">турклуба "Камчатка"</a> и турах, которые планирую организовать сам.</p>
-				<p>Во-вторых, здесь я планирую выкладывать полезную информацию и свои путевые заметки, которые просто теряются в социальных сетях спустя пару месяцев.</p>
-				<p>В-третьих, это своего рода сайт-визитка для меня как гида.</p>
-				<p>В-четвертых, это первая самостоятельная работа в качестве начинающего веб-разработчика (front-end).</p>
+				<h3>Что еще вам сказать?</h3>
+				<p>Грузия новый для меня регион. Я был здесь 3 раза самостоятельным туристом, но пришло время делиться опытом.</p>
+				<p>Внутренний перфекционист не даст мне сделать плохо. Вы будете довольны.</p>
 			</div>
 		</div>
 		
+
 
 	<!-- FOOTER -->
 	<div id="footer" class="footer">
@@ -654,21 +518,9 @@
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script async src="js/lazysizes.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
-	<!-- <script src="js/slick.min.js"></script> -->
-	<!-- <script src="js/chocolat.js"></script> -->
 
 	<!-- view JS ////////////-->
 	<script src="js/core.js"></script>
-
-
-
-	<!-- Code aux ////////////-->
-
-	<!-- Disable sending Form by press ENTER -->
-	<!-- <script>
-		// DEBUG!!! not working
-		window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='textarea'){e.preventDefault();return false;}}},true);
-	</script> -->
 
 
 

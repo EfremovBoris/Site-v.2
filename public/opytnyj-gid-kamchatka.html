@@ -23,16 +23,16 @@
     <!-- /metatextblock-->
 
 
-	<!-- Setup FAVICON -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."meta-load.html");  ?>
+
 
 	<!-- ext CSS  -->    
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/intlTelInput.min.js"></script>
 
     <!-- view CSS  -->
-    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css">    
 
 </head>
@@ -288,7 +288,6 @@
     <!-- ext JS ////////////-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/imask.js"></script>
 
 	<!-- view JS ////////////-->
     <script src="js/core.js"></script>

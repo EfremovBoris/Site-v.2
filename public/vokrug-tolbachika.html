@@ -49,18 +49,18 @@
 	<!--/metatextblock-->
 
 
-	<!-- Setup FAVICON -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">    
+	<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/components/";  include($IPATH."meta-load.html");  ?>
+
     
 	<!-- ext CSS  -->    
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.green.min.css">
-    <link rel="preload" href="css/splide.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> 
+    <link rel="preload" href="css/splide.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/intlTelInput.min.js"></script>    
 
 	<!-- view CSS  -->
-    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/my-slick-tour.css">
     <link rel="stylesheet" href="css/lupa.css">
@@ -164,14 +164,10 @@
             </div>
 
 
-
-
-
-            
             <!-- Подробнее детали -->
 
-            <div class="tour-brief flex-container">
-                <div class="tour-brief-part flex-xl-4 flex-lg-4 flex-md-6 flex-sm-12 flex-xs-12">
+            <div class="tour-brief">
+                <div class="tour-brief-part">
                     <div><h3>В ПРОГРАММЕ</h3></div>
                     <ul>
                         <li>Тихий океан с черным вулканическим песком</li>
@@ -183,7 +179,7 @@
                         <li>Каждый заберет на память уникальный сувенир с вершины Толбачика</li>
                     </ul>
                 </div>
-                <div class="tour-brief-part flex-xl-4 flex-lg-4 flex-md-6 flex-sm-12 flex-xs-12">
+                <div class="tour-brief-part">
                     <div><h3>ПОХОД В ЦИФРАХ</h3></div>
                     <ul>
                         <li>Гидов: <strong>2</strong></li>
@@ -203,7 +199,7 @@
                         <li>Высоты ночевок (метров): <strong>1000-1400</strong></li>
                     </ul>
                 </div>
-                <div class="tour-brief-part flex-xl-4 flex-lg-4 flex-md-6 flex-sm-12 flex-xs-12">
+                <div class="tour-brief-part">
                     <div class=""><h3>ОСОБЕННОСТИ</h3></div>
                     <ul>
                         <li>Полноценный автономный (6 дней) поход, где все необходимое несем на себе</li>
@@ -220,66 +216,66 @@
             </div>
             
 
-            <div class="flex-container gallerybox" style="overflow: hidden;">
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+            <div class="gallerybox" style="overflow: hidden;">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside image-container" id="lupa">
                         <a data-fancybox="gallery" data-caption="My caption 1" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_1.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_1.jpg" class="lazyload" alt="Поход вокруг Толбачика (1)"></a>
                         <div class="magnifying-glass"></div>
                     </div>
                 </div>
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" data-caption="My caption 2" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_2.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_2.jpg" class="lazyload" alt="Поход вокруг Толбачика (2)"></a>
                     </div>
                 </div>
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_3.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_3.jpg" class="lazyload" alt="Поход вокруг Толбачика (3)"></a>
                     </div>
                 </div>    
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_4.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_4.jpg" class="lazyload" alt="Поход вокруг Толбачика (4)"></a>
                     </div>
                 </div>     
                 
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_5.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_5.jpg" class="lazyload" alt="Поход вокруг Толбачика (5)"></a>
                     </div>
                 </div>
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_6.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_6.jpg" class="lazyload" alt="Поход вокруг Толбачика (6)"></a>
                     </div>
                 </div>
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_7.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_7.jpg" class="lazyload" alt="Поход вокруг Толбачика (7)"></a>
                     </div>
                 </div>    
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_8.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_8.jpg" class="lazyload" alt="Поход вокруг Толбачика (8)"></a>
                     </div>
                 </div> 
         
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_9.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_9.jpg" class="lazyload" alt="Поход вокруг Толбачика (9)"></a>
                     </div>
                 </div>
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_10.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_10.jpg" class="lazyload" alt="Поход вокруг Толбачика (10)"></a>
                     </div>
                 </div>
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_11.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_11.jpg" class="lazyload" alt="Поход вокруг Толбачика (11)"></a>
                     </div>
                 </div>    
-                <div class="gallerybox__item flex-xl-3 flex-lg-3 flex-md-6 flex-sm-6">
+                <div class="gallerybox__item">
                     <div class="gallerybox__item_inside">
                         <a data-fancybox="gallery" class="chocolat-image" href="images/tours/ksu/medium/tolbachik_medium_12.jpg"><img data-src="images/tours/ksu/small/tolbachik_small_12.jpg" class="lazyload" alt="Поход вокруг Толбачика (12)"></a>
                     </div>
@@ -801,7 +797,6 @@
     <script src="js/slick.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <!-- <script src="https://kit.fontawesome.com/335fbf2f60.js" crossorigin="anonymous"></script> -->
-    <script src="js/imask.js"></script>
     <script src="js/splide.min.js"></script>
 
 	<!-- view JS ////////////-->

@@ -78,20 +78,6 @@
       }
   }
 
-  // Mask for cellphone /////////////////////////////////////////////////
-  // var element = document.getElementById("form_phone");
-  // if (typeof(element) != 'undefined' && element != null){
-  //     var phoneMask = IMask(document.getElementById('form_phone'), {
-  //       mask: '+{7} (000) 000-00-00'
-  //       }).on('accept', function() {
-  //       document.getElementById('phone-complete').style.display = '';
-  //       document.getElementById('phone-unmasked').innerHTML = phoneMask.unmaskedValue;
-  //       }).on('complete', function() {
-  //       document.getElementById('phone-complete').style.display = 'inline-block';
-  //       });
-  // };
-  
-
 
     // GLOBAL VARs
     let iti; //var tel-input
@@ -288,7 +274,7 @@
                     fetch('https://ipapi.co/json/')
                     .then(res => res.json())
                     .then(data => callback(data.country_code))
-                    .catch(() => callback('us'));
+                    .catch(() => callback('ru'));
                   },
                   strictMode: true,
                   // loadUtils: () => import("/js/utils.js")
@@ -485,9 +471,9 @@
           } else {
               const errorCode = iti.getValidationError();
               if (errorCode === intlTelInput.utils.validationError.TOO_SHORT) {
-                  showError("⚠️Номер слишком короткий");
+                  showError("⚠️ Номер слишком короткий");
               } else {
-                  showError("⚠️Неверный номер телефона. Проверьте формат.");
+                  showError("⚠️ Неверный номер телефона. Проверьте формат.");
               }
               console.log('Неверный номер телефона. Проверьте формат.');
               return false;
